@@ -34,6 +34,8 @@ public class PlayerMechanics : MonoBehaviour
 
     bool flipCol = true; //True if facing right, false if facing left
 
+    string gravDir = "Down"; //Current direction of gravity.
+
     GameObject cam; //Camera
 
     Rigidbody2D rb; //Player's rigidbody
@@ -126,7 +128,14 @@ public class PlayerMechanics : MonoBehaviour
     {
         if(control.gravity) //If player changes gravity
         {
-
+            if(gravDir = "Down") //If current direction is down, make up
+            {
+                Physics2D.gravity = new Vector3(0,-9.81,0);
+            }
+            else if(gravDir = "Up") //If current direction is up, make down
+            {
+                Physics2D.gravity = new Vector3(0,9.81,0);
+            }
         }
     }
 

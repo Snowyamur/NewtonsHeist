@@ -23,6 +23,7 @@ public class AnimationController : MonoBehaviour
         anim.SetBool("isCrouching", mechanics.isCrouching);
         anim.SetBool("isJumping", mechanics.isJumping);
         anim.SetBool("isFalling", mechanics.isFalling);
+        anim.SetBool("isFlipping", mechanics.isFlipping);
         anim.SetBool("isIdle", mechanics.isIdle);
     }
 }
