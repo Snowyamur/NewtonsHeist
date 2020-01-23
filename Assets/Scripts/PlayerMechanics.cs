@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class PlayerMechanics : MonoBehaviour
@@ -148,6 +149,36 @@ public class PlayerMechanics : MonoBehaviour
         else
         {
             inAir = false;
+        }
+    }
+
+    void SavenLoad()
+    {
+        if(control.save)
+        {
+          Scene scene = SceneManager.GetActiveScene();
+          LevelManager.current.playerData.sceneID = scene.buildIndex;
+          LevelManager.current.playerData.playerPosX = transform.position.x;
+          LevelManager.current.playerData.playerPosY = transform.position.y;
+          LevelManager.current.playerData.playerPosZ = transform.position.z;
+
+          SaveLoad.Save();
+        }
+
+        //-----------------------------------------------------------------
+
+        if(control.load)
+        {
+          SaveLoad.Load();
+          LevelManager.current.isSceneBeingLoaded = true;
+          int whichScene = LevelManager.current.playerData.sceneID;
+          SceneManager.LoadScene(whichScene);
+
+          float t_x = LevelManager.current.playerData.playerPosX;
+          float t_y = LevelManager.current.playerData.playerPosY;
+          float t_z = LevelManager.current.playerData.playerPosZ;
+
+          transform.position = new Vector3(t_x, t_y, t_z);
         }
     }
 }
