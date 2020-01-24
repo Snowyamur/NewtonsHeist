@@ -33,10 +33,8 @@ public class PlayerMechanics : MonoBehaviour
 
     [SerializeField] Dictionary<string, bool> powers = new Dictionary<string, bool>
     {
-        {"Ug1", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
+        {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
     };
-
-    string gravDir = "Down"; //Current direction of gravity.
 
     GameObject cam; //Camera
 
@@ -46,6 +44,7 @@ public class PlayerMechanics : MonoBehaviour
     BoxCollider2D playerCol; //The collider of the player
     PlayerCollisions collisions;
     PlayerControlMapping control; //The control map of the player
+    GravityController gravControl;
 
     LayerMask enemyLayer; //To detect enemies
 
@@ -57,6 +56,7 @@ public class PlayerMechanics : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();
+        gravControl = GetComponent<GravityController>();
     }
 
     // Start is called before the first frame update
@@ -168,16 +168,9 @@ public class PlayerMechanics : MonoBehaviour
 
     void Gravity()
     {
-        if(control.gravity) //If player changes gravity
+        if(control.gravity)
         {
-            if(gravDir == "Down") //If current direction is down, make up
-            {
-                Physics2D.gravity = new Vector3(0, -9.81f, 0);
-            }
-            else if(gravDir == "Up") //If current direction is up, make down
-            {
-                Physics2D.gravity = new Vector3(0, 9.81f, 0);
-            }
+            gravControl.ChangeGravity(powers[0]); //Changes gravity based on ability
         }
     }
 

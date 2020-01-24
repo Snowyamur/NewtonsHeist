@@ -17,7 +17,7 @@ public class PlayerStats
 
     Dictionary<string, bool> m_powers = new Dictionary<string, bool>
     {
-        {"Ug1", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
+        {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
     };
 
     public float gravityPower
