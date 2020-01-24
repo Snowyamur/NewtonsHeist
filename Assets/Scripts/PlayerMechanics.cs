@@ -32,6 +32,10 @@ public class PlayerMechanics : MonoBehaviour
 
     [Space]
 
+    [SerializeField] Dictionary<string, bool> powers = new Dictionary<string, bool>
+    {
+        {"Ug1", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
+    };
 
     bool flipCol = true; //True if facing right, false if facing left
 
@@ -190,6 +194,8 @@ public class PlayerMechanics : MonoBehaviour
           LevelManager.current.playerData.playerPosY = transform.position.y;
           LevelManager.current.playerData.playerPosZ = transform.position.z;
 
+          LevelManager.current.playerData.powers = powers;
+
           SaveLoad.Save();
         }
 
@@ -206,6 +212,8 @@ public class PlayerMechanics : MonoBehaviour
           float t_y = LevelManager.current.playerData.playerPosY;
           float t_z = LevelManager.current.playerData.playerPosZ;
 
+          powers = LevelManager.current.playerData.powers;
+          
           transform.position = new Vector3(t_x, t_y, t_z);
         }
     }

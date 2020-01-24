@@ -13,7 +13,6 @@ public class LevelManager //Is started by Main Menu or when game is started
 
     //public CheckPoint lastCheckpoint; //Saves last checkpoint
 
-
     public LevelManager()
     {
         playerData = new PlayerStats();

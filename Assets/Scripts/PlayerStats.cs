@@ -15,6 +15,11 @@ public class PlayerStats
 
     int m_sceneID = 1; //Current scene
 
+    Dictionary<string, bool> m_powers = new Dictionary<string, bool>
+    {
+        {"Ug1", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
+    };
+
     public float gravityPower
     {
       get{return m_gravityPower;}
@@ -39,5 +44,10 @@ public class PlayerStats
     {
       get{return m_sceneID;}
       set{m_sceneID = value;}
+    }
+    public Dictionary<string, bool> powers
+    {
+      get{return m_powers;}
+      set{m_powers = value;}
     }
 }
