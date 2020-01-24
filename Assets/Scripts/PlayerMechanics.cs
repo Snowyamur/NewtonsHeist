@@ -67,11 +67,36 @@ public class PlayerMechanics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FlipSprite();
         Walk();
         Jump();
         Crouch();
         Gravity();
         CheckAir();
+    }
+
+    void FlipSprite()
+    {
+        if (control.xMove < 0) //If moving left
+        {
+            playerSprite.flipX = true;
+
+            if(flipCol)
+            {
+                pCol.offset = new Vector2(-pCol.offset.x, pCol.offset.y);
+                flipCol = false;
+            }
+        }
+        else if (control.xMove > 0) //If moving right
+        {
+            playerSprite.flipX = false;
+
+            if(!flipCol)
+            {
+                pCol.offset = new Vector2(-pCol.offset.x, pCol.offset.y);
+                flipCol = true;
+            }
+        }
     }
 
     void Walk()
