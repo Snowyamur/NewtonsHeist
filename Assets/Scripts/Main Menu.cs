@@ -65,7 +65,7 @@ public class MainMenu : MonoBehaviour
 
 			foreach(LevelManager l in SaveLoad.savedGames)
             {
-				if(GUILayout.Button("Level: " + l.playerData.sceneID) //Displays current level in save file
+				if(GUILayout.Button("Level: " + l.playerData.sceneID)) //Displays current level in save file
                 {
 					LevelManager.current = l; //Load saved LevelManager
 					//Move on to game...

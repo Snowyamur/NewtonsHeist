@@ -62,6 +62,7 @@ public class PlayerMechanics : MonoBehaviour
         enemyLayer = LayerMask.GetMask("Enemy");
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -74,6 +75,7 @@ public class PlayerMechanics : MonoBehaviour
 
     void Walk()
     {
+        
         if(control.xMove) //If player moves horizontally
         {
             //Calculates velocity based on speed and direction faced
@@ -181,4 +183,5 @@ public class PlayerMechanics : MonoBehaviour
           transform.position = new Vector3(t_x, t_y, t_z);
         }
     }
+    */
 }
