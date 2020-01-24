@@ -33,6 +33,13 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<PlayerRespawn>().Respawn();
+        }
+        */
+
         Detect();
         Patrol();
     }
