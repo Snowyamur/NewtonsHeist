@@ -10,8 +10,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float groundRayDistance = 2.0f;
 
     [Header("Detection")]
-    [Range(0.0f, 90.0f)]
-    [SerializeField] float detectionConeAngle;
+    [Range(0.0f, 180.0f)]
+    [SerializeField] float detectionConeAngle = 45.0f;
     [SerializeField] float detectionRayDistance = 5.0f;
 
     // ----- Private variables -----
@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         groundDetection = transform.Find("Ground Detection");
-        detectionCone   = transform.Find("Detection Cone");
+        detectionCone   = transform.Find("Ray Emitter");
     }
 
     private void Update()
@@ -39,14 +39,38 @@ public class EnemyAI : MonoBehaviour
 
     private void Detect()
     {
-        Vector2 direction;
-        if (isFacingLeft)
-            direction = Vector2.left;
-        else
-            direction = Vector2.right;
+        // Create a cone of detection
+        for (float i = -detectionConeAngle; i <= detectionConeAngle; ++i)
+        {
+            Vector2 direction = CalcRayDir(i);
+            RaycastHit2D coneRaycast = DrawRaycast(detectionCone.position, direction, 
+                                                   detectionRayDistance);
 
-        RaycastHit2D raycastHit = DrawRaycast(detectionCone.position, direction,
-                                              detectionRayDistance);
+            if (coneRaycast.collider != false && coneRaycast.transform.tag == "Player")
+            {
+                Debug.Log("Player killed"); 
+
+                // TODO: implement checkpoint respawn
+            }
+        }
+        
+    }
+
+    private Vector2 CalcRayDir(float angle)
+    {
+        // Determine whether to cast rays left or right
+        float baseDir;
+        if (isFacingLeft)
+            baseDir = Vector2.left.x;
+        else
+            baseDir = Vector2.right.x;
+
+        float radians = DegreesToRad(angle);
+        float height  = CalcHeight(baseDir, radians);
+
+        Vector2 angledDir = new Vector2(baseDir, height);
+
+        return angledDir;
     }
 
     private void Patrol()
@@ -57,8 +81,8 @@ public class EnemyAI : MonoBehaviour
 
     private void CheckGrounded()
     {
-        RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, Vector2.down, 
-                                              groundRayDistance);
+        RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, Vector2.down, 
+                                                    groundRayDistance);
 
         if (raycastHit.collider == false)
         {
@@ -77,12 +101,24 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
+
     // ----- HELPER FUNCTIONS -----
     private RaycastHit2D DrawRaycast(Vector2 origin, Vector2 direction, float distance)
     {
         RaycastHit2D raycastHit = Physics2D.Raycast(origin, direction, distance);
-        Debug.DrawLine(origin, origin + direction * distance, Color.green);
+        Debug.DrawRay(origin, direction.normalized * distance, Color.yellow);
 
         return raycastHit;
+    }
+
+    private float DegreesToRad(float degree)
+    {
+        return degree * Mathf.PI / 180.0f;
+    }
+
+    private float CalcHeight(float baseLen, float radian)
+    {
+        // FORMULA: tan(angle) = height / base
+        return Mathf.Tan(radian) * baseLen;
     }
 }
