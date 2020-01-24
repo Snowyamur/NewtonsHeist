@@ -36,8 +36,6 @@ public class PlayerMechanics : MonoBehaviour
         {"Ug1", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
     };
 
-    bool flipCol = true; //True if facing right, false if facing left
-
     string gravDir = "Down"; //Current direction of gravity.
 
     GameObject cam; //Camera
@@ -87,7 +85,6 @@ public class PlayerMechanics : MonoBehaviour
             if(flipCol)
             {
                 pCol.offset = new Vector2(-pCol.offset.x, pCol.offset.y);
-                flipCol = false;
             }
         }
         else if (control.xMove > 0) //If moving right
@@ -97,7 +94,20 @@ public class PlayerMechanics : MonoBehaviour
             if(!flipCol)
             {
                 pCol.offset = new Vector2(-pCol.offset.x, pCol.offset.y);
-                flipCol = true;
+            }
+        }
+        else if (gravDir = "Up") //If on ceiling
+        {
+            if(!flipCol)
+            {
+                pCol.offset = new Vector2(pCol.offset.x, -pCol.offset.y);
+            }
+        }
+        else if (gravDir = "Down") //If on ground
+        {
+            if(!flipCol)
+            {
+                pCol.offset = new Vector2(pCol.offset.x, -pCol.offset.y);
             }
         }
     }
