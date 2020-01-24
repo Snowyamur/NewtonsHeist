@@ -44,7 +44,7 @@ public class PlayerMechanics : MonoBehaviour
 
     BoxCollider2D playerCol; //The collider of the player
 
-    //ControlScript control //Standholder for control script
+    PlayerControlMapping control; //The control map of the player
 
     LayerMask enemyLayer; //To detect enemies
 
@@ -54,6 +54,7 @@ public class PlayerMechanics : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerCol = GetComponent<BoxCollider2D>();
         playerSprite = GetComponent<SpriteRenderer>();
+        control = GetComponent<PlayerControlMapping>();
     }
 
     // Start is called before the first frame update
@@ -75,7 +76,7 @@ public class PlayerMechanics : MonoBehaviour
 
     void Walk()
     {
-        
+
         if(control.xMove) //If player moves horizontally
         {
             //Calculates velocity based on speed and direction faced
@@ -131,13 +132,13 @@ public class PlayerMechanics : MonoBehaviour
     {
         if(control.gravity) //If player changes gravity
         {
-            if(gravDir = "Down") //If current direction is down, make up
+            if(gravDir == "Down") //If current direction is down, make up
             {
-                Physics2D.gravity = new Vector3(0,-9.81,0);
+                Physics2D.gravity = new Vector3(0, -9.81f, 0);
             }
-            else if(gravDir = "Up") //If current direction is up, make down
+            else if(gravDir == "Up") //If current direction is up, make down
             {
-                Physics2D.gravity = new Vector3(0,9.81,0);
+                Physics2D.gravity = new Vector3(0, 9.81f, 0);
             }
         }
     }
@@ -184,4 +185,5 @@ public class PlayerMechanics : MonoBehaviour
         }
     }
     */
+
 }
