@@ -10,7 +10,6 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] float JumpSpeed = 200f;
     [SerializeField] float smallJumpMod = 2f; //For double jump
     [SerializeField] float fallingMod = 2.5f; //Speed of falling
-    [SerializeField] bool inAir = false;
 
     [Space]
 
@@ -47,7 +46,7 @@ public class PlayerMechanics : MonoBehaviour
     SpriteRenderer playerSprite;
 
     BoxCollider2D playerCol; //The collider of the player
-
+    PlayerCollisions collisions;
     PlayerControlMapping control; //The control map of the player
 
     LayerMask enemyLayer; //To detect enemies
@@ -59,6 +58,7 @@ public class PlayerMechanics : MonoBehaviour
         playerCol = GetComponent<BoxCollider2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         control = GetComponent<PlayerControlMapping>();
+        collisions = GetComponent<PlayerCollisions>();
     }
 
     // Start is called before the first frame update
@@ -76,7 +76,6 @@ public class PlayerMechanics : MonoBehaviour
         Jump();
         Crouch();
         Gravity();
-        CheckAir();
     }
 
     void FlipSprite()
@@ -114,14 +113,14 @@ public class PlayerMechanics : MonoBehaviour
 
         //Play out appropraiate animations
         //If moving, but not crouching or jumping
-        if(control.xMove != 0 && !isCrouching && !inAir)
+        if(control.xMove != 0 && !isCrouching && !collisions.IsInAir())
         {
             isWalking = true;
             isIdle = false;
         }
 
         //If not moving, crouhcing, or jumping
-        else if(control.xMove == 0 && !isCrouching && !inAir)
+        else if(control.xMove == 0 && !isCrouching && !collisions.IsInAir())
         {
             isWalking = false;
             isIdle = true;
@@ -145,7 +144,7 @@ public class PlayerMechanics : MonoBehaviour
 
     void Crouch()
     {
-        if(control.crouching && !control.jumpOn && !inAir)
+        if(control.crouching && !control.jumpOn && !collisions.IsInAir())
         {
             rb.velocity *= crouchingMod; //Change to crouching speed
             isCrouching = true;
@@ -169,18 +168,6 @@ public class PlayerMechanics : MonoBehaviour
             {
                 Physics2D.gravity = new Vector3(0, 9.81f, 0);
             }
-        }
-    }
-
-    void CheckAir()
-    {
-        if(rb.velocity.y != 0)
-        {
-            inAir = true;
-        }
-        else
-        {
-            inAir = false;
         }
     }
 
@@ -213,7 +200,7 @@ public class PlayerMechanics : MonoBehaviour
           float t_z = LevelManager.current.playerData.playerPosZ;
 
           powers = LevelManager.current.playerData.powers;
-          
+
           transform.position = new Vector3(t_x, t_y, t_z);
         }
     }
