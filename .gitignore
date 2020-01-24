@@ -8,5 +8,4 @@
 
 # Whitelisted directories/files
 !/ProjectSettings/
-!/Assets/
-!/Library/metadata/
+!/Assets/     
