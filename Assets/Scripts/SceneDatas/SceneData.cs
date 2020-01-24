@@ -13,6 +13,7 @@ public class SceneData : MonoBehaviour
     float m_xPos;
     float m_yPos;
 
+    //Scene's boundaries
     float m_maxX;
     float m_minX;
     float m_maxY;
