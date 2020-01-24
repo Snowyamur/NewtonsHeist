@@ -48,7 +48,7 @@ public class EnemyAI : MonoBehaviour
 
             if (coneRaycast.collider != false && coneRaycast.transform.tag == "Player")
             {
-                Debug.Log("Player killed"); 
+                Destroy(coneRaycast.transform.gameObject);
 
                 // TODO: implement checkpoint respawn
             }
@@ -86,14 +86,29 @@ public class EnemyAI : MonoBehaviour
 
         if (raycastHit.collider == false)
         {
-            if (isFacingLeft)
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            else
-                transform.eulerAngles = new Vector3(0, -180, 0);
-
-            speed *= -1;
-            isFacingLeft = !isFacingLeft;
+            ChangeDirection();
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Patrol changes direction when hitting a wall or 
+        // an obstacle.
+        if (collision.transform.tag == "Obstacle")
+        {
+            ChangeDirection();
+        }
+    }
+
+    private void ChangeDirection()
+    {
+        if (isFacingLeft)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        else
+            transform.eulerAngles = new Vector3(0, -180, 0);
+
+        speed *= -1;
+        isFacingLeft = !isFacingLeft;
     }
 
     private void Movement()
