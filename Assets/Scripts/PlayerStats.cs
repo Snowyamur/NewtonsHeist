@@ -6,14 +6,15 @@ using System;
 [System.Serializable]
 public class PlayerStats
 {
-    float m_gravityPower = 100;
+    float m_gravityPower; //HOw much gravity the player has currently
+    float m_maxGravityPower = 100f; //Max gravity the player has
 
     //Current position of player in scene
-    float m_playerPosX = 0;
-    float m_playerPosY = 0;
-    float m_playerPosZ = 0;
+    float m_playerPosX;
+    float m_playerPosY;
+    float m_playerPosZ;
 
-    int m_sceneID = 1; //Current scene
+    int m_sceneID; //Current scene
 
     Dictionary<string, bool> m_powers = new Dictionary<string, bool>
     {
@@ -24,6 +25,11 @@ public class PlayerStats
     {
       get{return m_gravityPower;}
       set{m_gravityPower = value;}
+    }
+    public float maxGravityPower
+    {
+      get{return m_maxGravityPower;}
+      set{m_maxGravityPower = value;}
     }
     public float playerPosX
     {
