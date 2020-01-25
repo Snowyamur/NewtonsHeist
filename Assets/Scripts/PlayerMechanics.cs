@@ -65,7 +65,7 @@ public class PlayerMechanics : MonoBehaviour
         enemyLayer = LayerMask.GetMask("Enemy");
     }
 
-    /
+    /*
     // Update is called once per frame
     void Update()
     {
