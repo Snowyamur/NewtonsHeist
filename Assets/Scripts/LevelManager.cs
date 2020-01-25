@@ -16,6 +16,11 @@ public class LevelManager //Is started by Main Menu or when game is started
     public LevelManager()
     {
         playerData = new PlayerStats();
+        playerData.gravityPower = playerData.maxGravityPower;
+        playerData.sceneID = 0;
+        playerData.playerPosX = 0;
+        playerData.playerPosX = 0;
+        playerData.playerPosX = 0;
     }
 
 }

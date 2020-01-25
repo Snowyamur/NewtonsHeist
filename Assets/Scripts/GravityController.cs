@@ -19,13 +19,27 @@ public class GravityController : MonoBehaviour
 
     Image gravityArrows;
     PlayerControlMapping control;
+    PlayerCollisions collisions;
     Fade fade;
 
     void Awake()
     {
         control = GetComponent<PlayerControlMapping>();
+        collisions = GetComponent<PlayerCollisions>();
         gravityArrows = GameObject.FindGameObjectWithTag("GravityArrows").GetComponent<Image>();
         fade = gravityArrows.GetComponent<Fade>();
+    }
+
+    void Update()
+    {
+        if(collisions.onWall || collisions.onCeiling)
+        {
+            LevelManager.current.playerData.gravityPower -= 1f * Time.deltaTime;
+        }
+        else if(collisions.onGround)
+        {
+            LevelManager.current.playerData.gravityPower += 1f * Time.deltaTime;
+        }
     }
 
     public void ChangeGravity(bool multiDir)
@@ -43,7 +57,7 @@ public class GravityController : MonoBehaviour
             return;
         }
         //MULTIDIRECTIONAL GRAVITY
-        StartCoroutine(fade.FadeImageToFullAlpha(fps, gravityArrows));
+        StartCoroutine(fade.FadeImageToFullAlpha(fps, gravityArrows)); //Makes the arrows image appear
         while(control.gravity)
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
@@ -70,6 +84,6 @@ public class GravityController : MonoBehaviour
                 break;
             }
         }
-        StartCoroutine(fade.FadeImageToZeroAlpha(fps, gravityArrows));
+        StartCoroutine(fade.FadeImageToZeroAlpha(fps, gravityArrows)); //Makes the arrows image disappear
     }
 }
