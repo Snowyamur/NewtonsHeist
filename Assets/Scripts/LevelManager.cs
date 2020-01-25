@@ -11,7 +11,7 @@ public class LevelManager //Is started by Main Menu or when game is started
 
     public bool isSceneBeingLoaded = false; //Checks if a scene is being loaded
 
-    //public CheckPoint lastCheckpoint; //Saves last checkpoint
+    public GameObject lastCheckpoint; //Saves last checkpoint
 
     public LevelManager()
     {

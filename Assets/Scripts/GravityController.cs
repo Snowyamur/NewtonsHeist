@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class GravityController : MonoBehaviour
 {
+    float fps = 0.5f; //Time for image to appear
+
     enum GravityDirection
     {
         Down,
@@ -14,6 +16,17 @@ public class GravityController : MonoBehaviour
         Left
     }
     GravityDirection m_gravDir;
+
+    Image gravityArrows;
+    PlayerControlMapping control;
+    Fade fade;
+
+    void Awake()
+    {
+        control = GetComponent<PlayerControlMapping>();
+        gravityArrows = GameObject.FindGameObjectWithTag("GravityArrows").GetComponent<Image>();
+        fade = gravityArrows.GetComponent<Fade>();
+    }
 
     public void ChangeGravity(bool multiDir)
     {
@@ -30,5 +43,33 @@ public class GravityController : MonoBehaviour
             return;
         }
         //MULTIDIRECTIONAL GRAVITY
+        StartCoroutine(fade.FadeImageToFullAlpha(fps, gravityArrows));
+        while(control.gravity)
+        {
+            if(Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Physics2D.gravity = new Vector2(0, 9.8f);
+                break;
+            }
+
+            if(Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                Physics2D.gravity = new Vector2(0, -9.8f);
+                break;
+            }
+
+            if(Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                Physics2D.gravity = new Vector2(9.8f, 0);
+                break;
+            }
+
+            if(Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                Physics2D.gravity = new Vector2(-9.8f, 0);
+                break;
+            }
+        }
+        StartCoroutine(fade.FadeImageToZeroAlpha(fps, gravityArrows));
     }
 }

@@ -145,7 +145,7 @@ public class PlayerMechanics : MonoBehaviour
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
             }
-            else if(rb.velocity.y > 0 && !control.jumpOn) //If the player is in the air and jumps again
+            else if(rb.velocity.y > 0 && control.jumpOn) //If the player is in the air and jumps again
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
             }
