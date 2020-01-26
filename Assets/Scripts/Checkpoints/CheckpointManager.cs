@@ -25,7 +25,6 @@ public class CheckpointManager : MonoBehaviour
 
     public bool UpdateCheckpoint(GameObject newCP)
     {
-        Debug.Log("updating checkpoint... " + newCP);
         try
         {
             currIndex = checkpoints.IndexOf(newCP);

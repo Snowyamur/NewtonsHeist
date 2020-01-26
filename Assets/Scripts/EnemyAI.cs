@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
     // ----- Public variables -----
     [Header("Movement")]
     [SerializeField] float speed = 8.0f;
+
+    [Header("AI")]
     [SerializeField] float groundRayDistance = 2.0f;
 
     [Header("Detection")]
@@ -33,12 +35,10 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GetComponent<PlayerRespawn>().Respawn();
         }
-        */
 
         Detect();
         Patrol();
