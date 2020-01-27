@@ -20,8 +20,8 @@ public class Camera : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        offset = transform.position - character.transform.position;
-        sData = SceneManager.GetActiveScene().GetComponent<SceneData>();
+        offset = transform.position - player.transform.position;
+        sData = GameObject.FindGameObjectWithTag("SceneData").GetComponent<SceneData>();
 
         minX = sData.minX;
         maxX = sData.maxX;
