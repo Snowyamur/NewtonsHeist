@@ -11,10 +11,15 @@ public class MainMenu : MonoBehaviour
     {
 		MainMenu,
 		NewGame,
-		Continue
+		Continue,
+    Options,
+    Extras,
+    Quit
 	}
 
 	public Menu currentMenu;
+
+  float volume = 1.0f;
 
   void OnGUI ()
   {
@@ -39,8 +44,18 @@ public class MainMenu : MonoBehaviour
 
 			if(GUILayout.Button("Continue"))
       {
-				SaveLoad.Load();
 				currentMenu = Menu.Continue;
+			}
+
+      if(GUILayout.Button("Options"))
+      {
+				currentMenu = Menu.Options;
+			}
+
+      if(GUILayout.Button("Extras"))
+      {
+				SaveLoad.Load();
+				currentMenu = Menu.Extras;
 			}
 
 			if(GUILayout.Button("Quit Game"))
@@ -49,7 +64,7 @@ public class MainMenu : MonoBehaviour
 			}
 		}
 
-		else if (currentMenu == Menu.NewGame) //IF New Game was chosen
+		else if(currentMenu == Menu.NewGame) //IF New Game was chosen
     {
 			//Save the current Game as a new saved Game
 			SaveLoad.Save();
@@ -57,7 +72,7 @@ public class MainMenu : MonoBehaviour
 			SceneManager.LoadScene(1);
 		}
 
-		else if (currentMenu == Menu.Continue) //If Continue was chosen
+		else if(currentMenu == Menu.Continue) //If Continue was chosen
     {
 
 			GUILayout.Box("Select Save File");
@@ -81,6 +96,27 @@ public class MainMenu : MonoBehaviour
 			}
 
 		}
+
+    else if(currentMenu == Menu.Options)
+    {
+        GUILayout.Box("Volume");
+        GUILayout.Space(10);
+        volume = GUILayout.HorizontalSlider(volume ,0.0f,1.0f);
+        AudioListener.volume = volume;
+        GUILayout.Space(10);
+
+
+        if(GUILayout.Button("Back")) //Cancel to go back to Main Menu
+        {
+  				currentMenu = Menu.MainMenu;
+  			}
+
+    }
+
+    else if(currentMenu == Menu.Extras)
+    {
+        //TODO
+    }
 
 		GUILayout.FlexibleSpace();
 		GUILayout.EndVertical();
