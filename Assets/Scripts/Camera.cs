@@ -1,19 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Camera : MonoBehaviour
 {
-    public GameObject character;
-    [SerializeField] private Vector3 offset;
+    GameObject player;
+    SceneData sData;
+
+    [Header("Camera Coordinates")]
+    [SerializeField] float minX; //Booundaries of level
+    [SerializeField] float maxX;
+    [SerializeField] float minY;
+    [SerializeField] float maxY;
+    [SerializeField] Vector3 offset;
+    [SerializeField] Vector3 newPos;
+
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         offset = transform.position - character.transform.position;
+        sData = SceneManager.GetActiveScene().GetComponent<SceneData>();
+
+        minX = sData.minX;
+        maxX = sData.maxX;
+        minY = sData.minY;
+        maxY = sData.maxY;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = character.transform.position + offset;
+        newPos = player.transform.position + offset;
+
+        if(maxX >= newPos.x && newPos.x >= minX && maxY >= newPos.x && newPos.x >= minY)
+        {
+            transform.position = newPos;
+        }
     }
 }
