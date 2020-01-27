@@ -87,5 +87,18 @@ public class PlayerCollisions : MonoBehaviour
   {
       return inAir;
   }
+  public bool IsOnGround()
+  {
+      return onGround;
+  }
+  public bool IsOnWall()
+  {
+      return onWall;
+  }
+  public bool IsOnCeiling()
+  {
+      return onCeiling;
+  }
+
 
 }

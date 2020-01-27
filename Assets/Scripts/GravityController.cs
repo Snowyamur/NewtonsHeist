@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class GravityController : MonoBehaviour
@@ -32,11 +33,11 @@ public class GravityController : MonoBehaviour
 
     void Update()
     {
-        if(collisions.onWall || collisions.onCeiling)
+        if(collisions.IsOnWall() || collisions.IsOnCeiling())
         {
             LevelManager.current.playerData.gravityPower -= 1f * Time.deltaTime;
         }
-        else if(collisions.onGround)
+        else if(collisions.IsOnGround())
         {
             LevelManager.current.playerData.gravityPower += 1f * Time.deltaTime;
         }
@@ -58,7 +59,7 @@ public class GravityController : MonoBehaviour
         }
         //MULTIDIRECTIONAL GRAVITY
         StartCoroutine(fade.FadeImageToFullAlpha(fps, gravityArrows)); //Makes the arrows image appear
-        while(control.gravity)
+        while(Input.GetKeyDown(KeyCode.G)) //control.gravity
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
             {
