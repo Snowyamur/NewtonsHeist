@@ -20,6 +20,14 @@ public class MainMenu : MonoBehaviour
 	public Menu currentMenu;
 
   float volume = 1.0f;
+  string screenSize;
+
+  Resolution[] resolutions;
+
+  void Start()
+  {
+      resolutions = Screen.resolutions;
+  }
 
   void OnGUI ()
   {
@@ -101,14 +109,35 @@ public class MainMenu : MonoBehaviour
     {
         GUILayout.Box("Volume");
         GUILayout.Space(10);
-        volume = GUILayout.HorizontalSlider(volume ,0.0f,1.0f);
+        volume = GUILayout.HorizontalSlider(volume, 0.0f, 1.0f);
         AudioListener.volume = volume;
         GUILayout.Space(10);
 
-
-        if(GUILayout.Button("Back")) //Cancel to go back to Main Menu
+        if(Screen.fullScreen) //Change text of button based on current display
         {
-  				currentMenu = Menu.MainMenu;
+            screenSize = "Fullscreen";
+        }
+        else
+        {
+            screenSize = "Windowed";
+        }
+
+        if(GUILayout.Button(screenSize)) //Toggles display between fullscreen and windowed
+        {
+    				Screen.fullScreen = !Screen.fullScreen;
+            if(Screen.fullScreen)
+            {
+                screenSize = "Fullscreen";
+            }
+            else
+            {
+                screenSize = "Windowed";
+            }
+  			}
+
+        if(GUILayout.Button("Back")) //Back to go back to Main Menu
+        {
+    				currentMenu = Menu.MainMenu;
   			}
 
     }

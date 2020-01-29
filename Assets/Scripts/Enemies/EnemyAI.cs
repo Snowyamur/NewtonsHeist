@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class EnemyAI : MonoBehaviour
 {
     // ----- Public variables -----
-    [Header("Movement")]
-    [SerializeField] float speed = 8.0f;
-    [SerializeField] bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
+    public float speed = 6.0f;
+    public bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
                                                  // in the left direction
 
-    [Header("AI")]
-    [SerializeField] float groundRayDistance = 2.0f;
+    public float groundRayDistance = 2.0f;
 
     // ----- Private variables -----
     // GameObject component variables
-    private Rigidbody2D rb;
-    private Transform groundDetection;
-    private DetectionScript detectionScript;
+    public Rigidbody2D rb;
+    public Transform groundDetection;
+    public DetectionScript detectionScript;
 
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         groundDetection = transform.Find("Ground Detection");
@@ -33,7 +32,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         /* ----- code to debug checkpoints -----
         if (Input.GetKeyDown(KeyCode.Space))
@@ -45,35 +44,35 @@ public class EnemyAI : MonoBehaviour
         Patrol();
     }
 
-    private void Patrol()
+    void Patrol()
     {
         CheckGrounded();
         Look();
         Movement();
     }
 
-    private void CheckGrounded()
+    public void CheckGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, Vector2.down, 
+        RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, transform.right,
                                                     groundRayDistance);
 
-        if (raycastHit.collider == false)
+        if (raycastHit.collider == true)
         {
             ChangeDirection();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        // Patrol changes direction when hitting a wall or 
+        // Patrol changes direction when hitting a wall or
         // an obstacle.
-        if (collision.transform.tag == "Obstacle")
+        if (collision.transform.tag == "Obstacle" || collision.transform.tag == "Wall")
         {
             ChangeDirection();
         }
     }
 
-    private void ChangeDirection()
+    public void ChangeDirection()
     {
         if (isFacingLeft)
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -84,7 +83,7 @@ public class EnemyAI : MonoBehaviour
         isFacingLeft = !isFacingLeft;
     }
 
-    private void Look()
+    void Look()
     {
         // TODO: improve enemy detection here
         if (isFacingLeft)
@@ -93,7 +92,7 @@ public class EnemyAI : MonoBehaviour
             detectionScript.SetAimDirection(Vector3.right, false);
     }
 
-    private void Movement()
+    public void Movement()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
     }
