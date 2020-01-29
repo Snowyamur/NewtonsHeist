@@ -59,7 +59,7 @@ public class GravityController : MonoBehaviour
         }
         //MULTIDIRECTIONAL GRAVITY
         StartCoroutine(fade.FadeImageToFullAlpha(fps, gravityArrows)); //Makes the arrows image appear
-        while(Input.GetKeyDown(KeyCode.G)) //control.gravity
+        while(Input.GetKeyDown(KeyCode.G)) //control.gravityToggle
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
             {

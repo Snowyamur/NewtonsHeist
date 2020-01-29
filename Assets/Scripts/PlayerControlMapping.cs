@@ -6,16 +6,18 @@ public class PlayerControlMapping : MonoBehaviour
 {
     Rigidbody2D riggie;
 
-    float horizontalMove;
+    float xMove;
     float verticalMove;
     float horizontalAim;
     float verticalAim;
-    bool aButton;
+    bool jumpOn;
+    bool crouching;
     bool xButton;
     float rTrigger;
-    float lTrigger;
+    float gravityToggle;
     float horizontalDpad;
     float verticalDpad;
+    bool pause;
 
     // JUST A PLACEHOLDER TO REMOVE ERRORS
     // Start is called before the first frame update
@@ -27,15 +29,19 @@ public class PlayerControlMapping : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxis("Horizontal");
+        xMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
         horizontalAim = Input.GetAxis("HorizontalAim");
         verticalAim = Input.GetAxis("VerticalAim");
-        aButton = Input.GetButtonDown("Jump");
+        jumpOn = Input.GetButtonDown("Jump");
+        crouching = Input.GetButtonDown("Crouch");
         xButton = Input.GetButtonDown("Submit");
         rTrigger = Input.GetAxis("ThrownHeld");
-        lTrigger = Input.GetAxis("GravityToggle");
+        gravityToggle = Input.GetAxis("GravityToggle");
         horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
         verticalDpad = Input.GetAxisRaw("AbilityVertical");
+        pause = Input.GetButtonDown("Pause");
     }
 }
+//Can mess with "Snap" and "Gravity" values in Project Settings to
+// affect how nice movement feels.
