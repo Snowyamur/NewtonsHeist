@@ -6,6 +6,8 @@ public class PausingScript : MonoBehaviour
 {
     GameObject pauseMenu;
 
+    PlayerControlMapping control;
+
     void Awake()
     {
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
@@ -14,12 +16,13 @@ public class PausingScript : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+        control = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControlMapping>();
     }
 
     void Update()
     {
         //Toggle pause menu when pressing Escape
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(control.pause)
         {
             if(Time.timeScale == 0) //If pause menu is on
             {

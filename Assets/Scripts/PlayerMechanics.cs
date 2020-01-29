@@ -44,7 +44,7 @@ public class PlayerMechanics : MonoBehaviour
     BoxCollider2D playerCol; //The collider of the player
     PlayerCollisions collisions;
     PlayerControlMapping control; //The control map of the player
-    GravityController gravControl;
+    GravityController gravControl; //The mechanics of gravity
 
     LayerMask enemyLayer; //To detect enemies
 
@@ -65,7 +65,7 @@ public class PlayerMechanics : MonoBehaviour
         enemyLayer = LayerMask.GetMask("Enemy");
     }
 
-    /*
+
     // Update is called once per frame
     void Update()
     {
@@ -82,21 +82,15 @@ public class PlayerMechanics : MonoBehaviour
         {
             playerSprite.flipX = true;
 
-            if(flipCol)
-            {
-                pCol.offset = new Vector2(-pCol.offset.x, pCol.offset.y);
-            }
+            playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
         }
         else if (control.xMove > 0) //If moving right
         {
             playerSprite.flipX = false;
 
-            if(!flipCol)
-            {
-                pCol.offset = new Vector2(-pCol.offset.x, pCol.offset.y);
-            }
+            playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
         }
-        else if (gravDir = "Up") //If on ceiling
+        /*if (gravDir = "Up") //If on ceiling
         {
             if(!flipCol)
             {
@@ -109,13 +103,13 @@ public class PlayerMechanics : MonoBehaviour
             {
                 pCol.offset = new Vector2(pCol.offset.x, -pCol.offset.y);
             }
-        }
+        }*/
     }
 
     void Walk()
     {
 
-        if(control.xMove) //If player moves horizontally
+        if(control.xMove != 0) //If player moves horizontally
         {
             //Calculates velocity based on speed and direction faced
             rb.velocity = new Vector2(control.xMove*normalSpeed, rb.velocity.y);
@@ -168,9 +162,9 @@ public class PlayerMechanics : MonoBehaviour
 
     void Gravity()
     {
-        if(control.gravity)
+        if(control.gravityToggle != 0)
         {
-            gravControl.ChangeGravity(powers[0]); //Changes gravity based on ability
+            gravControl.ChangeGravity(powers["Multidirection Gravity"]); //Changes gravity based on ability
         }
     }
 
@@ -207,6 +201,6 @@ public class PlayerMechanics : MonoBehaviour
           transform.position = new Vector3(t_x, t_y, t_z);
         }
     }
-    */
+
 
 }
