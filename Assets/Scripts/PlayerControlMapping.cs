@@ -13,6 +13,7 @@ public class PlayerControlMapping : MonoBehaviour
     bool aButton;
     bool xButton;
     float rTrigger;
+    float lTrigger;
     float horizontalDpad;
     float verticalDpad;
 
@@ -33,18 +34,8 @@ public class PlayerControlMapping : MonoBehaviour
         aButton = Input.GetButtonDown("Jump");
         xButton = Input.GetButtonDown("Submit");
         rTrigger = Input.GetAxis("ThrownHeld");
+        lTrigger = Input.GetAxis("GravityToggle");
         horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
         verticalDpad = Input.GetAxisRaw("AbilityVertical");
-        if(Input.GetButtonDown("Pause"))
-        {
-            Debug.Log("Start pressed");
-        }
-        //Debug.Log(horizontalAim + ", " + verticalAim);
-    }
-
-    void FixedUpdate()
-    {
-        Vector2 tempVelocity = Vector2.zero;
-        riggie.velocity = new Vector2(horizontalMove * 5, verticalMove * 5);
     }
 }
