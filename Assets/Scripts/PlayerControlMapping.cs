@@ -21,7 +21,7 @@ public class PlayerControlMapping : MonoBehaviour
     public bool save;
     public bool load;
 
-    bool m_inputting;
+    bool m_inputting = true; //For debugging only, revert to no value before ppublsihing game
 
     // JUST A PLACEHOLDER TO REMOVE ERRORS
     // Start is called before the first frame update
