@@ -12,9 +12,9 @@ public class MainMenu : MonoBehaviour
 		MainMenu,
 		NewGame,
 		Continue,
-    Options,
-    Extras,
-    Quit
+        Options,
+        Extras,
+        Quit
 	}
 
 	public Menu currentMenu;
@@ -39,41 +39,41 @@ public class MainMenu : MonoBehaviour
 		GUILayout.FlexibleSpace();
 
 		if(currentMenu == Menu.MainMenu)
-    {
+        {
 
 			GUILayout.Box("Newton's Heist");
 			GUILayout.Space(10);
 
 			if(GUILayout.Button("New Game"))
-      {
+            {
 				LevelManager.current = new LevelManager(); //Create new Level Manager when starting new game
 				currentMenu = Menu.NewGame;
 			}
 
 			if(GUILayout.Button("Continue"))
-      {
+            {
 				currentMenu = Menu.Continue;
 			}
 
-      if(GUILayout.Button("Options"))
-      {
+            if(GUILayout.Button("Options"))
+            {
 				currentMenu = Menu.Options;
 			}
 
-      if(GUILayout.Button("Extras"))
-      {
+            if(GUILayout.Button("Extras"))
+            {
 				SaveLoad.Load();
 				currentMenu = Menu.Extras;
 			}
 
 			if(GUILayout.Button("Quit Game"))
-      {
+            {
 				Application.Quit();
 			}
 		}
 
 		else if(currentMenu == Menu.NewGame) //IF New Game was chosen
-    {
+        {
 			//Save the current Game as a new saved Game
 			SaveLoad.Save();
 			//Move on to game...
@@ -81,15 +81,15 @@ public class MainMenu : MonoBehaviour
 		}
 
 		else if(currentMenu == Menu.Continue) //If Continue was chosen
-    {
+        {
 
 			GUILayout.Box("Select Save File");
 			GUILayout.Space(10);
 
 			foreach(LevelManager l in SaveLoad.savedGames)
-      {
+            {
 				if(GUILayout.Button("Level: " + l.playerData.sceneID)) //Displays current level in save file
-        {
+                {
 					LevelManager.current = l; //Load saved LevelManager
 					//Move on to game...
 					SceneManager.LoadScene(LevelManager.current.playerData.sceneID); //Load last scene
@@ -99,7 +99,7 @@ public class MainMenu : MonoBehaviour
 
 			GUILayout.Space(10);
 			if(GUILayout.Button("Cancel")) //Cancel to go back to Main Menu
-      {
+            {
 				currentMenu = Menu.MainMenu;
 			}
 
@@ -133,12 +133,12 @@ public class MainMenu : MonoBehaviour
             {
                 screenSize = "Windowed";
             }
-  			}
+  		}
 
         if(GUILayout.Button("Back")) //Back to go back to Main Menu
         {
-    				currentMenu = Menu.MainMenu;
-  			}
+    		currentMenu = Menu.MainMenu;
+  		}
 
     }
 
