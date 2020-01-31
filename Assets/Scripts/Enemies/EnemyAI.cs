@@ -8,11 +8,9 @@ public class EnemyAI : MonoBehaviour
     // ----- Public variables -----
     public float speed = 6.0f;
     public bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
-                                                 // in the left direction
-
+                                       // in the left direction
     public float groundRayDistance = 2.0f;
 
-    // ----- Private variables -----
     // GameObject component variables
     public Rigidbody2D rb;
     public Transform groundDetection;
@@ -44,7 +42,7 @@ public class EnemyAI : MonoBehaviour
         Patrol();
     }
 
-    void Patrol()
+    public void Patrol()
     {
         CheckGrounded();
         Look();
@@ -56,13 +54,13 @@ public class EnemyAI : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, transform.right,
                                                     groundRayDistance);
 
-        if (raycastHit.collider == true)
+        if (raycastHit.collider == true) //If the enemy hits an object in front of it, it flips direction
         {
             ChangeDirection();
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         // Patrol changes direction when hitting a wall or
         // an obstacle.
@@ -75,11 +73,15 @@ public class EnemyAI : MonoBehaviour
     public void ChangeDirection()
     {
         if (isFacingLeft)
-            transform.eulerAngles = new Vector3(0, 0, 0);
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0); //Resets angles
+        }
         else
+        {
             transform.eulerAngles = new Vector3(0, -180, 0);
-
-        speed *= -1;
+        }
+          
+        speed *= -1; //Flips speed
         isFacingLeft = !isFacingLeft;
     }
 
