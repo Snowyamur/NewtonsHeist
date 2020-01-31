@@ -102,9 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a4585f434beb745ae4647dd796093a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpSpeed: 200
+  jumpSpeed: 10
   smallJumpMod: 2
   fallingMod: 2.5
+  gravOn: 1
+  jumpDir: {x: 0, y: -1}
   normalSpeed: 15
   crouchingMod: 0.5
   currentSpeed: 0
@@ -139,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c79f994608ce07d4e9531fb1b12d2889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: -1815688213964020326}
 --- !u!114 &8054214943488491977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,21 +187,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cd465a912254246a52c50f1d45f341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMove: 0
-  verticalMove: 0
-  horizontalAim: 0
-  verticalAim: 0
-  jumpOn: 0
-  crouching: 0
-  xButton: 0
-  throwHeld: 0
-  gravityToggle: 0
-  gravityHold: 0
-  horizontalDpad: 0
-  verticalDpad: 0
-  pause: 0
-  save: 0
-  load: 0
+  m_xMove: 0
+  m_vMove: 0
+  m_horizontalAim: 0
+  m_verticalAim: 0
+  m_jumpOn: 0
+  m_crouching: 0
+  m_enter: 0
+  m_throwHeld: 0
+  m_gravityToggle: 0
+  m_gravityHold: 0
+  m_horizontalDpad: 0
+  m_verticalDpad: 0
+  m_pause: 0
+  m_save: 0
+  m_load: 0
+  m_inputting: 1
 --- !u!114 &8054214943488492023
 MonoBehaviour:
   m_ObjectHideFlags: 0

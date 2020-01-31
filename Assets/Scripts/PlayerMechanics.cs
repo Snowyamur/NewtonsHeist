@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class PlayerMechanics : MonoBehaviour
 {
     [Header("Vertical Movement")]
-    [SerializeField] float JumpSpeed = 200f;
-    [SerializeField] float smallJumpMod = 2f; //For double jump
+    [SerializeField] float jumpSpeed = 10f;
+    [SerializeField] float smallJumpMod = 2.5f; //For double jump
     [SerializeField] float fallingMod = 2.5f; //Speed of falling
+    [SerializeField] int hasJumped = 0;
     [SerializeField] bool gravOn = true;
+    [SerializeField] Vector2 jumpDir = Vector2.up;
 
     [Space]
 
@@ -32,6 +34,7 @@ public class PlayerMechanics : MonoBehaviour
 
     [Space]
 
+    [Header("Powers")]
     [SerializeField] Dictionary<string, bool> powers = new Dictionary<string, bool>
     {
         {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
@@ -135,16 +138,22 @@ public class PlayerMechanics : MonoBehaviour
 
     void Jump()
     {
-        if(control.jumpOn) //If player presses up
+        if(control.jumpOn && hasJumped < 2) //If player presses up
         {
-            if(rb.velocity.y < 0) //If player is falling
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
-            }
-            else if(rb.velocity.y > 0 && control.jumpOn) //If the player is in the air and jumps again
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
-            }
+            rb.velocity = jumpDir*jumpSpeed;
+            hasJumped += 1;
+        }
+        if(rb.velocity.y < 0) //If player is falling
+        {
+            rb.velocity += jumpDir * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
+        }
+        else if(rb.velocity.y > 0 && !control.jumpOn) //If the player is in the air and jumps again
+        {
+            rb.velocity += jumpDir * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
+        }
+        if(rb.velocity.y == 0)
+        {
+            hasJumped = 0;
         }
     }
 
@@ -177,6 +186,22 @@ public class PlayerMechanics : MonoBehaviour
         else if(control.gravityToggle < 0.5f && !gravOn)
         {
           gravOn = !gravOn;
+        }
+
+        switch(gravControl.gravDir)
+        {
+            case GravityController.GravityDirection.Down:
+                jumpDir = Vector2.up;
+                break;
+            case GravityController.GravityDirection.Up:
+                jumpDir = Vector2.down;
+                break;
+            case GravityController.GravityDirection.Right:
+                jumpDir = Vector2.left;
+                break;
+            case GravityController.GravityDirection.Left:
+                jumpDir = Vector2.right;
+                break;
         }
     }
 
