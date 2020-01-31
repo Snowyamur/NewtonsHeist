@@ -5,8 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class FlyingDrone : EnemyAI
 {
-    [SerializeField] float floatStrength = 100f;
-    [SerializeField] float velY;
 
     void Start()
     {
@@ -20,19 +18,19 @@ public class FlyingDrone : EnemyAI
             transform.eulerAngles = new Vector3(0, -180, 0);
             speed *= -1;
         }
-        velY = transform.position.y;
     }
 
     void FixedUpdate()
     {
-      rb.AddForce(-transform.up*-9.81f); //Keeps the drone flying
+      rb.AddForce(-transform.up*(-9.81f + Mathf.Sin(Time.fixedTime))); //Keeps the drone flying by counteracting gravity. Adds a bobbing motion
+      //Debug.Log((Mathf.Sin(Time.fixedTime)).ToString());
     }
 
     void Movement()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y); //Moevment
 
-        transform.position = new Vector3(transform.position.x, //Creates a bobbing effect
-        velY+(Mathf.Sin(Time.fixedTime*Mathf.PI) * floatStrength), transform.position.z);
+        //transform.position = new Vector3(transform.position.x, //Creates a bobbing effect
+        //velY+(Mathf.Sin(Time.fixedTime*Mathf.PI) * floatStrength), transform.position.z);
     }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Ceiling
+  - Wall
+  - Ground
   layers:
   - Default
   - TransparentFX
