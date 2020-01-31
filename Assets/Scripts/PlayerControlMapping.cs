@@ -22,7 +22,7 @@ public class PlayerControlMapping : MonoBehaviour
     [SerializeField] bool m_save;
     [SerializeField] bool m_load;
 
-    [SerializeField] bool m_inputting = true; //For debugging only, revert to no value before ppublsihing game
+    [SerializeField] bool m_inputting = true; //For debugging only, revert to no value before publishing game
 
     // JUST A PLACEHOLDER TO REMOVE ERRORS
     // Start is called before the first frame update
@@ -38,7 +38,7 @@ public class PlayerControlMapping : MonoBehaviour
          m_enter = Input.GetButtonDown("Submit");
          m_throwHeld = Input.GetAxis("ThrownHeld");
          m_gravityToggle = Input.GetAxis("GravityToggle");
-         m_gravityHold = Input.GetAxisRaw("GravityToggle");
+         m_gravityHold = Input.GetAxis("GravityToggle");
          m_horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
          m_verticalDpad = Input.GetAxisRaw("AbilityVertical");
          m_pause = Input.GetButtonDown("Pause");
@@ -53,24 +53,24 @@ public class PlayerControlMapping : MonoBehaviour
     {
         if(m_inputting)
         {
-          riggie = GetComponent<Rigidbody2D>();
-          m_xMove = Input.GetAxis("Horizontal");
-          m_vMove = Input.GetAxis("Vertical");
-          m_horizontalAim = Input.GetAxis("HorizontalAim");
-          m_verticalAim = Input.GetAxis("VerticalAim");
-          m_jumpOn = Input.GetButtonDown("Jump");
-          m_crouching = Input.GetButton("Crouch");
-          m_enter = Input.GetButtonDown("Submit");
-          m_throwHeld = Input.GetAxis("ThrownHeld");
-          m_gravityToggle = Input.GetAxis("GravityToggle");
-          m_gravityHold = Input.GetAxisRaw("GravityToggle");
-          m_horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
-          m_verticalDpad = Input.GetAxisRaw("AbilityVertical");
-          m_pause = Input.GetButtonDown("Pause");
+            riggie = GetComponent<Rigidbody2D>();
+            m_xMove = Input.GetAxis("Horizontal");
+            m_vMove = Input.GetAxis("Vertical");
+            m_horizontalAim = Input.GetAxis("HorizontalAim");
+            m_verticalAim = Input.GetAxis("VerticalAim");
+            m_jumpOn = Input.GetButtonDown("Jump");
+            m_crouching = Input.GetButton("Crouch");
+            m_enter = Input.GetButtonDown("Submit");
+            m_throwHeld = Input.GetAxis("ThrownHeld");
+            m_gravityToggle = Input.GetAxis("GravityToggle");
+            m_gravityHold = Input.GetAxisRaw("GravityToggle");
+            m_horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
+            m_verticalDpad = Input.GetAxisRaw("AbilityVertical");
+            m_pause = Input.GetButtonDown("Pause");
 
-          //PLACEHOLDERs
-          m_save = Input.GetKeyDown(KeyCode.F5);
-          m_load = Input.GetKeyDown(KeyCode.F6);
+            //PLACEHOLDERs
+            m_save = Input.GetKeyDown(KeyCode.F5);
+            m_load = Input.GetKeyDown(KeyCode.F6);
         }
     }
 
