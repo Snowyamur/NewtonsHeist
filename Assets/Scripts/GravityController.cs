@@ -9,7 +9,7 @@ public class GravityController : MonoBehaviour
 {
     float fps = 0.5f; //Time for image to appear
 
-    enum GravityDirection
+    public enum GravityDirection
     {
         Down,
         Up,
@@ -51,7 +51,7 @@ public class GravityController : MonoBehaviour
         switch(m_gravDir)
         {
             case GravityDirection.Down:
-                rb.AddForce(transform.up*-9.81f*2f);
+                //rb.AddForce(transform.up*-9.81f*2f);
                 break;
 
             case GravityDirection.Up:
@@ -115,5 +115,10 @@ public class GravityController : MonoBehaviour
             }
         }
         StartCoroutine(fade.FadeImageToZeroAlpha(fps, gravityArrows)); //Makes the arrows image disappear
+    }
+
+    public GravityDirection gravDir
+    {
+        get{return m_gravDir;}
     }
 }
