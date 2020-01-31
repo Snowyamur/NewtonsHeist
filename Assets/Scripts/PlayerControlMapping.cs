@@ -13,8 +13,9 @@ public class PlayerControlMapping : MonoBehaviour
     public bool jumpOn;
     public bool crouching;
     public bool xButton;
-    public float rTrigger;
+    public bool throwHeld;
     public float gravityToggle;
+    public float gravityHold;
     public float horizontalDpad;
     public float verticalDpad;
     public bool pause;
@@ -35,8 +36,9 @@ public class PlayerControlMapping : MonoBehaviour
          jumpOn = Input.GetButtonDown("Jump");
          crouching = Input.GetButtonDown("Crouch");
          xButton = Input.GetButtonDown("Submit");
-         rTrigger = Input.GetAxis("ThrownHeld");
+         throwHeld = Input.GetButtonDown("ThrownHeld");
          gravityToggle = Input.GetAxis("GravityToggle");
+         gravityHold = Input.GetAxisRaw("GravityToggle");
          horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
          verticalDpad = Input.GetAxisRaw("AbilityVertical");
          pause = Input.GetButtonDown("Pause");
@@ -58,8 +60,9 @@ public class PlayerControlMapping : MonoBehaviour
             jumpOn = Input.GetButtonDown("Jump");
             crouching = Input.GetButtonDown("Crouch");
             xButton = Input.GetButtonDown("Submit");
-            rTrigger = Input.GetAxis("ThrownHeld");
+            throwHeld = Input.GetButtonDown("ThrownHeld");
             gravityToggle = Input.GetAxis("GravityToggle");
+            gravityHold = Input.GetAxisRaw("GravityToggle");
             horizontalDpad = Input.GetAxisRaw("AbilityHorizontal");
             verticalDpad = Input.GetAxisRaw("AbilityVertical");
             pause = Input.GetButtonDown("Pause");

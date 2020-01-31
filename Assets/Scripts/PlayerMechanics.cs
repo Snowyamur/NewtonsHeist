@@ -10,6 +10,7 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] float JumpSpeed = 200f;
     [SerializeField] float smallJumpMod = 2f; //For double jump
     [SerializeField] float fallingMod = 2.5f; //Speed of falling
+    [SerializeField] bool gravOn = true;
 
     [Space]
 
@@ -74,6 +75,7 @@ public class PlayerMechanics : MonoBehaviour
         Jump();
         Crouch();
         Gravity();
+        ThrowItem();
     }
 
     void FlipSprite()
@@ -162,10 +164,25 @@ public class PlayerMechanics : MonoBehaviour
 
     void Gravity()
     {
-        if(control.gravityToggle != 0)
+        if(control.gravityToggle > 0.5f && gravOn)
         {
+            gravOn = !gravOn;
+            /*if(LevelManager.current.playerData.gravityPower <= 0) //Prevents gravity toggle when 0;
+            {
+              return;
+            }*/
             gravControl.ChangeGravity(powers["Multidirection Gravity"]); //Changes gravity based on ability
+            //LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
         }
+        else if(control.gravityToggle < 0.5f && !gravOn)
+        {
+          gravOn = !gravOn;
+        }
+    }
+
+    void ThrowItem()
+    {
+        return;
     }
 
     void SavenLoad()
