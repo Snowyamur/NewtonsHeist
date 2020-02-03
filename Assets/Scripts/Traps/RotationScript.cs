@@ -10,40 +10,10 @@ public class RotationScript : MonoBehaviour
     [SerializeField] float endAngle   = 90f;
     [SerializeField] float rotationTime = 2f;
 
-    private float angleOfRotation;
-
-    private void Start()
-    {
-        angleOfRotation = Mathf.Abs(endAngle - startAngle);
-
-        /*
-        if (clockwiseRotation)
-            endAngle = (-endAngle) % 360;
-            */
-    }
-
     private void Update()
     {
-        /*
-        Debug.Log("end angle: " + endAngle);
-        Debug.Log(transform.eulerAngles.z);
-        if (Mathf.Abs(transform.eulerAngles.z - endAngle) <= ERR)
-        {
-            float temp = startAngle;
-            startAngle = endAngle;
-            endAngle = -temp;
-        }
-
-        transform.RotateAround(Vector3.zero, Vector3.forward, endAngle * Time.deltaTime / rotationTime);
-        */
-
-        /*
-        Debug.Log(angleOfRotation * Mathf.Sin(Time.time * rotationTime));
-
-        transform.rotation = Quaternion.Euler(0f, 0f, angleOfRotation * Mathf.Sin(Time.time * rotationTime));
-        */
-        Quaternion from = Quaternion.Euler(0, 0, startAngle);
-        Quaternion to = Quaternion.Euler(0, 0, endAngle);
+        Quaternion from = Quaternion.Euler(0, 0, endAngle);
+        Quaternion to = Quaternion.Euler(0, 0, startAngle);
 
         float lerp = 0.5F * (1.0F + Mathf.Sin(Mathf.PI * Time.realtimeSinceStartup / rotationTime));
         transform.localRotation = Quaternion.Lerp(from, to, lerp);
