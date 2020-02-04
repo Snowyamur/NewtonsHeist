@@ -22,7 +22,8 @@ public class FlyingDrone : EnemyAI
 
     void FixedUpdate()
     {
-      rb.AddForce(-transform.up*(-9.81f + Mathf.Sin(Time.fixedTime))); //Keeps the drone flying by counteracting gravity. Adds a bobbing motion
+      //Mathf.Sin(Time.fixedTime)
+      rb.AddForce(-transform.up*(-9.81f)); //Keeps the drone flying by counteracting gravity. Adds a bobbing motion
       //Debug.Log((Mathf.Sin(Time.fixedTime)).ToString());
     }
 
