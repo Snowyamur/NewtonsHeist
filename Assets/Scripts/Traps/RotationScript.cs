@@ -76,7 +76,7 @@ public class RotationScript : MonoBehaviour
 
     private void PingPong()
     {
-        float lerp = 0.5f * (1.0F + Mathf.Sin(Mathf.PI * Time.realtimeSinceStartup / rotationTime));
+        float lerp = 0.5f * (1.0F + Mathf.Sin(Mathf.PI * Time.time / rotationTime));
         float rotateFromStart = angleToRotate * lerp;
 
         Quaternion target = Quaternion.Euler(0, 0, startAngle + rotateFromStart);
