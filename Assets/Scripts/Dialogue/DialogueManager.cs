@@ -10,23 +10,35 @@ public class DialogueManager : MonoBehaviour
     public Text dialogue_Text;
     public Animator text_ani;
     public PlayerControlMapping control;
+    public bool StartedDialogue;
+    public bool progressText;
 
     //Creates a new queue for text to appear
     void Start()
     {
+        Debug.Log("Started");
+        StartedDialogue = false;
+        progressText = false;
         sentences = new Queue<string>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        //if(Input.GetKeyDown("Enter"))
-        //{
-        //    DisplayNext();
-        //}
+        if (progressText && Input.anyKey)
+        {
+            StopAllCoroutines();
+            control.ToggleInput(20f);
+            DisplayNext();
+            progressText = false;
+        }
+
     }
     // Starts the dialogue
     public void StartDialogue(Dialogue dialogue)
     {
+        StartedDialogue = true;
+        //Time.timeScale = 0f;
+        control.NoInput();
         // animator for showing the text box
         text_ani.SetBool("Opened", true);
         //Debug.Log("Starting.............." + dialogue.char_name);
@@ -68,12 +80,20 @@ public class DialogueManager : MonoBehaviour
             dialogue_Text.text += letter;
             yield return null;
         }
+        progressText = true;
+
     }
+
+
     // End chat for animator to disappear dialogue box
+
     public void EndChat()
     {
         //Debug.Log("Ending...");
         text_ani.SetBool("Opened", false);
+        //Time.timeScale = 1f;
+        control.StartInput();
+        StartedDialogue = false;
     }
 
 }

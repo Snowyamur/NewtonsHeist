@@ -19,7 +19,7 @@ public class Dialogue_Trigger : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isTriggeredOnce == false)
+        if (isTriggeredOnce == false && collision.tag == "Player")
         {
             Trigger_Dialogue();
             isTriggeredOnce = true;
