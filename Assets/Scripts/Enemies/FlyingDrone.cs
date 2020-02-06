@@ -27,6 +27,13 @@ public class FlyingDrone : EnemyAI
       //Debug.Log((Mathf.Sin(Time.fixedTime)).ToString());
     }
 
+    void Update()
+    {
+      CheckWall();
+      Look();
+      Movement();
+    }
+
     void Movement()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y); //Moevment

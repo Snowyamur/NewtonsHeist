@@ -51,6 +51,17 @@ public class EnemyAI : MonoBehaviour
 
     public void CheckGrounded()
     {
+        RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, -transform.up,
+                                                    groundRayDistance);
+
+        if (raycastHit.collider == false) //If the enemy hits an object in front of it, it flips direction
+        {
+            ChangeDirection();
+        }
+    }
+
+    public void CheckWall()
+    {
         RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, transform.right,
                                                     groundRayDistance);
 
@@ -80,12 +91,12 @@ public class EnemyAI : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
         }
-          
+
         speed *= -1; //Flips speed
         isFacingLeft = !isFacingLeft;
     }
 
-    void Look()
+    public void Look()
     {
         // TODO: improve enemy detection here
         if (isFacingLeft)
