@@ -16,6 +16,8 @@ public class EnemyAI : MonoBehaviour
     public Transform groundDetection;
     public DetectionScript detectionScript;
 
+    public float gravDelay = 5.0f;
+
 
     void Start()
     {
@@ -108,5 +110,17 @@ public class EnemyAI : MonoBehaviour
     public void Movement()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
+    }
+
+    public void SwitchGravity()
+    {
+        StartCoroutine(FlipGravity(gravDelay));
+
+    }
+    public IEnumerator FlipGravity(float delay)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 9.81f*2f);
+        yield return new WaitForSeconds(delay);
+        rb.velocity = new Vector2(rb.velocity.x, 0);
     }
 }
