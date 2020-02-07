@@ -69,9 +69,9 @@ public class SpiderDrone : EnemyAI
             //Debug.Log(collision.transform.tag);
             if(!isFacingLeft)
             {
-                currentGrav += 1;
+                currentGrav += 1; //Changes direction to the right
 
-                if(currentGrav == 4) //Prevent from overloading enum
+                if(currentGrav == 4) //Resets to prevent from overloading enum
                 {
                   currentGrav = 0;
                 }
@@ -80,9 +80,9 @@ public class SpiderDrone : EnemyAI
             }
             else
             {
-                currentGrav -= 1;
+                currentGrav -= 1; //Changes direction to the left
 
-                if(currentGrav == -1) //Prevent from underflowing enum
+                if(currentGrav == -1) //Resets to prevent from underflowing enum
                 {
                   currentGrav = 3;
                 }

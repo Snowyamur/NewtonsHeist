@@ -8,8 +8,8 @@ public class PlayerMechanics : MonoBehaviour
 {
     [Header("Vertical Movement")]
     [SerializeField] float jumpSpeed = 10f;
-    [SerializeField] float smallJumpMod = 2.5f; //For double jump
-    [SerializeField] float fallingMod = 2.5f; //Speed of falling
+    [SerializeField] float smallJumpMod = 3f; //For double jump
+    [SerializeField] float fallingMod = 4f; //Speed of falling
     [SerializeField] int hasJumped = 0;
     [SerializeField] bool gravOn = true;
     [SerializeField] Vector2 jumpDir = Vector2.up;
@@ -31,6 +31,7 @@ public class PlayerMechanics : MonoBehaviour
     public bool isCrouching;
     public bool isFlipping;
     public bool isIdle;
+    public bool isFacingLeft = false;
 
     [Space]
 
@@ -86,12 +87,14 @@ public class PlayerMechanics : MonoBehaviour
         if (control.xMove < 0) //If moving left
         {
             playerSprite.flipX = true;
+            isFacingLeft = true;
 
             playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
         }
         else if (control.xMove > 0) //If moving right
         {
             playerSprite.flipX = false;
+            isFacingLeft = false;
 
             playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
         }
@@ -140,6 +143,7 @@ public class PlayerMechanics : MonoBehaviour
     {
         if(control.jumpOn && hasJumped < 2) //If player presses up
         {
+            //rb.AddForce(jumpDir*jumpSpeed, ForceMode2D.Impulse);
             rb.velocity = jumpDir*jumpSpeed;
             hasJumped += 1;
         }
