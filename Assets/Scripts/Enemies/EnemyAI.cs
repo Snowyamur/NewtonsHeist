@@ -9,7 +9,8 @@ public class EnemyAI : MonoBehaviour
     public float speed = 6.0f;
     public bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
                                        // in the left direction
-    public float groundRayDistance = 2.0f;
+    public float rayDistance = 2.0f;
+    [SerializeField] private LayerMask changeDirectionMask;
 
     // GameObject component variables
     public Rigidbody2D rb;
@@ -45,14 +46,15 @@ public class EnemyAI : MonoBehaviour
     public void Patrol()
     {
         CheckGrounded();
+        CheckWall();
         Look();
         Movement();
     }
 
     public void CheckGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, -transform.up,
-                                                    groundRayDistance);
+        RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, changeDirectionMask);
 
         if (raycastHit.collider == false) //If the enemy hits an object in front of it, it flips direction
         {
@@ -62,20 +64,10 @@ public class EnemyAI : MonoBehaviour
 
     public void CheckWall()
     {
-        RaycastHit2D raycastHit = Physics2D.Raycast(groundDetection.position, transform.right,
-                                                    groundRayDistance);
+        RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, changeDirectionMask);
 
         if (raycastHit.collider == true) //If the enemy hits an object in front of it, it flips direction
-        {
-            ChangeDirection();
-        }
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Patrol changes direction when hitting a wall or
-        // an obstacle.
-        if (collision.transform.tag == "Obstacle" || collision.transform.tag == "Wall")
         {
             ChangeDirection();
         }
@@ -108,5 +100,14 @@ public class EnemyAI : MonoBehaviour
     public void Movement()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
+    }
+
+    // ----- HELPER FUNCTIONS -----
+    private RaycastHit2D DrawRaycast(Vector2 origin, Vector2 direction, float distance, LayerMask layerMask)
+    {
+        RaycastHit2D raycastHit = Physics2D.Raycast(origin, direction, distance, layerMask);
+        Debug.DrawRay(origin, direction.normalized * distance, Color.yellow);
+
+        return raycastHit;
     }
 }

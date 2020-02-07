@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7388186814737679146}
   - component: {fileID: 7388186814737679147}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7388186815606638053}
   - component: {fileID: 7388186815606638054}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de623e4d1be8dd6458d11d44d5f4a970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCycle: 0
+  isClockwise: 1
   startAngle: -10
   endAngle: 90
   rotationTime: 2
@@ -138,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7388186816272627059}
   - component: {fileID: 7388186816272627060}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

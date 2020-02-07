@@ -61,7 +61,15 @@ public class DetectionScript : MonoBehaviour
                 vertex = transform.InverseTransformPoint(worldVertex);
             }
             else
+            {
+                if (raycastHit.transform.CompareTag("Player"))
+                {
+                    GameManager.Instance.RespawnPlayer();
+                }
+
                 vertex = transform.InverseTransformPoint(raycastHit.point);
+            }
+                
             
             vertices[vertexIndex] = vertex;
 

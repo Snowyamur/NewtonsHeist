@@ -9,7 +9,7 @@ public class FlyingDrone : EnemyAI
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundRayDistance = 2.0f;
+        rayDistance = 2.0f;
         groundDetection = transform.Find("Ground Detection");
         detectionScript = transform.Find("Ray Emitter").GetComponent<DetectionScript>();
 

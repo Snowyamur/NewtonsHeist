@@ -7,12 +7,10 @@ public class CheckpointManager : MonoBehaviour
     // ----- Private variables ----- 
     List<GameObject> checkpoints;
     int currIndex;
-    static CheckpointManager instance = null;
 
     // Start is called before the first frame update
     private void Start()
     {
-        instance = this;
         checkpoints = new List<GameObject>();
 
         for (int i = 0; i < transform.childCount; ++i)
@@ -21,13 +19,13 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
-    public static CheckpointManager Instance { get { return instance; } }
-
     public bool UpdateCheckpoint(GameObject newCP)
     {
         try
         {
             currIndex = checkpoints.IndexOf(newCP);
+
+            LevelManager.current.lastCheckpoint = checkpoints[currIndex];
             return true;
         }
         catch
