@@ -112,4 +112,16 @@ public class EnemyAI : MonoBehaviour
 
         return raycastHit;
     }
+
+    public void SwitchGravity()
+    {
+        StartCoroutine(FlipGravity(gravDelay));
+
+    }
+    public IEnumerator FlipGravity(float delay)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 9.81f * 2f);
+        yield return new WaitForSeconds(delay);
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+    }
 }
