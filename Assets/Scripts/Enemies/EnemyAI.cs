@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     public Transform groundDetection;
     public DetectionScript detectionScript;
 
+    public float gravDelay = 5.0f;
+
 
     void Start()
     {
