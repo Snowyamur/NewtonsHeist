@@ -213,6 +213,8 @@ MonoBehaviour:
   isFlipping: 0
   isIdle: 0
   isFacingLeft: 0
+  grenade: 0
+  currentGrenade: 
 --- !u!114 &8054214943488491979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba95ee6215041b742ba802245df67c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grenade: {fileID: 7704340217966072800, guid: 4fa6b26655fd950419921eaa0af513ac, type: 3}
+  gravityManipulator: {fileID: 7704340217966072800, guid: 4fa6b26655fd950419921eaa0af513ac,
+    type: 3}
+  emp: {fileID: 2251440538790656057, guid: 4138ce9f6171d6340a90eeaf221ebc1a, type: 3}
   speed: 1000
   grenPosRight: {fileID: 0}
   grenPosLeft: {fileID: 0}
