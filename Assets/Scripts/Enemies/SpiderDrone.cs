@@ -23,6 +23,8 @@ public class SpiderDrone : EnemyAI
         wallMask = LayerMask.GetMask("Wall");
         ceilingMask = LayerMask.GetMask("Ceiling");
 
+        rayDistance = 1f;
+        
         if (isFacingLeft)
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
@@ -40,7 +42,7 @@ public class SpiderDrone : EnemyAI
 
     void FixedUpdate() //Responsible for changing gravity of spider drone
     {
-        Debug.Log(gravDir);
+        //Debug.Log(gravDir);
         switch(gravDir)
         {
             case GravityDirection.Down:
@@ -67,7 +69,7 @@ public class SpiderDrone : EnemyAI
 
     void CheckSurface()
     {
-        
+
         RaycastHit2D rayGround = DrawRaycast(groundDetection.position, transform.right,
                                               rayDistance, groundMask);
 

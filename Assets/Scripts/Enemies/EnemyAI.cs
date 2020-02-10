@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected float speed = 6.0f;
     [SerializeField] protected bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
                                        // in the left direction
+    [SerializeField] protected bool hitEMP = false; //Signals if hit by EMP
     [SerializeField] protected float rayDistance = 2.0f;
     [SerializeField] protected LayerMask groundMask;
     [SerializeField] protected LayerMask wallMask;
@@ -103,7 +104,14 @@ public class EnemyAI : MonoBehaviour
 
     protected void Movement()
     {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+        if(!hitEMP) //If not hit by an EMP
+        {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     // ----- HELPER FUNCTIONS -----
@@ -133,9 +141,13 @@ public class EnemyAI : MonoBehaviour
         {
             SwitchGravity();
         }
+        else if(collision.transform.tag == "EMP")
+        {
+            hitEMP = true; //Signals hit by EMP
+        }
         else if(collision.transform.tag == "Obstacle" || collision.transform.tag == "Enemy")
         {
-          ChangeDirection();
+            ChangeDirection();
         }
     }
 }

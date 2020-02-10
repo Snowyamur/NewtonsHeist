@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class ThrowProjectile : MonoBehaviour
 {
+    public GameObject gravityManipulator;
+    public GameObject timeStopper;
     public GameObject grenade;
 
     [SerializeField] float speed = 1000f;
     [SerializeField] GameObject grenPosRight;
     [SerializeField] GameObject grenPosLeft;
 
-    PlayerMechanics mechanics;
+    GameObject currentGrenade;
     GameObject cloneGrenade;
+    PlayerMechanics mechanics;
 
     void Awake()
     {
@@ -35,6 +38,30 @@ public class ThrowProjectile : MonoBehaviour
                 cloneGrenade.GetComponent<Rigidbody2D>().AddForce(grenPosRight.transform.right*1000f, ForceMode2D.Force);
             }
 
+        }
+    }
+    public void ThrowGrenade(string grenade, bool isFacingLeft)
+    {
+        switch(grenade)
+        {
+            case "Gravity Manipulator":
+                currentGrenade = gravityManipulator;
+                break;
+
+            case "EMP":
+                currentGrenade = timeStopper;
+                break;
+        }
+
+        if(isFacingLeft)
+        {
+            cloneGrenade = Instantiate(currentGrenade, grenPosLeft.transform.position, grenPosLeft.transform.rotation);
+            cloneGrenade.GetComponent<Rigidbody2D>().AddForce(-grenPosLeft.transform.right*1000f, ForceMode2D.Force);
+        }
+        else
+        {
+            cloneGrenade = Instantiate(currentGrenade, grenPosRight.transform.position, grenPosRight.transform.rotation);
+            cloneGrenade.GetComponent<Rigidbody2D>().AddForce(grenPosRight.transform.right*1000f, ForceMode2D.Force);
         }
     }
 }

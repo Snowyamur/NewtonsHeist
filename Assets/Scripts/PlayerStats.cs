@@ -21,6 +21,12 @@ public class PlayerStats
         {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
     };
 
+    Dictionary<string, int> m_grenades = new Dictionary<string, int>
+    {
+        {"Gravity Manipulator", 0}, {"Time Stopper", 0}, {"Ug3", 0}, {"Ug4", 0}
+    };
+    string m_currentGrenade;
+
     public float gravityPower
     {
       get{return m_gravityPower;}
@@ -55,5 +61,15 @@ public class PlayerStats
     {
       get{return m_powers;}
       set{m_powers = value;}
+    }
+    public Dictionary<string, int> grenades
+    {
+      get{return m_grenades;}
+      set{m_grenades = value;}
+    }
+    public string currentGrenade
+    {
+      get{return m_currentGrenade;}
+      set{m_currentGrenade = value;}
     }
 }

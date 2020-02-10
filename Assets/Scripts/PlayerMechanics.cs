@@ -44,8 +44,9 @@ public class PlayerMechanics : MonoBehaviour
     [Header("Grenades")]
     [SerializeField] Dictionary<string, int> grenades = new Dictionary<string, int>
     {
-        {"Gravity Manipulator", 0}, {"Time Stopper", 0}, {"Ug3", 0}, {"Ug4", 0}
+        {"Gravity Manipulator", 0}, {"EMP", 0}, {"Ug3", 0}, {"Ug4", 0}
     };
+    [SerializeField] string currentGrenade;
 
     GameObject cam; //Camera
 
@@ -56,6 +57,7 @@ public class PlayerMechanics : MonoBehaviour
     PlayerCollisions collisions;
     PlayerControlMapping control; //The control map of the player
     GravityController gravControl; //The mechanics of gravity
+    ThrowProjectile throwScript; //Ability to throw items
 
     LayerMask enemyLayer; //To detect enemies
 
@@ -68,6 +70,7 @@ public class PlayerMechanics : MonoBehaviour
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();
         gravControl = GetComponent<GravityController>();
+        throwScript = GetComponent<ThrowProjectile>();
     }
 
     // Start is called before the first frame update
@@ -85,7 +88,7 @@ public class PlayerMechanics : MonoBehaviour
         Jump();
         Crouch();
         Gravity();
-        ThrowItem();
+        Throw();
     }
 
     void FlipSprite()
@@ -122,7 +125,6 @@ public class PlayerMechanics : MonoBehaviour
 
     void Walk()
     {
-
         if(control.xMove != 0) //If player moves horizontally
         {
             //Calculates velocity based on speed and direction faced
@@ -215,9 +217,15 @@ public class PlayerMechanics : MonoBehaviour
         }
     }
 
-    void ThrowItem()
+    void Throw()
     {
-        return;
+        /*if(Input.GetKeyDown(KeyCode.Q))
+        {
+            if(grenades[currentGrenade] != 0)
+            {
+                throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
+            }
+        }*/
     }
 
     void SavenLoad()
@@ -231,6 +239,8 @@ public class PlayerMechanics : MonoBehaviour
           LevelManager.current.playerData.playerPosZ = transform.position.z;
 
           LevelManager.current.playerData.powers = powers;
+          LevelManager.current.playerData.grenades = grenades;
+          LevelManager.current.playerData.currentGrenade = currentGrenade;
 
           SaveLoad.Save();
         }
@@ -249,6 +259,8 @@ public class PlayerMechanics : MonoBehaviour
           float t_z = LevelManager.current.playerData.playerPosZ;
 
           powers = LevelManager.current.playerData.powers;
+          grenades = LevelManager.current.playerData.grenades;
+          currentGrenade = LevelManager.current.playerData.currentGrenade;
 
           transform.position = new Vector3(t_x, t_y, t_z);
         }
