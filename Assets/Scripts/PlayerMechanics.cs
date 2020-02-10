@@ -46,6 +46,7 @@ public class PlayerMechanics : MonoBehaviour
     {
         {"Gravity Manipulator", 5}, {"EMP", 5}, {"Ug3", 5}, {"Ug4", 5}
     };
+    [SerializeField] int grenade = 0;
     [SerializeField] string currentGrenade;
 
     GameObject cam; //Camera
@@ -220,14 +221,39 @@ public class PlayerMechanics : MonoBehaviour
 
     void Throw()
     {
-        /*if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            grenade += 1;
+
+            if(grenade == 2)
+            {
+                grenade = 0;
+            }
+        }
+
+        switch(grenade)
+        {
+            case 0:
+              currentGrenade = "Gravity Manipulator";
+              break;
+            case 1:
+              currentGrenade = "EMP";
+              break;
+            /*case 2:
+              currentGrenade = "GravityManipulator";
+              break;
+            case 3:
+              currentGrenade = "GravityManipulator";
+              break;*/
+        }
+        if(Input.GetKeyDown(KeyCode.V))
         {
             if(grenades[currentGrenade] != 0)
             {
                 grenades[currentGrenade] -= 1;
                 throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
             }
-        }*/
+        }
     }
 
     void SavenLoad()

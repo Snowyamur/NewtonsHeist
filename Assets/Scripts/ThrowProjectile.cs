@@ -5,8 +5,8 @@ using UnityEngine;
 public class ThrowProjectile : MonoBehaviour
 {
     public GameObject gravityManipulator;
-    public GameObject timeStopper;
-    public GameObject grenade;
+    public GameObject emp;
+    //public GameObject grenade;
 
     [SerializeField] float speed = 1000f;
     [SerializeField] GameObject grenPosRight;
@@ -14,16 +14,16 @@ public class ThrowProjectile : MonoBehaviour
 
     GameObject currentGrenade;
     GameObject cloneGrenade;
-    PlayerMechanics mechanics;
+    //PlayerMechanics mechanics;
 
     void Awake()
     {
         grenPosRight = GameObject.Find("GrenadePointRight");
         grenPosLeft = GameObject.Find("GrenadePointLeft");
-        mechanics = GetComponent<PlayerMechanics>();
+        //mechanics = GetComponent<PlayerMechanics>();
     }
 
-    void Update()
+    /*void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
@@ -39,7 +39,7 @@ public class ThrowProjectile : MonoBehaviour
             }
 
         }
-    }
+    }*/
     public void ThrowGrenade(string grenade, bool isFacingLeft)
     {
         switch(grenade)
@@ -49,7 +49,7 @@ public class ThrowProjectile : MonoBehaviour
                 break;
 
             case "EMP":
-                currentGrenade = timeStopper;
+                currentGrenade = emp;
                 break;
         }
 

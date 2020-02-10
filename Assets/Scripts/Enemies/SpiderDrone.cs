@@ -24,7 +24,7 @@ public class SpiderDrone : EnemyAI
         ceilingMask = LayerMask.GetMask("Ceiling");
 
         rayDistance = 1f;
-        
+
         if (isFacingLeft)
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
@@ -117,14 +117,64 @@ public class SpiderDrone : EnemyAI
 
     void Movement()
     {
-        if(gravDir == GravityDirection.Down || gravDir == GravityDirection.Up)
+        if(!hitEMP)
         {
-            rb.velocity = new Vector2(speed, rb.velocity.y); //Horizontal Movement
+            if(gravDir == GravityDirection.Down || gravDir == GravityDirection.Up)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y); //Horizontal Movement
+            }
+
+            else if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right)
+            {
+              rb.velocity = new Vector2(rb.velocity.x, speed); //Vertical Moevment
+            }
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
         }
 
-        else if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right)
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "GravityManipulator")
         {
-          rb.velocity = new Vector2(rb.velocity.x, speed); //Vertical Moevment
+            int currentGrav = (int)gravDir; //To cycle through enum
+
+            //Debug.Log(collision.transform.tag);
+            if(!isFacingLeft)
+            {
+                currentGrav += 2; //Changes direction to the right
+
+                if(currentGrav >= 4) //Resets to prevent from overloading enum
+                {
+                  currentGrav -= 4;
+                }
+                gravDir = (GravityDirection)currentGrav;
+                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 180); //Rotate right
+            }
+            else
+            {
+                currentGrav -= 2; //Changes direction to the left
+
+                if(currentGrav <= -1) //Resets to prevent from underflowing enum
+                {
+                  currentGrav += 4;
+                }
+                gravDir = (GravityDirection)currentGrav;
+                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 180); //Rotate left
+            }
+
+            speed = -speed;
+        }
+        else if(collision.transform.tag == "EMP")
+        {
+            hitEMP = true; //Signals hit by EMP
+        }
+        else if(collision.transform.tag == "Obstacle" || collision.transform.tag == "Enemy")
+        {
+            ChangeDirection();
         }
     }
 }
