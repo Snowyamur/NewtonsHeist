@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PortalScript : MonoBehaviour
 {
-    [SerializeField] private bool enterFromLeft = true;
+    [SerializeField] private bool isFacingLeft = true;
     
     private Vector3 portalNormal;
     private PortalManager managerScript;
 
     private void Start()
     {
-        if (enterFromLeft)
+        if (isFacingLeft)
             portalNormal = -transform.right;
         else
             portalNormal = transform.right;
