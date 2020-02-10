@@ -6,18 +6,19 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     // ----- Public variables -----
-    public float speed = 6.0f;
-    public bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
+    [SerializeField] protected float speed = 6.0f;
+    [SerializeField] protected bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
                                        // in the left direction
-    public float rayDistance = 2.0f;
-    [SerializeField] private LayerMask changeDirectionMask;
+    [SerializeField] protected float rayDistance = 2.0f;
+    [SerializeField] protected LayerMask groundMask;
+    [SerializeField] protected LayerMask wallMask;
 
     // GameObject component variables
-    public Rigidbody2D rb;
-    public Transform groundDetection;
-    public DetectionScript detectionScript;
+    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected Transform groundDetection;
+    [SerializeField] protected DetectionScript detectionScript;
 
-    public float gravDelay = 5.0f;
+    [SerializeField] protected float gravDelay = 5.0f;
 
 
     void Start()
@@ -25,10 +26,12 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundDetection = transform.Find("Ground Detection");
         detectionScript = transform.Find("Ray Emitter").GetComponent<DetectionScript>();
+        groundMask = LayerMask.GetMask("Ground");
+        wallMask = LayerMask.GetMask("Wall");
 
         if (isFacingLeft)
         {
-            transform.eulerAngles = new Vector3(0, -180, 0);
+            transform.eulerAngles = new Vector3(0, -180, 0); 
             speed *= -1;
         }
     }
@@ -45,7 +48,7 @@ public class EnemyAI : MonoBehaviour
         Patrol();
     }
 
-    public void Patrol()
+    protected void Patrol()
     {
         CheckGrounded();
         CheckWall();
@@ -53,10 +56,10 @@ public class EnemyAI : MonoBehaviour
         Movement();
     }
 
-    public void CheckGrounded()
+    void CheckGrounded()
     {
         RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, -transform.up,
-                                              rayDistance, changeDirectionMask);
+                                              rayDistance, groundMask);
 
         if (raycastHit.collider == false) //If the enemy hits an object in front of it, it flips direction
         {
@@ -64,10 +67,10 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void CheckWall()
+    protected void CheckWall()
     {
         RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, transform.right,
-                                              rayDistance, changeDirectionMask);
+                                              rayDistance, wallMask);
 
         if (raycastHit.collider == true) //If the enemy hits an object in front of it, it flips direction
         {
@@ -75,7 +78,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void ChangeDirection()
+    protected void ChangeDirection()
     {
         if (isFacingLeft)
         {
@@ -90,7 +93,7 @@ public class EnemyAI : MonoBehaviour
         isFacingLeft = !isFacingLeft;
     }
 
-    public void Look()
+    protected void Look()
     {
         // TODO: improve enemy detection here
         if (isFacingLeft)
@@ -99,7 +102,7 @@ public class EnemyAI : MonoBehaviour
             detectionScript.SetAimDirection(Vector3.right, false);
     }
 
-    public void Movement()
+    protected void Movement()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
     }
@@ -113,15 +116,23 @@ public class EnemyAI : MonoBehaviour
         return raycastHit;
     }
 
-    public void SwitchGravity()
+    void SwitchGravity()
     {
         StartCoroutine(FlipGravity(gravDelay));
 
     }
-    public IEnumerator FlipGravity(float delay)
+    IEnumerator FlipGravity(float delay)
     {
         rb.velocity = new Vector2(rb.velocity.x, 9.81f * 2f);
         yield return new WaitForSeconds(delay);
         rb.velocity = new Vector2(rb.velocity.x, 0);
+    }
+
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "GravityManipulator")
+        {
+            SwitchGravity();
+        }
     }
 }

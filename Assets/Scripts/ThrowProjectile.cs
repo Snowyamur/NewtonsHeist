@@ -37,12 +37,4 @@ public class ThrowProjectile : MonoBehaviour
 
         }
     }
-
-    /*public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.transform.tag != "Player")
-        {
-            Destroy(gameObject);
-        }
-    }*/
 }

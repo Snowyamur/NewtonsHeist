@@ -41,6 +41,12 @@ public class PlayerMechanics : MonoBehaviour
         {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
     };
 
+    [Header("Grenades")]
+    [SerializeField] Dictionary<string, int> grenades = new Dictionary<string, int>
+    {
+        {"Gravity Manipulator", 0}, {"Time Stopper", 0}, {"Ug3", 0}, {"Ug4", 0}
+    };
+
     GameObject cam; //Camera
 
     Rigidbody2D rb; //Player's rigidbody

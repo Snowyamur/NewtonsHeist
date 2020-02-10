@@ -11,7 +11,7 @@ public class GravityThrowable : Throwable
         id = 1;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "SpiderDrone")
         {
@@ -22,5 +22,5 @@ public class GravityThrowable : Throwable
             collision.gameObject.GetComponent<SpiderDrone>().SwitchGravity();
         }
         Destroy(gameObject);
-    }
+    }*/
 }

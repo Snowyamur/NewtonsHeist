@@ -9,10 +9,7 @@ using System;
 public class PlayerCollisions : MonoBehaviour
 {
   [Header("Offsets of Player")]
-  [SerializeField] Vector2 bottomOffset = new Vector2(0.11f, 0);
-  [SerializeField] Vector2 rightOffset = new Vector2(0.11f, 0);
-  [SerializeField] Vector2 leftOffset = new Vector2(0.11f, 0);
-  [SerializeField] float collisionRadius = 0.25f;
+  [SerializeField] float collisionRadius = 0.11f;
 
   [Space]
 
@@ -46,7 +43,7 @@ public class PlayerCollisions : MonoBehaviour
 
   void Start()
   {
-      groundTransform = transform.Find("groundTransform");
+      groundTransform = transform.Find("Ground Transform");
       groundLayer = LayerMask.GetMask("Ground");
       wallLayer = LayerMask.GetMask("Wall");
       ceilingLayer = LayerMask.GetMask("Ceiling");
@@ -55,11 +52,11 @@ public class PlayerCollisions : MonoBehaviour
 
   void Update()
   {
-      onGround = Physics2D.OverlapCircle((Vector2)transform.position+bottomOffset, collisionRadius, groundLayer);
+      onGround = Physics2D.OverlapCircle(groundTransform.position, collisionRadius, groundLayer);
 
-      onCeiling = Physics2D.OverlapCircle((Vector2)transform.position+bottomOffset, collisionRadius, ceilingLayer);
+      onCeiling = Physics2D.OverlapCircle(groundTransform.position, collisionRadius, ceilingLayer);
 
-      onWall = Physics2D.OverlapCircle((Vector2)transform.position+bottomOffset, collisionRadius, wallLayer);
+      onWall = Physics2D.OverlapCircle(groundTransform.position, collisionRadius, wallLayer);
       /*onRightWall = Physics2D.OverlapCircle((Vector2)transform.position+rightOffset, collisionRadius, groundLayer);
       onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position+leftOffset, collisionRadius, groundLayer);
 
@@ -70,6 +67,10 @@ public class PlayerCollisions : MonoBehaviour
           inAir = false;
           mechanics.isJumping = false;
           mechanics.isIdle = true;
+      }
+      else
+      {
+          inAir = true;
       }
   }
 

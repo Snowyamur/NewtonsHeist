@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1621311257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621311258}
+  m_Layer: 0
+  m_Name: Ground Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621311258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621311257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8054214943488492019}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &256862099774523876
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +130,7 @@ Transform:
   m_Children:
   - {fileID: 6651653623273266713}
   - {fileID: 1138468974757808547}
+  - {fileID: 1621311258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,9 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b91752d88571854985e6c6f3e03dfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottomOffset: {x: 0.11, y: 0}
-  rightOffset: {x: 0.11, y: 0}
-  leftOffset: {x: 0.11, y: 0}
   collisionRadius: 0.25
   onGround: 0
   onCeiling: 0
@@ -292,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba95ee6215041b742ba802245df67c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grenade: {fileID: 6490997024395930903, guid: 5d816651c955b1a488bad6d96dc7d25c, type: 3}
+  grenade: {fileID: 7704340217966072800, guid: 4fa6b26655fd950419921eaa0af513ac, type: 3}
   speed: 1000
   grenPosRight: {fileID: 0}
   grenPosLeft: {fileID: 0}

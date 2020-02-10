@@ -6,20 +6,6 @@ using UnityEngine;
 public class FlyingDrone : EnemyAI
 {
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rayDistance = 2.0f;
-        groundDetection = transform.Find("Ground Detection");
-        detectionScript = transform.Find("Ray Emitter").GetComponent<DetectionScript>();
-
-        if (isFacingLeft)
-        {
-            transform.eulerAngles = new Vector3(0, -180, 0);
-            speed *= -1;
-        }
-    }
-
     void FixedUpdate()
     {
       //Mathf.Sin(Time.fixedTime)
@@ -40,5 +26,13 @@ public class FlyingDrone : EnemyAI
 
         //transform.position = new Vector3(transform.position.x, //Creates a bobbing effect
         //velY+(Mathf.Sin(Time.fixedTime*Mathf.PI) * floatStrength), transform.position.z);
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "GravityManipulator")
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -9.81f * 2f);
+        }
     }
 }
