@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected float rayDistance = 2.0f;
     [SerializeField] protected LayerMask groundMask;
     [SerializeField] protected LayerMask wallMask;
+    [SerializeField] protected LayerMask ceilingMask;
 
     // GameObject component variables
     [SerializeField] protected Rigidbody2D rb;
@@ -28,10 +29,11 @@ public class EnemyAI : MonoBehaviour
         detectionScript = transform.Find("Ray Emitter").GetComponent<DetectionScript>();
         groundMask = LayerMask.GetMask("Ground");
         wallMask = LayerMask.GetMask("Wall");
+        ceilingMask = LayerMask.GetMask("Ceiling");
 
         if (isFacingLeft)
         {
-            transform.eulerAngles = new Vector3(0, -180, 0); 
+            transform.eulerAngles = new Vector3(0, -180, 0);
             speed *= -1;
         }
     }
@@ -96,10 +98,7 @@ public class EnemyAI : MonoBehaviour
     protected void Look()
     {
         // TODO: improve enemy detection here
-        if (isFacingLeft)
-            detectionScript.SetAimDirection(Vector3.left, true);
-        else
-            detectionScript.SetAimDirection(Vector3.right, false);
+        detectionScript.SetAimDirection(Vector2.right, isFacingLeft);
     }
 
     protected void Movement()
@@ -108,7 +107,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     // ----- HELPER FUNCTIONS -----
-    private RaycastHit2D DrawRaycast(Vector2 origin, Vector2 direction, float distance, LayerMask layerMask)
+    protected RaycastHit2D DrawRaycast(Vector2 origin, Vector2 direction, float distance, LayerMask layerMask)
     {
         RaycastHit2D raycastHit = Physics2D.Raycast(origin, direction, distance, layerMask);
         Debug.DrawRay(origin, direction.normalized * distance, Color.yellow);
@@ -133,6 +132,10 @@ public class EnemyAI : MonoBehaviour
         if(collision.transform.tag == "GravityManipulator")
         {
             SwitchGravity();
+        }
+        else if(collision.transform.tag == "Obstacle" || collision.transform.tag == "Enemy")
+        {
+          ChangeDirection();
         }
     }
 }

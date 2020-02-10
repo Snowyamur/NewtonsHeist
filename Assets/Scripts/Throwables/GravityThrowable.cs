@@ -11,16 +11,4 @@ public class GravityThrowable : Throwable
         id = 1;
     }
 
-    /*void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.transform.tag == "SpiderDrone")
-        {
-            collision.gameObject.GetComponent<SpiderDrone>().SwitchGravity();
-        }
-        else if(collision.transform.tag == "FlyingDrone")
-        {
-            collision.gameObject.GetComponent<SpiderDrone>().SwitchGravity();
-        }
-        Destroy(gameObject);
-    }*/
 }

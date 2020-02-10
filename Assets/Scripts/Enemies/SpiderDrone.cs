@@ -17,52 +17,67 @@ public class SpiderDrone : EnemyAI
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = 3f;
         groundDetection = transform.Find("Ground Detection");
         detectionScript = transform.Find("Ray Emitter").GetComponent<DetectionScript>();
+        groundMask = LayerMask.GetMask("Ground");
+        wallMask = LayerMask.GetMask("Wall");
+        ceilingMask = LayerMask.GetMask("Ceiling");
 
         if (isFacingLeft)
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
             speed *= -1;
         }
+
         gravDir = GravityDirection.Down;
     }
 
     void Update()
     {
+        CheckSurface();
         Movement();
     }
 
     void FixedUpdate() //Responsible for changing gravity of spider drone
     {
+        Debug.Log(gravDir);
         switch(gravDir)
         {
             case GravityDirection.Down:
-                //rb.AddForce(transform.up*-9.81f*2f);
+                //rb.AddForce(-transform.up*-9.81f*2f);
+                detectionScript.SetAimDirection(new Vector2(1,0), isFacingLeft);
                 break;
 
             case GravityDirection.Up:
                 rb.AddForce(transform.up*-9.81f*2f);
+                detectionScript.SetAimDirection(new Vector2(-1,0), isFacingLeft);
                 break;
 
             case GravityDirection.Left:
                 rb.AddForce(-transform.right*-9.81f*2f);
+                detectionScript.SetAimDirection(new Vector2(0,-1), isFacingLeft);
                 break;
 
             case GravityDirection.Right:
                 rb.AddForce(transform.right*-9.81f*2f);
+                detectionScript.SetAimDirection(new Vector2(0,1), isFacingLeft);
                 break;
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void CheckSurface()
     {
-        if(collision.transform.tag == "Obstacle") //Will flip direction upon hitting an obstacle
-        {
-            ChangeDirection();
-        }
-        else if(collision.transform.tag == "Wall" || collision.transform.tag == "Ceiling" || collision.transform.tag == "Ground") //If the drone hits a surface
+        
+        RaycastHit2D rayGround = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, groundMask);
+
+        RaycastHit2D rayCeiling = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, wallMask);
+
+        RaycastHit2D rayWall = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, ceilingMask);
+
+        if(rayGround || rayCeiling || rayWall) //If the drone hits a surface
         {
             int currentGrav = (int)gravDir; //To cycle through enum
 
@@ -90,7 +105,7 @@ public class SpiderDrone : EnemyAI
                 transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 90); //Rotate left
             }
 
-            if(gravDir == GravityDirection.Up || gravDir == GravityDirection.Left) //Flip speed to count for opposite directions
+            if(gravDir == GravityDirection.Up || gravDir == GravityDirection.Down) //Flip speed to count for opposite directions
             {
                 speed = -speed;
             }

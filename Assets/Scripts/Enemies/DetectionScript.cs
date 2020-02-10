@@ -10,7 +10,7 @@ public class DetectionScript : MonoBehaviour
     [SerializeField] float detectionRayDistance = 5.0f;
     [SerializeField] int numberOfRaycasts = 2;
 
-    // ----- Private variables ----- 
+    // ----- Private variables -----
     // Detection cone variables
     private Mesh mesh;
     private float angleIncrement;
@@ -47,13 +47,13 @@ public class DetectionScript : MonoBehaviour
         vertices[0] = transform.InverseTransformPoint(transform.position);
 
         int vertexIndex   = 1;
-        int triangleIndex = 0; 
-        float angle = startingAngle; 
+        int triangleIndex = 0;
+        float angle = startingAngle;
         for (int i = 0; i <= numberOfRaycasts; i++)
         {
             Vector3 angledVector = GetVectorFromAngle(angle);
             Vector3 vertex;
-            
+
             RaycastHit2D raycastHit = DrawRaycast(origin, angledVector, detectionRayDistance, layerMask);
             if (raycastHit.collider == null)
             {
@@ -69,8 +69,8 @@ public class DetectionScript : MonoBehaviour
 
                 vertex = transform.InverseTransformPoint(raycastHit.point);
             }
-                
-            
+
+
             vertices[vertexIndex] = vertex;
 
             if (i > 0)
@@ -92,10 +92,17 @@ public class DetectionScript : MonoBehaviour
     }
 
 
-    // ----- PUBLIC SETTER FUNCTIONS ----- 
-    public void SetAimDirection(Vector3 aimDirection, bool isFacingLeft)
+    // ----- PUBLIC SETTER FUNCTIONS -----
+    public void SetAimDirection(Vector2 aimDirection, bool isFacingLeft)
     {
-        startingAngle = GetAngleFromVectorFloat(aimDirection) + detectionConeAngle / 2f;
+        if(isFacingLeft)
+        {
+            startingAngle = GetAngleFromVectorFloat(-aimDirection) + detectionConeAngle / 2f;
+        }
+        else
+        {
+            startingAngle = GetAngleFromVectorFloat(aimDirection) + detectionConeAngle / 2f;
+        }
     }
 
 
