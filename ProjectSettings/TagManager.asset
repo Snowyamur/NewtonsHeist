@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - CheckpointManager
   - GravityManipulator
+  - EMP
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Enemy
   - Checkpoint
   - Trap
-  - 
+  - Portal
   - 
   - 
   - 
