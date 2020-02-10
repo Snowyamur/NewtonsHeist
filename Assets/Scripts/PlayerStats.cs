@@ -23,7 +23,7 @@ public class PlayerStats
 
     Dictionary<string, int> m_grenades = new Dictionary<string, int>
     {
-        {"Gravity Manipulator", 0}, {"Time Stopper", 0}, {"Ug3", 0}, {"Ug4", 0}
+        {"Gravity Manipulator", 5}, {"EMP", 5}, {"Ug3", 5}, {"Ug4", 5}
     };
     string m_currentGrenade;
 

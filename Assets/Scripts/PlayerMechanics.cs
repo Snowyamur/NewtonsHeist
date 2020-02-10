@@ -44,7 +44,7 @@ public class PlayerMechanics : MonoBehaviour
     [Header("Grenades")]
     [SerializeField] Dictionary<string, int> grenades = new Dictionary<string, int>
     {
-        {"Gravity Manipulator", 0}, {"EMP", 0}, {"Ug3", 0}, {"Ug4", 0}
+        {"Gravity Manipulator", 5}, {"EMP", 5}, {"Ug3", 5}, {"Ug4", 5}
     };
     [SerializeField] string currentGrenade;
 
@@ -71,6 +71,7 @@ public class PlayerMechanics : MonoBehaviour
         collisions = GetComponent<PlayerCollisions>();
         gravControl = GetComponent<GravityController>();
         throwScript = GetComponent<ThrowProjectile>();
+        LevelManager.current = new LevelManager();
     }
 
     // Start is called before the first frame update
@@ -223,6 +224,7 @@ public class PlayerMechanics : MonoBehaviour
         {
             if(grenades[currentGrenade] != 0)
             {
+                grenades[currentGrenade] -= 1;
                 throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
             }
         }*/
