@@ -21,6 +21,8 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] float crouchingMod = 0.5f;
     [SerializeField] float currentSpeed;
     [SerializeField] bool crouching = false;
+    [SerializeField] GameObject posRight;
+    [SerializeField] GameObject posLeft;
 
     [Space]
 
@@ -61,6 +63,7 @@ public class PlayerMechanics : MonoBehaviour
     ThrowProjectile throwScript; //Ability to throw items
 
     LayerMask enemyLayer; //To detect enemies
+    LayerMask wallMask;
 
     void Awake()
     {
@@ -73,6 +76,9 @@ public class PlayerMechanics : MonoBehaviour
         gravControl = GetComponent<GravityController>();
         throwScript = GetComponent<ThrowProjectile>();
         LevelManager.current = new LevelManager();
+        posRight = GameObject.Find("GrenadePointRight");
+        posLeft = GameObject.Find("GrenadePointLeft");
+        wallMask = LayerMask.GetMask("Wall");
     }
 
     // Start is called before the first frame update
@@ -127,10 +133,16 @@ public class PlayerMechanics : MonoBehaviour
 
     void Walk()
     {
+
         if(control.xMove != 0) //If player moves horizontally
         {
             //Calculates velocity based on speed and direction faced
             rb.velocity = new Vector2(control.xMove*normalSpeed, rb.velocity.y);
+
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
         //Play out appropraiate animations
@@ -189,13 +201,13 @@ public class PlayerMechanics : MonoBehaviour
     {
         if(control.gravityToggle > 0.5f && gravOn)
         {
-            gravOn = !gravOn;
-            /*if(LevelManager.current.playerData.gravityPower <= 0) //Prevents gravity toggle when 0;
+            if(LevelManager.current.playerData.gravityPower <= 0) //Prevents gravity toggle when 0;
             {
               return;
-            }*/
+            }
+            gravOn = !gravOn;
             gravControl.ChangeGravity(powers["Multidirection Gravity"]); //Changes gravity based on ability
-            //LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+            
         }
         else if(control.gravityToggle < 0.5f && !gravOn)
         {

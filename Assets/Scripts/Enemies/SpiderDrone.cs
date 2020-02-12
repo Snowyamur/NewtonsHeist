@@ -31,7 +31,7 @@ public class SpiderDrone : EnemyAI
             speed *= -1;
         }
 
-        gravDir = GravityDirection.Down;
+        gravDir = GravityDirection.Down; //Begin Spider Drone on the ground
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class SpiderDrone : EnemyAI
         Movement();
     }
 
-    void FixedUpdate() //Responsible for changing gravity of spider drone
+    void FixedUpdate() //Responsible for changing gravity of spider drone based on current surface
     {
         //Debug.Log(gravDir);
         switch(gravDir)
@@ -69,7 +69,7 @@ public class SpiderDrone : EnemyAI
 
     void CheckSurface()
     {
-
+        //Checks for ground, wall, or ceiling to turn onto
         RaycastHit2D rayGround = DrawRaycast(groundDetection.position, transform.right,
                                               rayDistance, groundMask);
 
@@ -107,10 +107,21 @@ public class SpiderDrone : EnemyAI
                 transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 90); //Rotate left
             }
 
-            if(gravDir == GravityDirection.Up || gravDir == GravityDirection.Down) //Flip speed to count for opposite directions
+            if(!isFacingLeft)
             {
-                speed = -speed;
+                if(gravDir == GravityDirection.Up || gravDir == GravityDirection.Down) //Flip speed to count for opposite directions
+                {
+                    speed = -speed;
+                }
             }
+            else
+            {
+                if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right) //Flip speed to count for opposite directions
+                {
+                    speed = -speed;
+                }
+            }
+
             //Debug.Log(gravDir);
         }
     }

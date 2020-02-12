@@ -127,12 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2023202260441170088, guid: 4521131968ace624bb9306c378c52640,
-        type: 3}
-      propertyPath: grenade
-      value: 
-      objectReference: {fileID: 7704340217966072800, guid: 4fa6b26655fd950419921eaa0af513ac,
-        type: 3}
     - target: {fileID: 8054214943488492017, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
       propertyPath: m_Name
@@ -141,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.4
+      value: 13.14
       objectReference: {fileID: 0}
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
@@ -286,6 +280,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8464592222258521548, guid: bcb8f6de00be56841baed20a34ea9124,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464592222258521548, guid: bcb8f6de00be56841baed20a34ea9124,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,6 +458,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8464592222258521548, guid: bcb8f6de00be56841baed20a34ea9124,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464592222258521548, guid: bcb8f6de00be56841baed20a34ea9124,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -870,6 +884,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider Drone
       objectReference: {fileID: 0}
+    - target: {fileID: 8485712896887114216, guid: bf3eed4b88a81c649a9d4154776227bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3eed4b88a81c649a9d4154776227bd, type: 3}
 --- !u!1001 &8338654381706410682
@@ -882,7 +901,7 @@ PrefabInstance:
     - target: {fileID: 2092768187617545220, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.28
+      value: -7.74
       objectReference: {fileID: 0}
     - target: {fileID: 2092768187617545220, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
         type: 3}
@@ -933,6 +952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092768187617545226, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2092768187617545230, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
         type: 3}
