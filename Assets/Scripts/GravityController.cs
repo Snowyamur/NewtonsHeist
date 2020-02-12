@@ -52,23 +52,37 @@ public class GravityController : MonoBehaviour
         {
             case GravityDirection.Down:
                 //rb.AddForce(transform.up*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower += 1;
                 break;
 
             case GravityDirection.Up:
                 rb.AddForce(-transform.up*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower -= 1;
                 break;
 
             case GravityDirection.Left:
                 rb.AddForce(-transform.right*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower -= 1;
                 break;
 
             case GravityDirection.Right:
                 rb.AddForce(transform.right*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower -= 1;
                 break;
+        }
+        if(LevelManager.current.playerData.gravityPower <= 0)
+        {
+            if(m_gravDir == GravityDirection.Left || m_gravDir == GravityDirection.Up)
+            {
+                speed = -speed;
+            }
+            m_gravDir = GravityDirection.Down;
+            LevelManager.current.playerData.gravityPower = 0;
         }
     }
     public void ChangeGravity(bool multiDir)
     {
+        LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
         if(!multiDir)
         {
             if(m_gravDir == GravityDirection.Down) //If current direction is down, make up
