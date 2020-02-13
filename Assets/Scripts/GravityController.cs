@@ -52,22 +52,22 @@ public class GravityController : MonoBehaviour
         {
             case GravityDirection.Down:
                 //rb.AddForce(transform.up*-9.81f*2f);
-                LevelManager.current.playerData.gravityPower += 1;
+                LevelManager.current.playerData.gravityPower += 0.1f;
                 break;
 
             case GravityDirection.Up:
                 rb.AddForce(-transform.up*-9.81f*2f);
-                LevelManager.current.playerData.gravityPower -= 1;
+                LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
 
             case GravityDirection.Left:
                 rb.AddForce(-transform.right*-9.81f*2f);
-                LevelManager.current.playerData.gravityPower -= 1;
+                LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
 
             case GravityDirection.Right:
                 rb.AddForce(transform.right*-9.81f*2f);
-                LevelManager.current.playerData.gravityPower -= 1;
+                LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
         }
         if(LevelManager.current.playerData.gravityPower <= 0)
