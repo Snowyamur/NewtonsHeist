@@ -11,6 +11,7 @@ TagManager:
   - CheckpointManager
   - GravityManipulator
   - EMP
+  - Trap
   layers:
   - Default
   - TransparentFX

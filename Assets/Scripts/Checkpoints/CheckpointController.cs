@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
+    // ----- Public Variables ----- 
+    public bool isTrapTrigger = false;
+
     // ----- Private variables ----- 
     CheckpointManager manager; 
 
@@ -17,6 +20,15 @@ public class CheckpointController : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             manager.UpdateCheckpoint(gameObject);
+
+            if (isTrapTrigger)
+            {
+                foreach (GameObject trap in GameObject.FindGameObjectsWithTag("Trap"))
+                {
+                    RotationScript script = trap.GetComponent<RotationScript>();
+                    script.SetActivated(true); 
+                }
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using UnityEditor;
 [CustomEditor(typeof(RotationScript))]
 public class RotationEditor : Editor
 {
+    private SerializedProperty isActivated;
     private SerializedProperty isCycle;
     private SerializedProperty isClockwise;
     private SerializedProperty startAngle;
@@ -14,6 +15,7 @@ public class RotationEditor : Editor
 
     private void OnEnable()
     {
+        isActivated = serializedObject.FindProperty("isActivated");
         isCycle = serializedObject.FindProperty("isCycle");
         isClockwise = serializedObject.FindProperty("isClockwise");
         startAngle = serializedObject.FindProperty("startAngle");
@@ -25,7 +27,9 @@ public class RotationEditor : Editor
     {
         serializedObject.Update();
 
+        EditorGUILayout.PropertyField(isActivated, new GUIContent("Is Activated"));
         EditorGUILayout.PropertyField(isCycle, new GUIContent("Is Cycle"));
+
         if (isCycle.boolValue)
         {
             EditorGUILayout.PropertyField(isClockwise, new GUIContent("Is Clockwise"));
@@ -47,6 +51,8 @@ public class RotationEditor : Editor
 public class RotationScript : MonoBehaviour
 {
     // Public variables
+    public bool isActivated = false;
+
     public bool isCycle = false;
     public bool isClockwise = true;
 
@@ -58,6 +64,9 @@ public class RotationScript : MonoBehaviour
     private float angleToRotate;
     private float rotationSpeed;
 
+    private float time = 0f;
+
+
     private void Start()
     {
         angleToRotate = endAngle - startAngle;
@@ -68,15 +77,20 @@ public class RotationScript : MonoBehaviour
 
     private void Update()
     {
-        if (isCycle)
-            Spin();
-        else
-            PingPong();
+        if (isActivated)
+        {
+            time += Time.deltaTime;
+
+            if (isCycle)
+                Spin();
+            else
+                PingPong();
+        }
     }
 
     private void PingPong()
     {
-        float lerp = 0.5f * (1.0F + Mathf.Sin(Mathf.PI * Time.time / rotationTime));
+        float lerp = 0.5f * (1.0F + Mathf.Sin(Mathf.PI * time / rotationTime));
         float rotateFromStart = angleToRotate * lerp;
 
         Quaternion target = Quaternion.Euler(0, 0, startAngle + rotateFromStart);
@@ -89,6 +103,12 @@ public class RotationScript : MonoBehaviour
             transform.RotateAround(transform.position, Vector3.forward, -rotationSpeed * Time.deltaTime);
         else
             transform.RotateAround(transform.position, Vector3.forward, rotationSpeed * Time.deltaTime);
+    }
+
+    // ----- PUBLIC FUNCTIONS ----- 
+    public void SetActivated(bool newActivated)
+    {
+        isActivated = newActivated;
     }
 
 

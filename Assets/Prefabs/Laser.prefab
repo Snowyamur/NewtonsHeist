@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7388186815606638054}
   m_Layer: 13
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de623e4d1be8dd6458d11d44d5f4a970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActivated: 0
   isCycle: 0
   isClockwise: 1
   startAngle: -10
