@@ -72,10 +72,6 @@ public class GravityController : MonoBehaviour
         }
         if(LevelManager.current.playerData.gravityPower <= 0)
         {
-            if(m_gravDir == GravityDirection.Left || m_gravDir == GravityDirection.Up)
-            {
-                speed = -speed;
-            }
             m_gravDir = GravityDirection.Down;
             LevelManager.current.playerData.gravityPower = 0;
         }
