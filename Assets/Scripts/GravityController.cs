@@ -21,6 +21,7 @@ public class GravityController : MonoBehaviour
     GameObject gravityArrows;
     PlayerControlMapping control;
     PlayerCollisions collisions;
+    SpriteRenderer playerSprite;
     Fade fade;
     [SerializeField] Rigidbody2D rb;
 
@@ -32,6 +33,7 @@ public class GravityController : MonoBehaviour
         fade = gravityArrows.GetComponent<Fade>();
         m_gravDir = GravityDirection.Down;
         rb = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
         gravityArrows.SetActive(false);
     }
 
@@ -73,6 +75,10 @@ public class GravityController : MonoBehaviour
         }
         if(LevelManager.current.playerData.gravityPower <= 0)
         {
+            if(m_gravDir != GravityDirection.Down)
+            {
+                playerSprite.flipY = false;
+            }
             m_gravDir = GravityDirection.Down;
             LevelManager.current.playerData.gravityPower = 0;
         }
@@ -90,6 +96,7 @@ public class GravityController : MonoBehaviour
             {
                 m_gravDir = GravityDirection.Down;
             }
+            playerSprite.flipY = !playerSprite.flipY;
             return;
         }
 
