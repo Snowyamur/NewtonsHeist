@@ -18,9 +18,10 @@ public class GravityController : MonoBehaviour
     }
     GravityDirection m_gravDir;
 
-    Image gravityArrows;
+    GameObject gravityArrows;
     PlayerControlMapping control;
     PlayerCollisions collisions;
+    SpriteRenderer playerSprite;
     Fade fade;
     [SerializeField] Rigidbody2D rb;
 
@@ -28,10 +29,12 @@ public class GravityController : MonoBehaviour
     {
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();
-        gravityArrows = GameObject.FindGameObjectWithTag("GravityArrows").GetComponent<Image>();
+        gravityArrows = GameObject.Find("Gravity Arrows");
         fade = gravityArrows.GetComponent<Fade>();
         m_gravDir = GravityDirection.Down;
         rb = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
+        gravityArrows.SetActive(false);
     }
 
     void Update()
@@ -52,23 +55,37 @@ public class GravityController : MonoBehaviour
         {
             case GravityDirection.Down:
                 //rb.AddForce(transform.up*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower += 0.1f;
                 break;
 
             case GravityDirection.Up:
                 rb.AddForce(-transform.up*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
 
             case GravityDirection.Left:
                 rb.AddForce(-transform.right*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
 
             case GravityDirection.Right:
                 rb.AddForce(transform.right*-9.81f*2f);
+                LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
+        }
+        if(LevelManager.current.playerData.gravityPower <= 0)
+        {
+            if(m_gravDir != GravityDirection.Down)
+            {
+                playerSprite.flipY = false;
+            }
+            m_gravDir = GravityDirection.Down;
+            LevelManager.current.playerData.gravityPower = 0;
         }
     }
     public void ChangeGravity(bool multiDir)
     {
+        LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
         if(!multiDir)
         {
             if(m_gravDir == GravityDirection.Down) //If current direction is down, make up
@@ -79,11 +96,12 @@ public class GravityController : MonoBehaviour
             {
                 m_gravDir = GravityDirection.Down;
             }
+            playerSprite.flipY = !playerSprite.flipY;
             return;
         }
 
         //MULTIDIRECTIONAL GRAVITY
-        StartCoroutine(fade.FadeImageToFullAlpha(fps, gravityArrows)); //Makes the arrows image appear
+        gravityArrows.SetActive(true); //Makes the arrows image appear
         while(control.gravityHold != 0)
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
@@ -114,7 +132,7 @@ public class GravityController : MonoBehaviour
                 break;
             }
         }
-        StartCoroutine(fade.FadeImageToZeroAlpha(fps, gravityArrows)); //Makes the arrows image disappear
+        gravityArrows.SetActive(false); //Makes the arrows image disappear
     }
 
     public GravityDirection gravDir

@@ -14,9 +14,9 @@ public class PlayerCollisions : MonoBehaviour
   [Space]
 
   [Header("Collision Checks")]
-  [SerializeField] bool onGround;
-  [SerializeField] bool onCeiling;
-  [SerializeField] bool onWall;
+  [SerializeField] Collider2D onGround;
+  [SerializeField] Collider2D onCeiling;
+  [SerializeField] Collider2D onWall;
   [SerializeField] bool inAir;
   //[SerializeField] bool onRightWall;
   //[SerializeField] bool onLeftWall;
@@ -66,7 +66,6 @@ public class PlayerCollisions : MonoBehaviour
       {
           inAir = false;
           mechanics.isJumping = false;
-          mechanics.isIdle = true;
       }
       else
       {
@@ -75,14 +74,14 @@ public class PlayerCollisions : MonoBehaviour
   }
 
 
-  void OnTriggerEnter2D(Collider2D other)
+  /*void OnTriggerEnter2D(Collider2D other)
   {
       if(other.gameObject.tag == "Enemy")
       {
           //If hit with an enemy, dies
           Destroy(this);
       }
-  }
+  }*/
 
   public bool IsInAir() //Checks if currently in air
   {
