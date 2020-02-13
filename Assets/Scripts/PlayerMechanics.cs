@@ -201,13 +201,13 @@ public class PlayerMechanics : MonoBehaviour
     {
         if(control.gravityToggle > 0.5f && gravOn)
         {
-            if(LevelManager.current.playerData.gravityPower <= 0) //Prevents gravity toggle when 0;
+            if(LevelManager.current.playerData.gravityPower < 20) //Prevents gravity toggle when < 20;
             {
               return;
             }
             gravOn = !gravOn;
             gravControl.ChangeGravity(powers["Multidirection Gravity"]); //Changes gravity based on ability
-            
+
         }
         else if(control.gravityToggle < 0.5f && !gravOn)
         {
