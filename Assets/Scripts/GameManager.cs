@@ -9,13 +9,13 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    // If a script will be using the singleton in its awake method, make 
-    // sure the manager is first to execute with the Script Execution 
+    // If a script will be using the singleton in its awake method, make
+    // sure the manager is first to execute with the Script Execution
     // Order project settings
     private void Awake()
     {
         // this depend how you want to handle multiple managers (like when switching/adding scenes)
-        if (Instance != null) 
+        if (Instance != null)
             Destroy(Instance);
         Instance = this;
     }
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
+        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         respawnScript.Respawn();
     }
 

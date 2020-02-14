@@ -93,6 +93,8 @@ public class DetectionScript : MonoBehaviour
 
 
     // ----- PUBLIC SETTER FUNCTIONS -----
+
+    //Sets direction of cone based on angle
     public void SetAimDirection(Vector2 aimDirection, bool isFacingLeft)
     {
         if(isFacingLeft)
@@ -107,6 +109,8 @@ public class DetectionScript : MonoBehaviour
 
 
     // ----- HELPER FUNCTIONS -----
+
+    //Draws the raycast for degugging
     private RaycastHit2D DrawRaycast(Vector2 origin, Vector2 direction, float distance, LayerMask layerMask)
     {
         RaycastHit2D raycastHit = Physics2D.Raycast(origin, direction, distance, layerMask);
@@ -115,17 +119,20 @@ public class DetectionScript : MonoBehaviour
         return raycastHit;
     }
 
+    //Turn degrees to radians
     private float DegreesToRad(float degree)
     {
         return degree * Mathf.PI / 180.0f;
     }
 
+    //Turns an angle to a vector
     private Vector3 GetVectorFromAngle(float angle)
     {
         float radian = DegreesToRad(angle);
         return new Vector3(Mathf.Cos(radian), Mathf.Sin(radian));
     }
 
+    //Converts a vector to an angle
     private float GetAngleFromVectorFloat(Vector3 dir)
     {
         dir = dir.normalized;

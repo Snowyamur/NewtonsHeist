@@ -103,17 +103,23 @@ public class PlayerMechanics : MonoBehaviour
     {
         if (control.xMove < 0) //If moving left
         {
-            playerSprite.flipX = true;
             isFacingLeft = true;
 
             playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
         }
         else if (control.xMove > 0) //If moving right
         {
-            playerSprite.flipX = false;
             isFacingLeft = false;
 
             playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
+        }
+        if(gravControl.gravDir == GravityController.GravityDirection.Up || gravControl.gravDir == GravityController.GravityDirection.Left)
+        {
+            playerSprite.flipX = !isFacingLeft;
+        }
+        else
+        {
+            playerSprite.flipX = isFacingLeft;
         }
         /*if (gravDir = "Up") //If on ceiling
         {
@@ -206,7 +212,7 @@ public class PlayerMechanics : MonoBehaviour
               return;
             }
             gravOn = !gravOn;
-            gravControl.ChangeGravity(powers["Multidirection Gravity"]); //Changes gravity based on ability
+            gravControl.ChangeGravity(LevelManager.current.playerData.powers["Multidirection Gravity"]); //Changes gravity based on ability
 
         }
         else if(control.gravityToggle < 0.5f && !gravOn)

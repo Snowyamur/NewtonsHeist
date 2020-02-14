@@ -53,7 +53,6 @@ public class PlayerControlMapping : MonoBehaviour
     {
         if(m_inputting)
         {
-            riggie = GetComponent<Rigidbody2D>();
             m_xMove = Input.GetAxis("Horizontal");
             m_vMove = Input.GetAxis("Vertical");
             m_horizontalAim = Input.GetAxis("HorizontalAim");
@@ -71,6 +70,26 @@ public class PlayerControlMapping : MonoBehaviour
             //PLACEHOLDERs
             m_save = Input.GetKeyDown(KeyCode.F5);
             m_load = Input.GetKeyDown(KeyCode.F6);
+        }
+        else
+        {
+          m_xMove = 0;
+          m_vMove = 0;
+          m_horizontalAim = 0;
+          m_verticalAim = 0;
+          m_jumpOn = false;
+          m_crouching = false;
+          m_enter = false;
+          m_throwHeld = 0;
+          m_gravityToggle = 0;
+          m_gravityHold = 0;
+          m_horizontalDpad = 0;
+          m_verticalDpad = 0;
+          m_pause = false;
+
+          //PLACEHOLDERs
+          m_save = false;
+          m_load = false;
         }
     }
 

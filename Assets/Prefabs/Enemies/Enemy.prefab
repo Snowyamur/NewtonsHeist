@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7976957334609063254}
   m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7976957334609063253
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,10 +147,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   isFacingLeft: 0
+  hitEMP: 0
   rayDistance: 2
-  changeDirectionMask:
+  gravDelay: 5
+  groundMask:
     serializedVersion: 2
-    m_Bits: 1792
+    m_Bits: 0
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 0
+  ceilingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  isIdle: 0
+  isWalking: 0
+  isTurning: 0
   rb: {fileID: 0}
   groundDetection: {fileID: 0}
   detectionScript: {fileID: 0}

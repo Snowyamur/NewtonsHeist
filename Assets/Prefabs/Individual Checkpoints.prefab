@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2300726030330520510}
   - component: {fileID: 2300726030330520509}
   m_Layer: 0
-  m_Name: Checkpoint 5
+  m_Name: Individual Checkpoints
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2300726030330520451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 98.5, y: 13.2, z: -0.8348}
-  m_LocalScale: {x: 2.035824, y: 2.413441, z: 1}
+  m_LocalScale: {x: 2, y: 2.413441, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 30}
+  m_Size: {x: 1, y: 25}
   m_EdgeRadius: 0
 --- !u!114 &2300726030330520510
 MonoBehaviour:
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ed23e432486e6448b45f1931e4ad63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTrapTrigger: 0
 --- !u!212 &2300726030330520509
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -6,21 +6,31 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     // ----- Public variables -----
+    [Header("Mechanics")]
     [SerializeField] protected float speed = 6.0f;
     [SerializeField] protected bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
                                        // in the left direction
     [SerializeField] protected bool hitEMP = false; //Signals if hit by EMP
     [SerializeField] protected float rayDistance = 2.0f;
+    [SerializeField] protected float gravDelay = 5.0f;
+    [Space]
+
+    [Header("Layer Masks")]
     [SerializeField] protected LayerMask groundMask;
     [SerializeField] protected LayerMask wallMask;
     [SerializeField] protected LayerMask ceilingMask;
+    [Space]
+
+    [Header("Animation Bools")]
+    public bool isIdle;
+    public bool isWalking;
+    public bool isTurning;
+    [Space]
 
     // GameObject component variables
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected Transform groundDetection;
     [SerializeField] protected DetectionScript detectionScript;
-
-    [SerializeField] protected float gravDelay = 5.0f;
 
 
     void Start()
@@ -83,6 +93,10 @@ public class EnemyAI : MonoBehaviour
 
     protected void ChangeDirection()
     {
+        isTurning = true;
+        StartCoroutine(WaitToTurn()); //Lets animation play out
+        isTurning = false;
+
         if (isFacingLeft)
         {
             transform.eulerAngles = new Vector3(0, 0, 0); //Resets angles
@@ -107,10 +121,14 @@ public class EnemyAI : MonoBehaviour
         if(!hitEMP) //If not hit by an EMP
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            isWalking = true;
+            isIdle = false;
         }
         else
         {
             rb.velocity = new Vector2(0, 0);
+            isWalking = false;
+            isIdle = true;
         }
     }
 
@@ -133,6 +151,11 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 9.81f * 2f);
         yield return new WaitForSeconds(delay);
         rb.velocity = new Vector2(rb.velocity.x, 0);
+    }
+
+    IEnumerator WaitToTurn()
+    {
+        yield return new WaitForSeconds(5f);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)

@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class FlyingDrone : EnemyAI
 {
-  
+
     void FixedUpdate()
     {
       //Mathf.Sin(Time.fixedTime)
