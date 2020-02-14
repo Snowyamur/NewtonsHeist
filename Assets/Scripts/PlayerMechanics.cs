@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMechanics : MonoBehaviour
 {
     [Header("Vertical Movement")]
-    [SerializeField] float jumpSpeed = 10f;
+    [SerializeField] float jumpSpeed = 7f;
     [SerializeField] float smallJumpMod = 3f; //For double jump
     [SerializeField] float fallingMod = 4f; //Speed of falling
     [SerializeField] int hasJumped = 0;
@@ -23,6 +23,7 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] bool crouching = false;
     [SerializeField] GameObject posRight;
     [SerializeField] GameObject posLeft;
+    [SerializeField] string movement;
 
     [Space]
 
@@ -79,6 +80,7 @@ public class PlayerMechanics : MonoBehaviour
         posRight = GameObject.Find("GrenadePointRight");
         posLeft = GameObject.Find("GrenadePointLeft");
         wallMask = LayerMask.GetMask("Wall");
+        rb.gravityScale = 0;
     }
 
     // Start is called before the first frame update
@@ -140,31 +142,65 @@ public class PlayerMechanics : MonoBehaviour
     void Walk()
     {
 
-        if(control.xMove != 0) //If player moves horizontally
+        if(movement == "xMove" && control.xMove != 0) //If player moves horizontally
         {
             //Calculates velocity based on speed and direction faced
             rb.velocity = new Vector2(control.xMove*normalSpeed, rb.velocity.y);
 
         }
-        else
+        else if(movement == "vMove" && control.vMove != 0) //If player moves vertically
+        {
+          //Calculates velocity based on speed and direction faced
+          rb.velocity = new Vector2(rb.velocity.x, control.vMove*normalSpeed);
+        }
+        else if(control.xMove == 0 && (gravControl.gravDir == GravityController.GravityDirection.Up || gravControl.gravDir == GravityController.GravityDirection.Down))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-
+        else if(control.vMove == 0 && (gravControl.gravDir == GravityController.GravityDirection.Right || gravControl.gravDir == GravityController.GravityDirection.Left))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+        }
         //Play out appropraiate animations
         //If moving, but not crouching or jumping
-        if(control.xMove != 0 && !isCrouching && !collisions.IsInAir())
+        if(control.xMove != 0 && !isCrouching && !collisions.IsInAir() && movement == "xMove")
         {
             isWalking = true;
             isIdle = false;
+            isFalling = false;
+            isJumping = false;
         }
 
         //If not moving, crouhcing, or jumping
-        else if(control.xMove == 0 && !isCrouching && !collisions.IsInAir())
+        else if(control.xMove == 0 && !isCrouching && !collisions.IsInAir() && movement == "xMove")
         {
             isWalking = false;
             isIdle = true;
+            isFalling = false;
+            isJumping = false;
         }
+        else if(control.vMove != 0 && !isCrouching && !collisions.IsInAir() && movement == "vMove")
+        {
+            isWalking = true;
+            isIdle = false;
+            isFalling = false;
+            isJumping = false;
+        }
+
+        //If not moving, crouhcing, or jumping
+        else if(control.vMove == 0 && !isCrouching && !collisions.IsInAir() && movement == "vMove")
+        {
+            isWalking = false;
+            isIdle = true;
+            isFalling = false;
+            isJumping = false;
+        }
+        else
+        {
+           isWalking = false;
+           isIdle = false;
+        }
+
     }
 
     void Jump()
@@ -173,15 +209,20 @@ public class PlayerMechanics : MonoBehaviour
         {
             //rb.AddForce(jumpDir*jumpSpeed, ForceMode2D.Impulse);
             rb.velocity = jumpDir*jumpSpeed;
+            isJumping = true;
             hasJumped += 1;
         }
         if(rb.velocity.y < 0) //If player is falling
         {
             rb.velocity += jumpDir * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
+            isJumping = false;
+            isFalling = true;
         }
         else if(rb.velocity.y > 0 && !control.jumpOn) //If the player is in the air and jumps again
         {
             rb.velocity += jumpDir * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
+            isFalling = false;
+            isJumping = true;
         }
         if(rb.velocity.y == 0)
         {
@@ -195,7 +236,6 @@ public class PlayerMechanics : MonoBehaviour
         {
             rb.velocity *= crouchingMod; //Change to crouching speed
             isCrouching = true;
-            isIdle = false;
         }
         else
         {
@@ -224,15 +264,19 @@ public class PlayerMechanics : MonoBehaviour
         {
             case GravityController.GravityDirection.Down:
                 jumpDir = Vector2.up;
+                movement = "xMove";
                 break;
             case GravityController.GravityDirection.Up:
                 jumpDir = Vector2.down;
+                movement = "xMove";
                 break;
             case GravityController.GravityDirection.Right:
                 jumpDir = Vector2.left;
+                movement = "vMove";
                 break;
             case GravityController.GravityDirection.Left:
                 jumpDir = Vector2.right;
+                movement = "vMove";
                 break;
         }
     }
