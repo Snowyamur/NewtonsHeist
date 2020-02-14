@@ -256,6 +256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (198)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &17948191
@@ -324,6 +329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (141)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -394,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (193)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &24432259
@@ -462,6 +477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (234)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -532,6 +552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (219)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &38453272
@@ -600,6 +625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (206)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -670,6 +700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (235)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &53303015
@@ -738,6 +773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -808,6 +848,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (142)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &59354729
@@ -877,6 +922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (16)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &61413932
@@ -890,6 +940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976957334609063248, guid: e1747e260b306cf41b539ea15262b9ff,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7976957334609063258, guid: e1747e260b306cf41b539ea15262b9ff,
         type: 3}
@@ -929,7 +984,7 @@ PrefabInstance:
     - target: {fileID: 7976957334609063258, guid: e1747e260b306cf41b539ea15262b9ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7976957334609063258, guid: e1747e260b306cf41b539ea15262b9ff,
         type: 3}
@@ -1015,6 +1070,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (243)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &74861166
@@ -1083,6 +1143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (116)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1153,6 +1218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (119)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &76322303
@@ -1221,6 +1291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1291,6 +1366,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (227)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &89004629
@@ -1359,6 +1439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1429,6 +1514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (131)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &108783120
@@ -1497,6 +1587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1567,6 +1662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (69)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &120113879
@@ -1635,6 +1735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (231)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1705,6 +1810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (201)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &126765766
@@ -1773,6 +1883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1843,6 +1958,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (250)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &136435239
@@ -1911,6 +2031,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (239)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -1981,6 +2106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (115)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &142563997
@@ -2049,6 +2179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (109)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -2119,6 +2254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (99)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &153119571
@@ -2188,6 +2328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (175)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &155174853
@@ -2201,6 +2346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Checkpoint 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300726030330520451, guid: 82b4e2ea9c5653b439d4a8abf64019d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2300726030330520508, guid: 82b4e2ea9c5653b439d4a8abf64019d7,
         type: 3}
@@ -2326,6 +2476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (12)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &158222101
@@ -2394,6 +2549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (125)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -2464,6 +2624,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (80)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &163286001
@@ -2532,6 +2697,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (232)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -2602,6 +2772,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (138)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &175535559
@@ -2671,6 +2846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (155)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &208991057
@@ -2739,6 +2919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -2893,6 +3078,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (62)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &241762982
@@ -2961,6 +3151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (161)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -3031,6 +3226,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (251)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &251232905
@@ -3100,6 +3300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (186)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &264332475
@@ -3168,6 +3373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (167)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -3322,6 +3532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (233)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &295206100
@@ -3390,6 +3605,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (189)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -3460,6 +3680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (183)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &318924124
@@ -3528,6 +3753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (258)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -3598,6 +3828,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (55)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &355699491
@@ -3666,6 +3901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -3736,6 +3976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (94)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &365485695
@@ -3805,6 +4050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (178)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &382755078
@@ -3873,6 +4123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -4012,6 +4267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (172)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &402366187
@@ -4080,6 +4340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -4150,6 +4415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (21)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &409819091
@@ -4219,6 +4489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (103)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &426094710
@@ -4266,7 +4541,7 @@ PrefabInstance:
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
@@ -4362,6 +4637,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (171)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &445931077
@@ -4430,6 +4710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (174)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -4500,6 +4785,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (238)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &454682636
@@ -4568,6 +4858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -4638,6 +4933,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (98)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &457686877
@@ -4706,6 +5006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -4776,6 +5081,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (152)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &464984968
@@ -4844,6 +5154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -4914,6 +5229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (10)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &479888883
@@ -4982,6 +5302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -5052,6 +5377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (249)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &497927652
@@ -5120,6 +5450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -5190,6 +5525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (114)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &503974704
@@ -5258,6 +5598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (230)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -5328,6 +5673,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (137)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &510361507
@@ -5396,6 +5746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (126)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -5563,6 +5918,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (166)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1 &521679712
@@ -5629,7 +5989,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &535087012
 PrefabInstance:
@@ -5697,6 +6057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (209)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -5767,6 +6132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (59)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &536100297
@@ -5835,6 +6205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -5905,6 +6280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (81)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &539848812
@@ -5973,6 +6353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6043,6 +6428,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (27)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &554147209
@@ -6111,6 +6501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (164)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6181,6 +6576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (245)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &571509698
@@ -6249,6 +6649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (160)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6319,6 +6724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (146)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &578417868
@@ -6387,6 +6797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (179)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6457,6 +6872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (211)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &594395161
@@ -6525,6 +6945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6595,6 +7020,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (154)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &610146237
@@ -6663,6 +7093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6733,6 +7168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (226)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &626471956
@@ -6801,6 +7241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (134)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -6871,6 +7316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (118)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &630704350
@@ -6940,6 +7390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (108)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &633843389
@@ -7008,6 +7463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -7096,6 +7556,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (60)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &663087806
@@ -7164,6 +7629,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -7234,6 +7704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (163)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &674169841
@@ -7303,6 +7778,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (168)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &675387183
@@ -7350,7 +7830,7 @@ PrefabInstance:
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
@@ -7515,6 +7995,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (196)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &718315441
@@ -7583,6 +8068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (182)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -7653,6 +8143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (216)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &731773403
@@ -7721,6 +8216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (192)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -7791,6 +8291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &756067344
@@ -7859,6 +8364,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (244)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -7929,6 +8439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (222)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &772282627
@@ -7997,6 +8512,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (151)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -8067,6 +8587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (45)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &786312545
@@ -8135,6 +8660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -8205,6 +8735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (173)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &810729819
@@ -8273,6 +8808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -8343,6 +8883,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (215)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &821756204
@@ -8411,6 +8956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (194)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -8481,6 +9031,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (139)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &824055276
@@ -8549,6 +9104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (156)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -8619,6 +9179,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (54)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &844407532
@@ -8687,6 +9252,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (133)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -8757,6 +9327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (149)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &872325471
@@ -8826,6 +9401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (41)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1 &882322661
@@ -8875,7 +9455,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &911964781
 PrefabInstance:
@@ -8943,6 +9523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (225)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9013,6 +9598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (88)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &919213095
@@ -9081,6 +9671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9151,6 +9746,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (128)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &931199155
@@ -9219,6 +9819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (236)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9358,6 +9963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (23)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &947383362
@@ -9426,6 +10036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9496,6 +10111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (40)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &952125997
@@ -9564,6 +10184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9634,6 +10259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (58)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &972681333
@@ -9702,6 +10332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (185)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9772,6 +10407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (205)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &987387205
@@ -9840,6 +10480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (224)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -9910,6 +10555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (33)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &992761820
@@ -9978,6 +10628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -10048,6 +10703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (89)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1007159996
@@ -10116,6 +10776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (150)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -10186,6 +10851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (246)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1020683017
@@ -10254,6 +10924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -10324,6 +10999,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (254)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1035816911
@@ -10392,6 +11072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (181)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -10462,6 +11147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (228)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1041784956
@@ -10530,6 +11220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -10600,6 +11295,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (97)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1065962972
@@ -10668,6 +11368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (240)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -10750,6 +11455,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (184)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1097167701
@@ -10797,7 +11507,7 @@ PrefabInstance:
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
@@ -10893,6 +11603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (71)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1116245546
@@ -10961,6 +11676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (252)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -11031,6 +11751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (130)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1123279717
@@ -11099,6 +11824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -11169,6 +11899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (32)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1133884880
@@ -11237,6 +11972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -11307,6 +12047,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (220)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1151184143
@@ -11376,6 +12121,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (107)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1156496831
@@ -11423,7 +12173,7 @@ PrefabInstance:
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8464592222258521549, guid: bcb8f6de00be56841baed20a34ea9124,
         type: 3}
@@ -11519,6 +12269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (144)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1169218013
@@ -11587,6 +12342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (158)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -11657,6 +12417,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (36)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1178442317
@@ -11725,6 +12490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -11795,6 +12565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (200)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1195320102
@@ -11863,6 +12638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (218)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -11933,6 +12713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (50)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1214919671
@@ -12001,6 +12786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (140)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -12094,7 +12884,7 @@ PrefabInstance:
     - target: {fileID: 5559740352772771111, guid: 72d2c2b4878f0e74da3419c0c2ae61e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5559740352772771111, guid: 72d2c2b4878f0e74da3419c0c2ae61e7,
         type: 3}
@@ -12211,6 +13001,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (111)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1225625234
@@ -12279,6 +13074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (212)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -12349,6 +13149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (79)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1247713004
@@ -12417,6 +13222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (217)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -12487,6 +13297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (148)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1263115276
@@ -12555,6 +13370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (120)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -12650,6 +13470,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (7)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1282195622
@@ -12718,6 +13543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (162)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -12788,6 +13618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (203)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1305828560
@@ -12856,6 +13691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (204)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -12926,6 +13766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (34)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1328203761
@@ -12994,6 +13839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (214)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -13064,6 +13914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (253)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1344239080
@@ -13133,6 +13988,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (208)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1346232642
@@ -13201,6 +14061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (143)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -13340,6 +14205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (104)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1355395246
@@ -13408,6 +14278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (237)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -13478,6 +14353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (82)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1365240184
@@ -13546,6 +14426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (157)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -13616,6 +14501,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (102)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1372708069
@@ -13684,6 +14574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (170)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -13754,6 +14649,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (24)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1393243973
@@ -13822,6 +14722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (190)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -13892,6 +14797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (147)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1402043595
@@ -13960,6 +14870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (124)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14099,6 +15014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (241)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1462306502
@@ -14167,6 +15087,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14237,6 +15162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (256)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1473546214
@@ -14305,6 +15235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (197)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14375,6 +15310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (48)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1497711258
@@ -14443,6 +15383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (210)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14513,6 +15458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (20)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1500931855
@@ -14581,6 +15531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14651,6 +15606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (187)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1509805628
@@ -14719,6 +15679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (169)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14789,6 +15754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (61)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1534055989
@@ -14857,6 +15827,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -14939,6 +15914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (153)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1562559270
@@ -15007,6 +15987,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (199)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -15077,6 +16062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (78)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1607248144
@@ -15145,6 +16135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (213)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -15215,6 +16210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (145)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1634015631
@@ -15283,6 +16283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -15422,6 +16427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (248)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1655771711
@@ -15490,6 +16500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -15560,6 +16575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (132)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1689693816
@@ -15629,6 +16649,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (262)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1693627130
@@ -15681,7 +16706,7 @@ PrefabInstance:
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
@@ -15787,6 +16812,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (177)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1703534381
@@ -15855,6 +16885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -15925,6 +16960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (11)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1719996527
@@ -15993,6 +17033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16063,6 +17108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (96)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1728146605
@@ -16131,6 +17181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (259)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16201,6 +17256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (101)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1731415371
@@ -16269,6 +17329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16339,6 +17404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (229)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1737017597
@@ -16407,6 +17477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16477,6 +17552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (207)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1744462868
@@ -16545,6 +17625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (195)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16615,6 +17700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (15)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1778139528
@@ -16683,6 +17773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (121)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16753,6 +17848,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (42)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1785837033
@@ -16821,6 +17921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (260)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -16891,6 +17996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (105)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1792885036
@@ -16959,6 +18069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17029,6 +18144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (57)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1803187650
@@ -17098,6 +18218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (202)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1817756367
@@ -17166,6 +18291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (221)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17283,7 +18413,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6f2e49a539985de4182f9ae2814c39b6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6f2e49a539985de4182f9ae2814c39b6,
         type: 3}
@@ -17304,6 +18434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17374,6 +18509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (74)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1856169733
@@ -17442,6 +18582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17512,6 +18657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (135)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1861242319
@@ -17580,6 +18730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (188)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17650,6 +18805,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (73)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1867632818
@@ -17718,6 +18878,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17788,6 +18953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (53)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1878296598
@@ -17856,6 +19026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (191)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -17926,6 +19101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (22)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1891191093
@@ -17995,6 +19175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (261)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1902078760
@@ -18063,6 +19248,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -18157,6 +19347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (117)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1909604255
@@ -18226,6 +19421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (129)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1934623270
@@ -18239,6 +19439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Checkpoint 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300726030330520451, guid: 82b4e2ea9c5653b439d4a8abf64019d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2300726030330520508, guid: 82b4e2ea9c5653b439d4a8abf64019d7,
         type: 3}
@@ -18364,6 +19569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (159)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!95 &1942960011 stripped
@@ -18439,6 +19649,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (43)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1957144042
@@ -18507,6 +19722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (165)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -18577,6 +19797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (242)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1971555339
@@ -18645,6 +19870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -18715,6 +19945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (176)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &1985851239
@@ -18783,6 +20018,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (127)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -18937,6 +20177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &2004110443
@@ -19005,6 +20250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (223)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -19075,6 +20325,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (247)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &2025663212
@@ -19144,6 +20399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (255)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &2028248370
@@ -19157,6 +20417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976957334609063248, guid: e1747e260b306cf41b539ea15262b9ff,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7976957334609063258, guid: e1747e260b306cf41b539ea15262b9ff,
         type: 3}
@@ -19196,7 +20461,7 @@ PrefabInstance:
     - target: {fileID: 7976957334609063258, guid: e1747e260b306cf41b539ea15262b9ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7976957334609063258, guid: e1747e260b306cf41b539ea15262b9ff,
         type: 3}
@@ -19281,6 +20546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (257)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -19374,6 +20644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (136)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &2073894703
@@ -19442,6 +20717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -19512,6 +20792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (47)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &2104198473
@@ -19580,6 +20865,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -19650,6 +20940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (180)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
 --- !u!1001 &2136372965
@@ -19718,6 +21013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube (122)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ceiling
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e49a539985de4182f9ae2814c39b6, type: 3}
@@ -19840,7 +21140,7 @@ PrefabInstance:
     - target: {fileID: 3248918060483574432, guid: 85f8723f02900fe4d8d7598307bd1863,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3248918060483574432, guid: 85f8723f02900fe4d8d7598307bd1863,
         type: 3}
