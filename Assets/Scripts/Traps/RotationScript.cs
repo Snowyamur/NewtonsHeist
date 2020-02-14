@@ -75,7 +75,7 @@ public class RotationScript : MonoBehaviour
         rotationSpeed = 360f / rotationTime;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isActivated)
         {
@@ -90,7 +90,7 @@ public class RotationScript : MonoBehaviour
 
     private void PingPong()
     {
-        float lerp = 0.5f * (1.0F + Mathf.Sin(Mathf.PI * time / rotationTime));
+        float lerp = 0.5f * (1.0F + Mathf.Sin(Mathf.PI * time / rotationTime - Mathf.PI / 2f));
         float rotateFromStart = angleToRotate * lerp;
 
         Quaternion target = Quaternion.Euler(0, 0, startAngle + rotateFromStart);
