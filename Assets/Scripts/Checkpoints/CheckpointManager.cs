@@ -17,6 +17,9 @@ public class CheckpointManager : MonoBehaviour
         {
             checkpoints.Add(transform.GetChild(i).gameObject);
         }
+
+        if (checkpoints.Count != 0) 
+            LevelManager.current.lastCheckpoint = checkpoints[0];
     }
 
     public bool UpdateCheckpoint(GameObject newCP)
