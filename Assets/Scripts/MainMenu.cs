@@ -24,9 +24,12 @@ public class MainMenu : MonoBehaviour
 
   Resolution[] resolutions;
 
+  public Text currentRes;
+
   void Start()
   {
       resolutions = Screen.resolutions;
+      currentRes.text = Screen.currentResolution.ToString();
   }
 
   void OnGUI ()
