@@ -54,7 +54,7 @@ public class GravityController : MonoBehaviour
         switch(m_gravDir)
         {
             case GravityDirection.Down:
-                //rb.AddForce(transform.up*-9.81f*2f);
+                rb.AddForce(Vector2.down*9.81f*2f);
                 if(LevelManager.current.playerData.gravityPower < 100f)
                 {
                   LevelManager.current.playerData.gravityPower += 0.1f;
@@ -62,19 +62,19 @@ public class GravityController : MonoBehaviour
                 break;
 
             case GravityDirection.Up:
-                rb.AddForce(transform.up*-9.81f*2f);
+                rb.AddForce(Vector2.up*9.81f*2f);
                 LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
 
             case GravityDirection.Left:
-                rb.AddForce(-transform.right*-9.81f*2f);
-                rb.AddForce(-transform.up*(-9.81f));
+                rb.AddForce(-transform.up*9.81f*2f);
+                //rb.AddForce(-Vector2.up*-9.81f);
                 LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
 
             case GravityDirection.Right:
-                rb.AddForce(transform.right*-9.81f*2f);
-                rb.AddForce(-transform.up*(-9.81f));
+                rb.AddForce(-transform.up*9.81f*2f);
+                //rb.AddForce(-Vector2.up*-9.81f);
                 LevelManager.current.playerData.gravityPower -= 0.1f;
                 break;
         }
@@ -116,7 +116,7 @@ public class GravityController : MonoBehaviour
       float sTime = 0f;
       while(sTime <= 5f)
       {
-          if(Input.GetKeyDown(KeyCode.UpArrow))
+          if(Input.GetKey(KeyCode.UpArrow))
           {
               //Physics2D.gravity = new Vector2(0, 9.8f);
               m_gravDir = GravityDirection.Up;
@@ -125,17 +125,16 @@ public class GravityController : MonoBehaviour
               break;
           }
 
-          if(Input.GetKeyDown(KeyCode.DownArrow))
+          if(Input.GetKey(KeyCode.DownArrow))
           {
             //  Physics2D.gravity = new Vector2(0, -9.8f);
               m_gravDir = GravityDirection.Down;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 0);
-              playerSprite.flipY = false;
               break;
           }
 
-          if(Input.GetKeyDown(KeyCode.RightArrow))
+          if(Input.GetKey(KeyCode.RightArrow))
           {
               //Physics2D.gravity = new Vector2(9.8f, 0);
               m_gravDir = GravityDirection.Right;
@@ -144,7 +143,7 @@ public class GravityController : MonoBehaviour
               break;
           }
 
-          if(Input.GetKeyDown(KeyCode.LeftArrow))
+          if(Input.GetKey(KeyCode.LeftArrow))
           {
               //Physics2D.gravity = new Vector2(-9.8f, 0);
               m_gravDir = GravityDirection.Left;
