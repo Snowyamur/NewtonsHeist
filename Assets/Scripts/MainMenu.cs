@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 		NewGame,
 		Continue,
         Options,
-        Extras,
+        Extra,
         Quit
 	}
 
@@ -60,10 +60,10 @@ public class MainMenu : MonoBehaviour
 				currentMenu = Menu.Options;
 			}
 
-            if(GUILayout.Button("Extras"))
+            if(GUILayout.Button("Extra"))
             {
 				SaveLoad.Load();
-				currentMenu = Menu.Extras;
+				currentMenu = Menu.Extra;
 			}
 
 			if(GUILayout.Button("Quit Game"))
@@ -142,7 +142,7 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    else if(currentMenu == Menu.Extras)
+    else if(currentMenu == Menu.Extra)
     {
         //TODO
     }
