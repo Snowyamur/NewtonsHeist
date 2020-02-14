@@ -167,6 +167,8 @@ public class PlayerMechanics : MonoBehaviour
         {
             isWalking = true;
             isIdle = false;
+            isFalling = false;
+            isJumping = false;
         }
 
         //If not moving, crouhcing, or jumping
@@ -174,11 +176,15 @@ public class PlayerMechanics : MonoBehaviour
         {
             isWalking = false;
             isIdle = true;
+            isFalling = false;
+            isJumping = false;
         }
         else if(control.vMove != 0 && !isCrouching && !collisions.IsInAir() && movement == "vMove")
         {
             isWalking = true;
             isIdle = false;
+            isFalling = false;
+            isJumping = false;
         }
 
         //If not moving, crouhcing, or jumping
@@ -186,6 +192,13 @@ public class PlayerMechanics : MonoBehaviour
         {
             isWalking = false;
             isIdle = true;
+            isFalling = false;
+            isJumping = false;
+        }
+        else
+        {
+           isWalking = false;
+           isIdle = false;
         }
 
     }
@@ -196,15 +209,20 @@ public class PlayerMechanics : MonoBehaviour
         {
             //rb.AddForce(jumpDir*jumpSpeed, ForceMode2D.Impulse);
             rb.velocity = jumpDir*jumpSpeed;
+            isJumping = true;
             hasJumped += 1;
         }
         if(rb.velocity.y < 0) //If player is falling
         {
             rb.velocity += jumpDir * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
+            isJumping = false;
+            isFalling = true;
         }
         else if(rb.velocity.y > 0 && !control.jumpOn) //If the player is in the air and jumps again
         {
             rb.velocity += jumpDir * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
+            isFalling = false;
+            isJumping = true;
         }
         if(rb.velocity.y == 0)
         {
@@ -218,7 +236,6 @@ public class PlayerMechanics : MonoBehaviour
         {
             rb.velocity *= crouchingMod; //Change to crouching speed
             isCrouching = true;
-            isIdle = false;
         }
         else
         {
