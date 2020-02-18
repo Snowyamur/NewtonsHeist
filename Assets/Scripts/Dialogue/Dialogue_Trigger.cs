@@ -5,8 +5,15 @@ using UnityEngine;
 public class Dialogue_Trigger : MonoBehaviour
 {
     [SerializeField] private bool isTriggeredOnce;
+    
     // Trigerring Dialogue
     public Dialogue dialogue;
+
+    // size of index and player names should be same
+    // i.e. [2, 4, 6]
+    //      [Kep, Rob, Kep]
+    public int[] next_player_index;
+    public string[] player_names;
 
     private void Start()
     {
@@ -14,7 +21,7 @@ public class Dialogue_Trigger : MonoBehaviour
     }
     public void Trigger_Dialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, next_player_index, player_names, dialogue.sentences);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
