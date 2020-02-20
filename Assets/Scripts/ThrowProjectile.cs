@@ -23,23 +23,6 @@ public class ThrowProjectile : MonoBehaviour
         //mechanics = GetComponent<PlayerMechanics>();
     }
 
-    /*void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            if(mechanics.isFacingLeft)
-            {
-                cloneGrenade = Instantiate(grenade, grenPosLeft.transform.position, grenPosLeft.transform.rotation);
-                cloneGrenade.GetComponent<Rigidbody2D>().AddForce(-grenPosLeft.transform.right*1000f, ForceMode2D.Force);
-            }
-            else
-            {
-                cloneGrenade = Instantiate(grenade, grenPosRight.transform.position, grenPosRight.transform.rotation);
-                cloneGrenade.GetComponent<Rigidbody2D>().AddForce(grenPosRight.transform.right*1000f, ForceMode2D.Force);
-            }
-
-        }
-    }*/
     public void ThrowGrenade(string grenade, bool isFacingLeft)
     {
         switch(grenade)

@@ -8580,7 +8580,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 9.567545
   m_Depth: -1
   m_CullingMask:
@@ -8605,7 +8605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516038135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13950,6 +13950,13 @@ MonoBehaviour:
   control: {fileID: 645603586}
   StartedDialogue: 0
   progressText: 0
+  pane: {fileID: 0}
+  line_counter: 0
+  index_counter: 0
+  indexes_of_characters: 
+  array_of_names: []
+  s_array: []
+  character_images: []
 --- !u!4 &882322663
 Transform:
   m_ObjectHideFlags: 0
@@ -19339,6 +19346,8 @@ MonoBehaviour:
     - I am batman
     - HAHAHAHA
     - uwu
+  next_player_index: 
+  player_names: []
 --- !u!1001 &1274880679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24684,12 +24693,12 @@ PrefabInstance:
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.3
+      value: -10.56
       objectReference: {fileID: 0}
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9
+      value: 2.31
       objectReference: {fileID: 0}
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
@@ -28135,6 +28144,8 @@ MonoBehaviour:
     sentences:
     - Testing
     - aaaaa
+  next_player_index: 
+  player_names: []
 --- !u!1001 &1906319094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30119,6 +30130,8 @@ MonoBehaviour:
     char_name: Zazzer
     sentences:
     - Wowsa
+  next_player_index: 
+  player_names: []
 --- !u!1001 &2049341343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31143,7 +31156,7 @@ PrefabInstance:
     - target: {fileID: 2300726030330520510, guid: 82b4e2ea9c5653b439d4a8abf64019d7,
         type: 3}
       propertyPath: isTrapTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b4e2ea9c5653b439d4a8abf64019d7, type: 3}
