@@ -27,6 +27,9 @@ public class PlayerStats
     };
     string m_currentGrenade;
 
+    // Collectibles dictionary with {collectible_id (String) : collected (Bool)}
+    private Dictionary<string, bool> m_collectibles = new Dictionary<string, bool>();
+
     public float gravityPower
     {
       get{return m_gravityPower;}
@@ -71,5 +74,25 @@ public class PlayerStats
     {
       get{return m_currentGrenade;}
       set{m_currentGrenade = value;}
+    }
+
+    public bool collectibleRegistered(string id)
+    {
+        return m_collectibles.ContainsKey(id);
+    }
+
+    public void addCollectible(string id, bool value=false)
+    {
+        m_collectibles.Add(id, value);
+    }
+
+    public void updateCollectibles(string id, bool new_value)
+    {
+        m_collectibles[id] = new_value;
+    }
+
+    public bool getCollectibleItem(string id)
+    {
+        return m_collectibles[id];
     }
 }
