@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected bool hitEMP = false; //Signals if hit by EMP
     [SerializeField] protected float rayDistance = 2.0f;
     [SerializeField] protected float gravDelay = 5.0f;
+    [SerializeField] protected float timer = 1f;
     [Space]
 
     [Header("Layer Masks")]
@@ -76,7 +77,15 @@ public class EnemyAI : MonoBehaviour
 
         if (raycastHit.collider == false) //If the enemy hits an object in front of it, it flips direction
         {
+            if(timer > 0) //Checks if the enemy spent a second waiting before turning
+            {
+                isTurning = true; //Stops movement
+                timer -= Time.deltaTime;
+                return;
+            }
             ChangeDirection();
+            isTurning = false;
+            timer = 1f; //Reset timer
         }
     }
 
@@ -87,15 +96,20 @@ public class EnemyAI : MonoBehaviour
 
         if (raycastHit.collider == true) //If the enemy hits an object in front of it, it flips direction
         {
+            if(timer > 0) //Checks if the enemy spent a second waiting before turning
+            {
+                isTurning = true; //Stops movement
+                timer -= Time.deltaTime;
+                return;
+            }
             ChangeDirection();
+            isTurning = false;
+            timer = 1f; //Reset timer
         }
     }
 
     protected void ChangeDirection()
     {
-        isTurning = true;
-        StartCoroutine(WaitToTurn()); //Lets animation play out
-        isTurning = false;
 
         if (isFacingLeft)
         {
@@ -118,7 +132,7 @@ public class EnemyAI : MonoBehaviour
 
     protected void Movement()
     {
-        if(!hitEMP) //If not hit by an EMP
+        if(!hitEMP && !isTurning) //If not hit by an EMP
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
             isWalking = true;
