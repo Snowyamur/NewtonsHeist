@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     {
         line_counter = index_counter = 0;
         pane = name_Text.transform.parent.gameObject;
-        Debug.Log("Started");
+        //Debug.Log("Started");
         StartedDialogue = false;
         progressText = false;
         sentences = new Queue<string>();
@@ -50,17 +50,12 @@ public class DialogueManager : MonoBehaviour
 
         pane.SetActive(true);
         StartedDialogue = true;
-        //Time.timeScale = 0f;
+
         control.NoInput();
 
         array_of_names = names;
         indexes_of_characters = index;
         s_array = s;
-
-        // animator for showing the text box
-        //text_ani.SetBool("Opened", true);
-        //Debug.Log("Starting.............." + dialogue.char_name);
-        name_Text.text = dialogue.char_name;
         
         // Clears queue if anything inside
         sentences.Clear();
