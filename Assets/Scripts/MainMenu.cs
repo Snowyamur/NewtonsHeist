@@ -7,17 +7,20 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-    public enum Menu
+  //Need to track current menu,
+  //changing sprites for non-current menu and closing other menus when a new one is pressed
+
+    /*public enum Menu
     {
-		MainMenu,
-		NewGame,
-		Continue,
+		    MainMenu,
+		    NewGame,
+		    Continue,
         Options,
         Extra,
         Quit
-	}
+	}*/
 
-	public Menu currentMenu;
+	//public Menu currentMenu;
 
   float volume = 1.0f;
   string screenSize;
@@ -26,13 +29,16 @@ public class MainMenu : MonoBehaviour
 
   public Text currentRes;
 
+
   void Start()
   {
       resolutions = Screen.resolutions;
       currentRes.text = Screen.currentResolution.ToString();
   }
 
-  void OnGUI ()
+
+
+  /*void OnGUI () //Old UI, un-comment for testing
   {
 
 		GUILayout.BeginArea(new Rect(0,0,Screen.width, Screen.height));
@@ -156,6 +162,6 @@ public class MainMenu : MonoBehaviour
 		GUILayout.EndHorizontal();
 		GUILayout.EndArea();
 
-	}
+	}*/
 
 }

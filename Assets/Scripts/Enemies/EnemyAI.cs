@@ -167,11 +167,6 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0);
     }
 
-    IEnumerator WaitToTurn()
-    {
-        yield return new WaitForSeconds(5f);
-    }
-
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "GravityManipulator")
