@@ -57,7 +57,7 @@ public class PlayerMechanics : MonoBehaviour
     Rigidbody2D rb; //Player's rigidbody
     SpriteRenderer playerSprite;
 
-    BoxCollider2D playerCol; //The collider of the player
+    CapsuleCollider2D playerCol; //The collider of the player
     PlayerCollisions collisions;
     PlayerControlMapping control; //The control map of the player
     GravityController gravControl; //The mechanics of gravity
@@ -70,7 +70,7 @@ public class PlayerMechanics : MonoBehaviour
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         rb = GetComponent<Rigidbody2D>();
-        playerCol = GetComponent<BoxCollider2D>();
+        playerCol = GetComponent<CapsuleCollider2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();

@@ -106,14 +106,15 @@ public class GravityController : MonoBehaviour
         }
 
         //MULTIDIRECTIONAL GRAVITY
-        gravityArrows.SetActive(true); //Makes the arrows image appear
+
         StartCoroutine(MultiDirGravity());
-        gravityArrows.SetActive(false); //Makes the arrows image disappear
+
     }
 
     IEnumerator MultiDirGravity()
     {
       float sTime = 0f;
+      gravityArrows.SetActive(true); //Makes the arrows image appear
       while(sTime <= 5f)
       {
           if(Input.GetKey(KeyCode.UpArrow))
@@ -157,6 +158,7 @@ public class GravityController : MonoBehaviour
             break;
           }*/
       }
+      gravityArrows.SetActive(false); //Makes the arrows image disappear
       yield return null;
     }
 
