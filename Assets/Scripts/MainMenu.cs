@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-    public enum Menu
+  //Need to track current menu,
+  //changing sprites for non-current menu and closing other menus when a new one is pressed
+
+    /*public enum Menu
     {
 		    MainMenu,
 		    NewGame,
@@ -15,9 +18,9 @@ public class MainMenu : MonoBehaviour
         Options,
         Extra,
         Quit
-	}
+	}*/
 
-	public Menu currentMenu;
+	//public Menu currentMenu;
 
   float volume = 1.0f;
   string screenSize;
