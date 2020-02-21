@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PausingScript : MonoBehaviour
 {
-    GameObject pauseMenu;
-
-    PlayerControlMapping control;
+    private GameObject pauseMenu;
+    private PlayerControlMapping control;
+    private bool isCurrentlyPaused = false;
 
     void Awake()
     {
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        pauseMenu.SetActive(false); // now that we found the pausemenu, make it inactive.
     }
 
     void Start()
@@ -23,42 +24,54 @@ public class PausingScript : MonoBehaviour
     {
         //Toggle pause menu when pressing Escape
         if(control.pause)
-        {
-            if(Time.timeScale == 0) //If pause menu is on
-            {
-                Time.timeScale = 1; //Resume time
-                ResumeGame();
-            }
-            else if(Time.timeScale == 1) //If pause menu is off
-            {
-                Time.timeScale = 0; //Stop time
-                PauseGame();
-            }
-        }
+            PauseControl();
     }
 
     public void PauseGame()
     {
+        isCurrentlyPaused = true;
+        Time.timeScale = 0; //Stop time
         pauseMenu.SetActive(true); //Show pause menu
     }
 
     public void ResumeGame()
      {
+        isCurrentlyPaused = false;
+        Time.timeScale = 1; //Resume time
         pauseMenu.SetActive(false); //Hide pause menu
     }
 
     //Allows pausing game using external scripts
     public void PauseControl()
     {
-        if(Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
+        if (isCurrentlyPaused) //If pause menu is on
             ResumeGame();
-        }
-        else if(Time.timeScale == 1)
-        {
-            Time.timeScale = 0;
+        else //If pause menu is off
             PauseGame();
-        }
+    }
+
+    public void SaveGame()
+    {
+
+    }
+
+    public void LoadGame()
+    {
+
+    }
+
+    public void OpenOptions()
+    {
+
+    }
+
+    public void MainMenu()
+    {
+
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
