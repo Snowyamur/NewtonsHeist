@@ -32,15 +32,18 @@ public class MainMenu : MonoBehaviour
 
   Button lowerRes;
   Button higherRes;
+  Button applyBut;
 
   void Start()
   {
       resolutions = Screen.resolutions;
       currentRes.text = ResToString(Screen.currentResolution);
+      applyBut = GameObject.Find("Apply").GetComponent<Button>();
       lowerRes = GameObject.Find("LowText").GetComponent<Button>();
       higherRes = GameObject.Find("HighText").GetComponent<Button>();
       lowerRes.onClick.AddListener(LowerResolution);
       higherRes.onClick.AddListener(UpResolution);
+      applyBut.onClick.AddListener(Apply);
   }
 
   string ResToString(Resolution res)
