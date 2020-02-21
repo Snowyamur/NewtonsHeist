@@ -54,6 +54,7 @@ public class PlayerMechanics : MonoBehaviour
     [SerializeField] string currentGrenade;
     [SerializeField] Image polarImg;
     [SerializeField] Image empImg;
+    [SerializeField] bool grenOn = true;
 
     GameObject cam; //Camera
 
@@ -88,6 +89,7 @@ public class PlayerMechanics : MonoBehaviour
         wallMask = LayerMask.GetMask("Wall");
         polarImg = GameObject.Find("Polarity Grenade Icon").GetComponent<Image>();
         empImg = GameObject.Find("EMP Grenade Icon").GetComponent<Image>();
+
         rb.gravityScale = 0;
     }
 
@@ -302,11 +304,9 @@ public class PlayerMechanics : MonoBehaviour
             switch(grenade)
             {
                 case 0:
-                  currentGrenade = "Gravity Manipulator";
                   StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, polarImg, 1f));
                   break;
                 case 1:
-                  currentGrenade = "EMP";
                   StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, empImg, 1f));
                   break;
                 /*case 2:
@@ -316,16 +316,37 @@ public class PlayerMechanics : MonoBehaviour
                   currentGrenade = "GravityManipulator";
                   break;*/
             }
+
+        }
+        switch(grenade)
+        {
+            case 0:
+              currentGrenade = "Gravity Manipulator";
+              break;
+            case 1:
+              currentGrenade = "EMP";
+              break;
+            /*case 2:
+              currentGrenade = "GravityManipulator";
+              break;
+            case 3:
+              currentGrenade = "GravityManipulator";
+              break;*/
         }
 
 
-        if(Input.GetKeyDown(KeyCode.V))
+        if(control.throwHeld > 0.5 && grenOn)
         {
             if(grenades[currentGrenade] != 0)
             {
                 grenades[currentGrenade] -= 1;
                 throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
             }
+            grenOn = !grenOn;
+        }
+        else if(control.throwHeld < 0.5 && !grenOn)
+        {
+            grenOn = !grenOn;
         }
     }
 
