@@ -44,6 +44,8 @@ public class MainMenu : MonoBehaviour
       lowerRes.onClick.AddListener(LowerResolution);
       higherRes.onClick.AddListener(UpResolution);
       applyBut.onClick.AddListener(Apply);
+
+      GameObject.Find("OptionsMenu").SetActive(false);
   }
 
   string ResToString(Resolution res)
