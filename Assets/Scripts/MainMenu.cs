@@ -24,16 +24,61 @@ public class MainMenu : MonoBehaviour
 
   float volume = 1.0f;
   string screenSize;
+  int posRes = 0;
 
   Resolution[] resolutions;
 
   public Text currentRes;
 
+  Button lowerRes;
+  Button higherRes;
 
   void Start()
   {
       resolutions = Screen.resolutions;
-      currentRes.text = Screen.currentResolution.ToString();
+      currentRes.text = ResToString(Screen.currentResolution);
+      lowerRes = GameObject.Find("LowText").GetComponent<Button>();
+      higherRes = GameObject.Find("HighText").GetComponent<Button>();
+      lowerRes.onClick.AddListener(LowerResolution);
+      higherRes.onClick.AddListener(UpResolution);
+  }
+
+  string ResToString(Resolution res)
+  {
+      return res.width + " x " + res.height;
+  }
+
+  void UpResolution()
+  {
+      if(posRes < resolutions.Length-1)
+      {
+        posRes++;
+      }
+      else
+      {
+          posRes = 0;
+      }
+
+      currentRes.text = ResToString(resolutions[posRes]);
+  }
+
+  void LowerResolution()
+  {
+      if(posRes > 0)
+      {
+        posRes--;
+      }
+      else
+      {
+          posRes = resolutions.Length-1;
+      }
+
+      currentRes.text = ResToString(resolutions[posRes]);
+  }
+
+  void Apply()
+  {
+      Screen.SetResolution(resolutions[posRes].width, resolutions[posRes].height, true);
   }
 
 
