@@ -29,6 +29,7 @@ public class GravityController : MonoBehaviour
     {
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();
+        gravityArrows = new GameObject[4];
         gravityArrows[0] = GameObject.Find("GravUp");
         gravityArrows[1] = GameObject.Find("GravRight");
         gravityArrows[2] = GameObject.Find("GravDown");
@@ -37,17 +38,56 @@ public class GravityController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         //gravityArrows.SetActive(false);
+
+        for(int i = 0; i < 4; i++)
+        {
+            gravityArrows[i].SetActive(false);
+        }
     }
 
     void Update()
-    {
-        if(collisions.IsOnWall() || collisions.IsOnCeiling())
+    {      
+        if(LevelManager.current.playerData.powers["Multidirection Gravity"])
         {
-            //LevelManager.current.playerData.gravityPower -= 1f * Time.deltaTime;
-        }
-        else if(collisions.IsOnGround())
-        {
-            //LevelManager.current.playerData.gravityPower += 1f * Time.deltaTime;
+            if(Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
+            && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow))
+            {
+                gravityArrows[2].SetActive(true);
+                gravityArrows[0].SetActive(false);
+                gravityArrows[1].SetActive(false);
+                gravityArrows[3].SetActive(false);
+            }
+            else if(!Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow)
+            && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow))
+            {
+                gravityArrows[3].SetActive(true);
+                gravityArrows[0].SetActive(false);
+                gravityArrows[1].SetActive(false);
+                gravityArrows[2].SetActive(false);
+            }
+            else if(!Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
+            && Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow))
+            {
+                gravityArrows[0].SetActive(true);
+                gravityArrows[2].SetActive(false);
+                gravityArrows[1].SetActive(false);
+                gravityArrows[3].SetActive(false);
+            }
+            else if(!Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
+            && !Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
+            {
+                gravityArrows[1].SetActive(true);
+                gravityArrows[0].SetActive(false);
+                gravityArrows[2].SetActive(false);
+                gravityArrows[3].SetActive(false);
+            }
+            else
+            {
+              gravityArrows[0].SetActive(false);
+              gravityArrows[1].SetActive(false);
+              gravityArrows[2].SetActive(false);
+              gravityArrows[3].SetActive(false);
+            }
         }
     }
 
@@ -108,7 +148,6 @@ public class GravityController : MonoBehaviour
         }
 
         //MULTIDIRECTIONAL GRAVITY
-
         StartCoroutine(MultiDirGravity());
 
     }
@@ -122,7 +161,6 @@ public class GravityController : MonoBehaviour
           //gravityArrows.SetActive(true); //Makes the arrows image appear
           if(Input.GetKey(KeyCode.UpArrow))
           {
-              //Physics2D.gravity = new Vector2(0, 9.8f);
               m_gravDir = GravityDirection.Up;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 180);
@@ -131,7 +169,6 @@ public class GravityController : MonoBehaviour
 
           if(Input.GetKey(KeyCode.DownArrow))
           {
-            //  Physics2D.gravity = new Vector2(0, -9.8f);
               m_gravDir = GravityDirection.Down;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 0);
@@ -140,7 +177,6 @@ public class GravityController : MonoBehaviour
 
           if(Input.GetKey(KeyCode.RightArrow))
           {
-              //Physics2D.gravity = new Vector2(9.8f, 0);
               m_gravDir = GravityDirection.Right;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 90);
@@ -149,17 +185,13 @@ public class GravityController : MonoBehaviour
 
           if(Input.GetKey(KeyCode.LeftArrow))
           {
-              //Physics2D.gravity = new Vector2(-9.8f, 0);
               m_gravDir = GravityDirection.Left;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 270);
               break;
           }
           sTime += Time.deltaTime;
-          /*if(Time.time - sTime >= 5f)
-          {
-            break;
-          }*/
+
       }
       //gravityArrows.SetActive(false); //Makes the arrows image disappear
       yield return null;
