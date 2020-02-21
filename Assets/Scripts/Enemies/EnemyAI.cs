@@ -142,7 +142,7 @@ public class EnemyAI : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
             isWalking = false;
-            isIdle = true;
+            //isIdle = true;
         }
     }
 

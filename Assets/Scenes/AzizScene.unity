@@ -273,31 +273,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb8f6de00be56841baed20a34ea9124, type: 3}
---- !u!1 &741225278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2092768187617545230, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8338654381706410682}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &741225284
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741225278}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b17dce817aefd048a32e83dc5139f0c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &874811230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1234,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 2092768187617545220, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.74
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 2092768187617545220, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
         type: 3}
@@ -1286,25 +1261,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2092768187617545220, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092768187617545226, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2092768187617545230, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
         type: 3}
       propertyPath: m_Name
       value: Flying Drone
-      objectReference: {fileID: 0}
-    - target: {fileID: 2092768187617545230, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ff2d8ea57b1b64ca9cf5cc571cc57f, type: 3}

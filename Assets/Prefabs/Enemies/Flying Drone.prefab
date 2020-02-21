@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2092768187617545226}
   - component: {fileID: 2092768187617545227}
   - component: {fileID: 8338654381968932559}
+  - component: {fileID: 741225284}
+  - component: {fileID: 741225285}
   m_Layer: 11
   m_Name: Flying Drone
   m_TagString: Untagged
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2092768187617545230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.28, y: 4.78, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2092768189141828228}
   - {fileID: 2092768189100782133}
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce2701545e3debd4ba69835f814fabab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9191c8ecc693ce40a766c559e1a2a84, type: 3}
   m_Color: {r: 0.7264151, g: 0.17475079, b: 0.17475079, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 12.8, y: 7.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,17 +149,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   isFacingLeft: 0
+  hitEMP: 0
   rayDistance: 2
+  gravDelay: 5
+  timer: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 0
   wallMask:
     serializedVersion: 2
     m_Bits: 0
+  ceilingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  isIdle: 0
+  isWalking: 0
+  isTurning: 0
   rb: {fileID: 0}
   groundDetection: {fileID: 0}
   detectionScript: {fileID: 0}
-  gravDelay: 5
+--- !u!95 &741225284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092768187617545230}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b17dce817aefd048a32e83dc5139f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &741225285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092768187617545230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2ffc5111404304a82e66a5f2eaa93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2092768188926683294
 GameObject:
   m_ObjectHideFlags: 0
