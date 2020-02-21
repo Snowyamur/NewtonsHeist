@@ -142,7 +142,7 @@ public class EnemyAI : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
             isWalking = false;
-            isIdle = true;
+            //isIdle = true;
         }
     }
 
@@ -165,11 +165,6 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 9.81f * 2f);
         yield return new WaitForSeconds(delay);
         rb.velocity = new Vector2(rb.velocity.x, 0);
-    }
-
-    IEnumerator WaitToTurn()
-    {
-        yield return new WaitForSeconds(5f);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)

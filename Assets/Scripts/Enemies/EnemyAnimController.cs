@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyAnimController : MonoBehaviour
 {
-    Animator anim;
+    protected Animator anim;
     EnemyAI mechanics;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         anim = GetComponent<Animator>();
         mechanics = GetComponent<EnemyAI>();

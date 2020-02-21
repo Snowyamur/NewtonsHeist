@@ -18,9 +18,6 @@ public class PlayerCollisions : MonoBehaviour
   [SerializeField] Collider2D onCeiling;
   [SerializeField] Collider2D onWall;
   [SerializeField] bool inAir;
-  //[SerializeField] bool onRightWall;
-  //[SerializeField] bool onLeftWall;
-  //[SerializeField] int wallSide;
   [SerializeField] Transform groundTransform;
 
   [Space]
@@ -57,10 +54,6 @@ public class PlayerCollisions : MonoBehaviour
       onCeiling = Physics2D.OverlapCircle(groundTransform.position, collisionRadius, ceilingLayer);
 
       onWall = Physics2D.OverlapCircle(groundTransform.position, collisionRadius, wallLayer);
-      /*onRightWall = Physics2D.OverlapCircle((Vector2)transform.position+rightOffset, collisionRadius, groundLayer);
-      onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position+leftOffset, collisionRadius, groundLayer);
-
-      wallSide = onRightWall ? 1 : -1;*/
 
       if(onGround || onCeiling || onWall) //If the player is standing on ground
       {
@@ -73,15 +66,6 @@ public class PlayerCollisions : MonoBehaviour
       }
   }
 
-
-  /*void OnTriggerEnter2D(Collider2D other)
-  {
-      if(other.gameObject.tag == "Enemy")
-      {
-          //If hit with an enemy, dies
-          Destroy(this);
-      }
-  }*/
 
   public bool IsInAir() //Checks if currently in air
   {

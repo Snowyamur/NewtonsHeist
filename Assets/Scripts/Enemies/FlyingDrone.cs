@@ -20,21 +20,6 @@ public class FlyingDrone : EnemyAI
       Movement();
     }
 
-    /*void Movement()
-    {
-        if(!hitEMP) //If not hit by an EMP
-        {
-            rb.velocity = new Vector2(speed, rb.velocity.y); //Moevment
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, 0);
-        }
-
-        //transform.position = new Vector3(transform.position.x, //Creates a bobbing effect
-        //velY+(Mathf.Sin(Time.fixedTime*Mathf.PI) * floatStrength), transform.position.z);
-    }*/
-
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "GravityManipulator")
