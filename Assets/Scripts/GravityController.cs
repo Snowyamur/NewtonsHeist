@@ -18,7 +18,7 @@ public class GravityController : MonoBehaviour
     }
     GravityDirection m_gravDir;
 
-    GameObject gravityArrows;
+    GameObject[] gravityArrows;
     PlayerControlMapping control;
     PlayerCollisions collisions;
     SpriteRenderer playerSprite;
@@ -29,12 +29,14 @@ public class GravityController : MonoBehaviour
     {
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();
-        gravityArrows = GameObject.Find("Gravity Arrows");
-        fade = gravityArrows.GetComponent<Fade>();
+        gravityArrows[0] = GameObject.Find("GravUp");
+        gravityArrows[1] = GameObject.Find("GravRight");
+        gravityArrows[2] = GameObject.Find("GravDown");
+        gravityArrows[3] = GameObject.Find("GravLeft");
         m_gravDir = GravityDirection.Down;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
-        gravityArrows.SetActive(false);
+        //gravityArrows.SetActive(false);
     }
 
     void Update()
@@ -114,9 +116,10 @@ public class GravityController : MonoBehaviour
     IEnumerator MultiDirGravity()
     {
       float sTime = 0f;
-      gravityArrows.SetActive(true); //Makes the arrows image appear
+
       while(sTime <= 5f)
       {
+          //gravityArrows.SetActive(true); //Makes the arrows image appear
           if(Input.GetKey(KeyCode.UpArrow))
           {
               //Physics2D.gravity = new Vector2(0, 9.8f);
@@ -158,12 +161,13 @@ public class GravityController : MonoBehaviour
             break;
           }*/
       }
-      gravityArrows.SetActive(false); //Makes the arrows image disappear
+      //gravityArrows.SetActive(false); //Makes the arrows image disappear
       yield return null;
     }
 
     public GravityDirection gravDir
     {
         get{return m_gravDir;}
+        set{m_gravDir = value;}
     }
 }
