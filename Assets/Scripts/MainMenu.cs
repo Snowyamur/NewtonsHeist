@@ -9,9 +9,9 @@ public class MainMenu : MonoBehaviour
 
     public enum Menu
     {
-		MainMenu,
-		NewGame,
-		Continue,
+		    MainMenu,
+		    NewGame,
+		    Continue,
         Options,
         Extra,
         Quit
@@ -26,13 +26,16 @@ public class MainMenu : MonoBehaviour
 
   public Text currentRes;
 
+
   void Start()
   {
       resolutions = Screen.resolutions;
       currentRes.text = Screen.currentResolution.ToString();
   }
 
-  void OnGUI ()
+
+
+  /*void OnGUI () //Old UI, un-comment for testing
   {
 
 		GUILayout.BeginArea(new Rect(0,0,Screen.width, Screen.height));
@@ -156,6 +159,6 @@ public class MainMenu : MonoBehaviour
 		GUILayout.EndHorizontal();
 		GUILayout.EndArea();
 
-	}
+	}*/
 
 }
