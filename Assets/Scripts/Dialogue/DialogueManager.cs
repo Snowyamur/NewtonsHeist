@@ -8,7 +8,6 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public Text name_Text;
     public Text dialogue_Text;
-    public Animator text_ani;
     public PlayerControlMapping control;
     public bool StartedDialogue;
     public bool progressText;
@@ -17,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     public int index_counter;
     public int[] indexes_of_characters;
     public string[] array_of_names;
-    public string[] s_array;
+    public string[] s_array; // array of lines
     public GameObject[] character_images;
 
     //Creates a new queue for text to appear
@@ -37,7 +36,7 @@ public class DialogueManager : MonoBehaviour
         {
             display_char_art(name_Text.text);
             StopAllCoroutines();
-            control.ToggleInput(20f);
+            //control.ToggleInput(20f);
             DisplayNext();
             progressText = false;
             
@@ -74,13 +73,19 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log("called");
         if (line_counter < s_array.Length)
         {
+            Debug.Log("line counter " + line_counter + " index counter " + index_counter); 
             //Debug.Log(line_counter.ToString() + " " + indexes_of_characters[line_counter].ToString());
-            if (line_counter == indexes_of_characters[index_counter])
+            if (index_counter < indexes_of_characters.Length)
             {
-                name_Text.text = array_of_names[index_counter];
-                index_counter++;
-
+                if (line_counter == indexes_of_characters[index_counter])
+                {
+                    Debug.Log("index counter " + index_counter);
+                    name_Text.text = array_of_names[index_counter];
+                    Debug.Log("array");
+                    index_counter++;
+                }
             }
+            
             line_counter++;
         }
         display_char_art(name_Text.text);
@@ -135,24 +140,39 @@ public class DialogueManager : MonoBehaviour
 
     public void display_char_art(string s)
     {
+
+        // Kepler = Kid = Calem
+        // Newton
+        // Lathi = Robin = ???
+        // Kestrel
         foreach (GameObject g in character_images)
         {
             g.GetComponent<Image>().color = Color.gray;
+            g.SetActive(false);
         }
-        if (s == "Kep")
+        if (s == "Kepler" || s == "Kid" || s == "Calem")
         {
+            // 0 index is Kepler
             character_images[0].SetActive(true);
             character_images[0].GetComponent<Image>().color = Color.white;
         }
-        else if (s == "Rob")
+        else if (s == "Robin" || s == "Lathi" || s == "???")
         {
+            // 1 index is Robin
             character_images[1].SetActive(true);
             character_images[1].GetComponent<Image>().color = Color.white;
         }
-        else if (s == "3rd Guy")
+        else if (s == "Newton")
         {
+            // 2 index is Newton
             character_images[2].SetActive(true);
             character_images[2].GetComponent<Image>().color = Color.white;
+        }
+        else if (s == "Kestrel")
+        {
+            // 3 is Kestrel
+            character_images[3].SetActive(true);
+            character_images[3].GetComponent<Image>().color = Color.white;
         }
     }
 
