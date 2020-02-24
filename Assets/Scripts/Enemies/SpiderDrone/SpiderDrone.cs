@@ -133,16 +133,19 @@ public class SpiderDrone : EnemyAI
             if(gravDir == GravityDirection.Down || gravDir == GravityDirection.Up)
             {
                 rb.velocity = new Vector2(speed, rb.velocity.y); //Horizontal Movement
+                isWalking = true;
             }
 
             else if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right)
             {
               rb.velocity = new Vector2(rb.velocity.x, speed); //Vertical Moevment
+                isWalking = true;
             }
         }
         else
         {
             rb.velocity = new Vector2(0, 0);
+            isWalking = false;
         }
 
     }

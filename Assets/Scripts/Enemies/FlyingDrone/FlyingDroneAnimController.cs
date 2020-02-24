@@ -5,8 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class FlyingDroneAnimController : EnemyAnimController
 {
-    FlyingDrone mechanics;
-
     // Start is called before the first frame update
     void Start()
     {
