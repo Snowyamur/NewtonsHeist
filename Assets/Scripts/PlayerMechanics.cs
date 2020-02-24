@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class PlayerMechanics : MonoBehaviour
@@ -52,6 +53,9 @@ public class PlayerMechanics : MonoBehaviour
     };
     [SerializeField] int grenade = 0;
     [SerializeField] string currentGrenade;
+    [SerializeField] Image polarImg;
+    [SerializeField] Image empImg;
+    [SerializeField] bool grenOn = true;
 
     GameObject cam; //Camera
 
@@ -63,6 +67,7 @@ public class PlayerMechanics : MonoBehaviour
     PlayerControlMapping control; //The control map of the player
     GravityController gravControl; //The mechanics of gravity
     ThrowProjectile throwScript; //Ability to throw items
+    Fade fade;
 
     LayerMask enemyLayer; //To detect enemies
     LayerMask wallMask;
@@ -77,10 +82,15 @@ public class PlayerMechanics : MonoBehaviour
         collisions = GetComponent<PlayerCollisions>();
         gravControl = GetComponent<GravityController>();
         throwScript = GetComponent<ThrowProjectile>();
+        fade = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Fade>();
         LevelManager.current = new LevelManager();
+
         posRight = GameObject.Find("GrenadePointRight");
         posLeft = GameObject.Find("GrenadePointLeft");
         wallMask = LayerMask.GetMask("Wall");
+        polarImg = GameObject.Find("Polarity Grenade Icon").GetComponent<Image>();
+        empImg = GameObject.Find("EMP Grenade Icon").GetComponent<Image>();
+
         rb.gravityScale = 0;
     }
 
@@ -225,7 +235,7 @@ public class PlayerMechanics : MonoBehaviour
             isFalling = false;
             isJumping = true;
         }
-        if(rb.velocity.y == 0)
+        if(rb.velocity.y == 0) //CHANGE HERE to fix jumping ----------------------------------------------------------
         {
             hasJumped = 0;
         }
@@ -292,8 +302,23 @@ public class PlayerMechanics : MonoBehaviour
             {
                 grenade = 0;
             }
-        }
+            switch(grenade)
+            {
+                case 0:
+                  StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, polarImg, 1f));
+                  break;
+                case 1:
+                  StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, empImg, 1f));
+                  break;
+                /*case 2:
+                  currentGrenade = "GravityManipulator";
+                  break;
+                case 3:
+                  currentGrenade = "GravityManipulator";
+                  break;*/
+            }
 
+        }
         switch(grenade)
         {
             case 0:
@@ -309,13 +334,20 @@ public class PlayerMechanics : MonoBehaviour
               currentGrenade = "GravityManipulator";
               break;*/
         }
-        if(Input.GetKeyDown(KeyCode.V))
+
+
+        if(control.throwHeld > 0.5 && grenOn)
         {
             if(grenades[currentGrenade] != 0)
             {
                 grenades[currentGrenade] -= 1;
                 throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
             }
+            grenOn = !grenOn;
+        }
+        else if(control.throwHeld < 0.5 && !grenOn)
+        {
+            grenOn = !grenOn;
         }
     }
 

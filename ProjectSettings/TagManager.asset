@@ -12,6 +12,7 @@ TagManager:
   - GravityManipulator
   - EMP
   - Trap
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

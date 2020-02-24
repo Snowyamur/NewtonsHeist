@@ -28,6 +28,9 @@ public class PortalManager : MonoBehaviour
         else
             exitPortal = portal1;
 
+        // Calculate player exit velocity relative to the normal of the exitPortal
+        
+
         // Retain player velocity after exiting the portal
         Vector3 exitPortalNormal = exitPortal.GetComponent<PortalScript>().GetPortalNormal();
         Vector3 exitVelocity = exitPortalNormal * playerRB.velocity.magnitude;
