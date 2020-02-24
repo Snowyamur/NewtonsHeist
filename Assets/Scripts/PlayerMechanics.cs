@@ -234,7 +234,7 @@ public class PlayerMechanics : MonoBehaviour
             isFalling = false;
             isJumping = true;
         }
-        if(rb.velocity.y == 0) //CHANGE HERE to fix jumping ----------------------------------------------------------
+        if(rb.velocity.y == 0)
         {
             hasJumped = 0;
         }
