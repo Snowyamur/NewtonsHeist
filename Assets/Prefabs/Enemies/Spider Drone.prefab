@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8485712896887114211}
   - component: {fileID: 8485712896887114220}
   - component: {fileID: 1977245735350543546}
+  - component: {fileID: 2927594356192155591}
   - component: {fileID: 5717333639571485135}
+  - component: {fileID: 5863554329965461574}
   m_Layer: 11
   m_Name: Spider Drone
   m_TagString: Untagged
@@ -74,9 +76,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3ff5de42a78096b41886edacd2002f51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb61fa53c03f2d749ababd27e370a3bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3, y: 1}
@@ -139,6 +141,18 @@ MonoBehaviour:
   rb: {fileID: 0}
   groundDetection: {fileID: 0}
   detectionScript: {fileID: 0}
+--- !u!114 &2927594356192155591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485712896887114216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32868356b136bf44db15ba0ecd86ccaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &5717333639571485135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,6 +179,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.8082037, y: 3.0921001}
   m_EdgeRadius: 0
+--- !u!95 &5863554329965461574
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485712896887114216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e28f39ea8d65fb44da77bca1341307c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8485712898196286840
 GameObject:
   m_ObjectHideFlags: 0

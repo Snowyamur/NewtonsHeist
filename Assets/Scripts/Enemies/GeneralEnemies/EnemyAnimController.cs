@@ -6,17 +6,17 @@ using UnityEngine;
 public class EnemyAnimController : MonoBehaviour
 {
     protected Animator anim;
-    EnemyAI mechanics;
+    protected EnemyAI mechanics;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         anim = GetComponent<Animator>();
         mechanics = GetComponent<EnemyAI>();
     }
 
     //Updates animations based on current movement
-    void Update()
+    private void Update()
     {
         anim.SetBool("isWalking", mechanics.isWalking);
         anim.SetBool("isIdle", mechanics.isIdle);
