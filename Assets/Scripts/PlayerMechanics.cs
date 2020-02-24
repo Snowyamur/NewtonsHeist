@@ -36,7 +36,6 @@ public class PlayerMechanics : MonoBehaviour
     public bool isFlipping;
     public bool isIdle;
     public bool isFacingLeft = false;
-    public bool canTriggerInvisibleDialogue;
 
     [Space]
 
