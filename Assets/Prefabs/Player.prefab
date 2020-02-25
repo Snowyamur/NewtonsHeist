@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930556451}
   - component: {fileID: 930556452}
+  - component: {fileID: 1093476723}
   m_Layer: 0
   m_Name: GravRight
   m_TagString: Untagged
@@ -160,6 +161,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1093476723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930556450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6f8ad7c795bf846ae525d24493e554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1005360455
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1005360456}
   - component: {fileID: 1005360457}
+  - component: {fileID: 470411153}
   m_Layer: 0
   m_Name: GravDown
   m_TagString: Untagged
@@ -240,6 +254,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &470411153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005360455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6f8ad7c795bf846ae525d24493e554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164321123
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164321124}
   - component: {fileID: 1164321125}
+  - component: {fileID: 577560793}
   m_Layer: 0
   m_Name: GravUp
   m_TagString: Untagged
@@ -320,6 +347,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &577560793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164321123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6f8ad7c795bf846ae525d24493e554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621311257
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124991689}
   - component: {fileID: 2124991690}
+  - component: {fileID: 89246800}
   m_Layer: 0
   m_Name: GravLeft
   m_TagString: Untagged
@@ -430,6 +470,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &89246800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124991688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6f8ad7c795bf846ae525d24493e554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256862099774523876
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +675,9 @@ MonoBehaviour:
   isFacingLeft: 0
   grenade: 0
   currentGrenade: 
+  polarImg: {fileID: 0}
+  empImg: {fileID: 0}
+  grenOn: 1
 --- !u!114 &8054214943488491979
 MonoBehaviour:
   m_ObjectHideFlags: 0
