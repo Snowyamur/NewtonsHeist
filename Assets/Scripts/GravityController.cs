@@ -134,9 +134,9 @@ public class GravityController : MonoBehaviour
     }
     public void ChangeGravity(bool multiDir)
     {
-        audio.Play();
         if(!multiDir)
         {
+            audio.Play();
             LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
             if(m_gravDir == GravityDirection.Down) //If current direction is down, make up
             {
@@ -167,6 +167,7 @@ public class GravityController : MonoBehaviour
               m_gravDir = GravityDirection.Up;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 180);
+              audio.Play();
               break;
           }
 
@@ -175,6 +176,7 @@ public class GravityController : MonoBehaviour
               m_gravDir = GravityDirection.Down;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 0);
+              audio.Play();
               break;
           }
 
@@ -183,6 +185,7 @@ public class GravityController : MonoBehaviour
               m_gravDir = GravityDirection.Right;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 90);
+              audio.Play();
               break;
           }
 
@@ -191,6 +194,7 @@ public class GravityController : MonoBehaviour
               m_gravDir = GravityDirection.Left;
               LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
               transform.eulerAngles = new Vector3(0, 0, 270);
+              audio.Play();
               break;
           }
           sTime += Time.deltaTime;
