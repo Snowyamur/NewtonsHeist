@@ -23,12 +23,14 @@ public class GravityController : MonoBehaviour
     PlayerCollisions collisions;
     SpriteRenderer playerSprite;
     Fade fade;
+    AudioSource audio;
     [SerializeField] Rigidbody2D rb;
 
     void Start()
     {
         control = GetComponent<PlayerControlMapping>();
         collisions = GetComponent<PlayerCollisions>();
+        audio = GetComponent<AudioSource>();
         gravityArrows = new GameObject[4];
         gravityArrows[0] = GameObject.Find("GravUp");
         gravityArrows[1] = GameObject.Find("GravRight");
@@ -46,7 +48,7 @@ public class GravityController : MonoBehaviour
     }
 
     void Update()
-    {      
+    {
         if(LevelManager.current.playerData.powers["Multidirection Gravity"])
         {
             if(Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow)
@@ -132,6 +134,7 @@ public class GravityController : MonoBehaviour
     }
     public void ChangeGravity(bool multiDir)
     {
+        audio.Play();
         if(!multiDir)
         {
             LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
