@@ -5,45 +5,46 @@ using UnityEngine.SceneManagement;
 
 //Holds a scene's data
 [System.Serializable]
-public class SceneData : MonoBehaviour
+public class Level1 : SceneData
 {
     //Scene name to transfer to
-    protected string scene;
+    string scene = "Level 1";
 
     //Player's beginning position in new scene
-    protected float m_xPos;
-    protected float m_yPos;
+    float m_xPos = -14f;
+    float m_yPos = 15f;
 
     //Scene's boundaries
-    protected float m_maxX;
-    protected float m_minX;
-    protected float m_maxY;
-    protected float m_minY;
+    float m_maxX = 47f;
+    float m_minX = 0f;
+    float m_maxY = 1.73f;
+    float m_minY = -49f;
 
-    public virtual string getScene() {return scene;}
+    public string getScene() {return scene;}
 
-    public virtual float xPos
+    public override float xPos
     {
       get{return m_xPos;}
     }
-    public virtual float yPos
+    public override float yPos
     {
       get{return m_yPos;}
     }
-    public virtual float maxX
+    public override float maxX
     {
       get{return m_maxX;}
     }
-    public virtual float minX
+    public override float minX
     {
       get{return m_minX;}
     }
-    public virtual float maxY
+    public override float maxY
     {
       get{return m_maxY;}
     }
-    public virtual float minY
+    public override float minY
     {
       get{return m_minY;}
     }
+
 }
