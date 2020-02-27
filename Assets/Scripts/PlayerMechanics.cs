@@ -90,7 +90,7 @@ public class PlayerMechanics : MonoBehaviour
         polarImg = GameObject.Find("Polarity Grenade Icon").GetComponent<Image>();
         empImg = GameObject.Find("EMP Grenade Icon").GetComponent<Image>();
 
-        rb.gravityScale = 0;
+        rb.gravityScale = 0; //Sets gravity to zero to let GravityController handle manipulation
     }
 
     // Start is called before the first frame update
@@ -215,28 +215,59 @@ public class PlayerMechanics : MonoBehaviour
 
     void Jump()
     {
-        if(control.jumpOn && hasJumped < 2) //If player presses up
+        //When on ground or ceiling, player uses y velocity. For walls, player uses x velocity
+        if(gravControl.gravDir == GravityController.GravityDirection.Down || gravControl.gravDir == GravityController.GravityDirection.Up)
         {
-            //rb.AddForce(jumpDir*jumpSpeed, ForceMode2D.Impulse);
-            rb.velocity = jumpDir*jumpSpeed;
-            isJumping = true;
-            hasJumped += 1;
+            if(control.jumpOn && hasJumped < 2) //If player presses up
+            {
+                //rb.AddForce(jumpDir*jumpSpeed, ForceMode2D.Impulse);
+                rb.velocity = jumpDir*jumpSpeed;
+                isJumping = true;
+                hasJumped += 1;
+            }
+            if(rb.velocity.y < 0) //If player is falling
+            {
+                rb.velocity += jumpDir * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
+                isJumping = false;
+                isFalling = true;
+            }
+            else if(rb.velocity.y > 0 && !control.jumpOn) //If the player is in the air and jumps again
+            {
+                rb.velocity += jumpDir * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
+                isFalling = false;
+                isJumping = true;
+            }
+            if(rb.velocity.y == 0)
+            {
+                hasJumped = 0;
+            }
         }
-        if(rb.velocity.y < 0) //If player is falling
+
+        if(gravControl.gravDir == GravityController.GravityDirection.Left || gravControl.gravDir == GravityController.GravityDirection.Right)
         {
-            rb.velocity += jumpDir * Physics2D.gravity.y * (fallingMod - 1) * Time.deltaTime;
-            isJumping = false;
-            isFalling = true;
-        }
-        else if(rb.velocity.y > 0 && !control.jumpOn) //If the player is in the air and jumps again
-        {
-            rb.velocity += jumpDir * Physics2D.gravity.y * (smallJumpMod - 1) * Time.deltaTime;
-            isFalling = false;
-            isJumping = true;
-        }
-        if(rb.velocity.y == 0)
-        {
-            hasJumped = 0;
+            if(control.jumpOn && hasJumped < 2) //If player presses up
+            {
+                //rb.AddForce(jumpDir*jumpSpeed, ForceMode2D.Impulse);
+                rb.velocity = jumpDir*jumpSpeed;
+                isJumping = true;
+                hasJumped += 1;
+            }
+            if(rb.velocity.x < 0) //If player is falling
+            {
+                rb.velocity += jumpDir * -9.81f * (fallingMod - 1) * Time.deltaTime;
+                isJumping = false;
+                isFalling = true;
+            }
+            else if(rb.velocity.x > 0 && !control.jumpOn) //If the player is in the air and jumps again
+            {
+                rb.velocity += jumpDir * -9.81f * (smallJumpMod - 1) * Time.deltaTime;
+                isFalling = false;
+                isJumping = true;
+            }
+            if(rb.velocity.x == 0)
+            {
+                hasJumped = 0;
+            }
         }
     }
 

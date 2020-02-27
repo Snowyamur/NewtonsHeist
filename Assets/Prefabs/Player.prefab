@@ -553,10 +553,10 @@ GameObject:
   - component: {fileID: 8054214943488492019}
   - component: {fileID: 8054214943488492016}
   - component: {fileID: 8054214943488492021}
+  - component: {fileID: 8054214943488492022}
   - component: {fileID: 8054214943488491979}
   - component: {fileID: 8054214943488491976}
   - component: {fileID: 8054214943488491977}
-  - component: {fileID: 8054214943488492022}
   - component: {fileID: 8054214943488492023}
   - component: {fileID: 2023202260441170088}
   - component: {fileID: -1815688213964020326}
@@ -679,6 +679,34 @@ MonoBehaviour:
   polarImg: {fileID: 0}
   empImg: {fileID: 0}
   grenOn: 1
+--- !u!114 &8054214943488492022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054214943488492017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cd465a912254246a52c50f1d45f341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_xMove: 0
+  m_vMove: 0
+  m_horizontalAim: 0
+  m_verticalAim: 0
+  m_jumpOn: 0
+  m_crouching: 0
+  m_enter: 0
+  m_throwHeld: 0
+  m_gravityToggle: 0
+  m_gravityHold: 0
+  m_horizontalDpad: 0
+  m_verticalDpad: 0
+  m_pause: 0
+  m_save: 0
+  m_load: 0
+  m_inputting: 1
 --- !u!114 &8054214943488491979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,34 +762,6 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &8054214943488492022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8054214943488492017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8cd465a912254246a52c50f1d45f341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_xMove: 0
-  m_vMove: 0
-  m_horizontalAim: 0
-  m_verticalAim: 0
-  m_jumpOn: 0
-  m_crouching: 0
-  m_enter: 0
-  m_throwHeld: 0
-  m_gravityToggle: 0
-  m_gravityHold: 0
-  m_horizontalDpad: 0
-  m_verticalDpad: 0
-  m_pause: 0
-  m_save: 0
-  m_load: 0
-  m_inputting: 1
 --- !u!114 &8054214943488492023
 MonoBehaviour:
   m_ObjectHideFlags: 0
