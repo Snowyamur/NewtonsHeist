@@ -113,13 +113,13 @@ public class PlayerMechanics : MonoBehaviour
 
     void FlipSprite()
     {
-        if (control.xMove < 0) //If moving left
+        if ((movement == "xMove" && control.xMove < 0) || (movement == "vMove" && control.vMove < 0)) //If moving left or up
         {
             isFacingLeft = true;
 
             playerCol.offset = new Vector2(-playerCol.offset.x, playerCol.offset.y);
         }
-        else if (control.xMove > 0) //If moving right
+        else if ((movement == "xMove" && control.xMove > 0) || (movement == "vMove" && control.vMove > 0)) //If moving right or down
         {
             isFacingLeft = false;
 
