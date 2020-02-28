@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485712898353543132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0.41, y: 0.88, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 8485712896887114210}
@@ -278,7 +278,7 @@ MonoBehaviour:
   numberOfRaycasts: 50
   layerMask:
     serializedVersion: 2
-    m_Bits: 3895
+    m_Bits: 1847
 --- !u!33 &8485712898353543121
 MeshFilter:
   m_ObjectHideFlags: 0
