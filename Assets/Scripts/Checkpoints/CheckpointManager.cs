@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    // ----- Private variables ----- 
+    // ----- Private variables -----
     List<GameObject> checkpoints;
     int currIndex;
 
@@ -18,8 +18,8 @@ public class CheckpointManager : MonoBehaviour
             checkpoints.Add(transform.GetChild(i).gameObject);
         }
 
-        if (checkpoints.Count != 0) 
-            LevelManager.current.lastCheckpoint = checkpoints[0];
+        if (checkpoints.Count != 0)
+            LevelManager.current.lastCheckpoint = 0;
     }
 
     public bool UpdateCheckpoint(GameObject newCP)
@@ -28,7 +28,7 @@ public class CheckpointManager : MonoBehaviour
         {
             currIndex = checkpoints.IndexOf(newCP);
 
-            LevelManager.current.lastCheckpoint = checkpoints[currIndex];
+            LevelManager.current.lastCheckpoint = currIndex;
             return true;
         }
         catch
@@ -40,5 +40,10 @@ public class CheckpointManager : MonoBehaviour
     public GameObject GetCheckpoint()
     {
         return checkpoints[currIndex];
+    }
+
+    public GameObject GetIndexedCheckpoint(int index)
+    {
+        return checkpoints[index];
     }
 }

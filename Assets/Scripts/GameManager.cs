@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     {
         // this depend how you want to handle multiple managers (like when switching/adding scenes)
         if (Instance != null)
+        {
             Destroy(Instance);
+        }
         Instance = this;
     }
 
@@ -35,6 +37,8 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         if (Instance == this)
+        {
             Instance = null;
+        }
     }
 }

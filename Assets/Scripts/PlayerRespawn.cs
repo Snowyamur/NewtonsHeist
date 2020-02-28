@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerRespawn : MonoBehaviour
 {
     GravityController gravControl;
+    CheckpointManager chkpManager;
 
     void Start()
     {
         gravControl = GetComponent<GravityController>();
+        chkpManager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
     }
     /*private CheckpointManager mgrScript;
 
@@ -19,7 +21,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public void Respawn()
     {
-        transform.position = LevelManager.current.lastCheckpoint.transform.position;
+        transform.position = chkpManager.GetIndexedCheckpoint(LevelManager.current.lastCheckpoint).transform.position;
         gravControl.gravDir = GravityController.GravityDirection.Down;
         transform.eulerAngles = new Vector3(0, 0, 0);
         //GameObject cp = mgrScript.GetCheckpoint();

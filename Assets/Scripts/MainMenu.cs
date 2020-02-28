@@ -25,27 +25,95 @@ public class MainMenu : MonoBehaviour
   float volume = 1.0f;
   string screenSize;
   int posRes = 0;
+  bool showGUI = false;
 
   Resolution[] resolutions;
 
   public Text currentRes;
+  Text saveFile;
 
+  Button newGame;
+  Button play;
   Button lowerRes;
   Button higherRes;
   Button applyBut;
+
+  GameObject continueMenu;
 
   void Start()
   {
       resolutions = Screen.resolutions;
       currentRes.text = ResToString(Screen.currentResolution);
+      saveFile = GameObject.Find("Save File").GetComponent<Text>();
+      newGame = GameObject.Find("New Game").GetComponent<Button>();
+      play = GameObject.Find("Play").GetComponent<Button>();
       applyBut = GameObject.Find("Apply").GetComponent<Button>();
       lowerRes = GameObject.Find("LowText").GetComponent<Button>();
       higherRes = GameObject.Find("HighText").GetComponent<Button>();
+      newGame.onClick.AddListener(StartGame);
+      play.onClick.AddListener(Play);
       lowerRes.onClick.AddListener(LowerResolution);
       higherRes.onClick.AddListener(UpResolution);
       applyBut.onClick.AddListener(Apply);
 
       GameObject.Find("OptionsMenu").SetActive(false);
+  }
+
+  public void StartGame()
+  {
+      LevelManager.current = new LevelManager(); //Create new Level Manager when starting new game
+      //Save the current Game as a new saved Game
+			SaveLoad.Save();
+			//Move on to game...
+			SceneManager.LoadScene(1);
+  }
+
+  public void ContinueGame()
+  {
+    if(SaveLoad.savedGames.Count != 0)
+    {
+        saveFile.text = "Level: " + SaveLoad.savedGames[SaveLoad.savedGames.Count-1].playerData.sceneID;
+    }
+    else //Disable continue menu if no save games are present
+    {
+        continueMenu = GameObject.Find("ContinueMenu");
+        continueMenu.SetActive(false);
+    }
+    /*float i = 0f;
+    foreach(LevelManager l in SaveLoad.savedGames)
+    {
+      //GameObject newButton = Instantiate(button) as GameObject;
+      //newButton.transform.parent = continueMenu;
+      CreateButton(continueMenu.transform, new Vector3(0f, 100f+i, 0f),
+      new Vector2(1, 1), LoadScene, "l.playerData.sceneID");
+
+      if(GUILayout.Button("Level: " + l.playerData.sceneID)) //Displays current level in save file
+      {
+        LevelManager.current = l; //Load saved LevelManager
+        //Move on to game...
+        SceneManager.LoadScene(LevelManager.current.playerData.sceneID); //Load last scene
+      }
+      i += 5;
+    }*/
+  }
+
+  public void Play()
+  {
+    LevelManager.current = SaveLoad.savedGames[SaveLoad.savedGames.Count-1];
+    SceneManager.LoadScene(LevelManager.current.playerData.sceneID); //Load last scene
+  }
+
+  void CreateButton(Transform parent, Vector3 position, Vector2 size,
+  UnityEngine.Events.UnityAction method, string butText)
+  {
+    GameObject button = new GameObject();
+    button.transform.parent = parent;
+    button.AddComponent<RectTransform>();
+    button.AddComponent<Button>();
+    //button.GetComponent<Button>().text = "Level: " + butText;
+    button.transform.position = position;
+    //button.GetComponent<RectTransform>().SetSize(size);
+    button.GetComponent<Button>().onClick.AddListener(method);
   }
 
   string ResToString(Resolution res)
@@ -85,7 +153,6 @@ public class MainMenu : MonoBehaviour
   {
       Screen.SetResolution(resolutions[posRes].width, resolutions[posRes].height, true);
   }
-
 
 
   /*void OnGUI () //Old UI, un-comment for testing

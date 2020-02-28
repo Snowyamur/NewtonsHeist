@@ -12,14 +12,14 @@ public static class SaveLoad
     public static void Save()
     {
       //Creates save data directory if not created yet.
-      if(!Directory.Exists("Saves"))
+      if(!Directory.Exists(Application.persistentDataPath+"/Saves"))
       {
-          Directory.CreateDirectory("Saves");
+          Directory.CreateDirectory(Application.persistentDataPath+"/Saves");
       }
 
       SaveLoad.savedGames.Add(LevelManager.current);
       BinaryFormatter bf = new BinaryFormatter();
-      FileStream file = File.Create (Application.persistentDataPath + "Saves/savedGames.gd");
+      FileStream file = File.Create (Application.persistentDataPath + "/Saves/savedGames.gd");
       bf.Serialize(file, SaveLoad.savedGames);
       file.Close();
     }
@@ -27,10 +27,10 @@ public static class SaveLoad
     //Loads a savefile
     public static void Load()
     {
-      if(File.Exists(Application.persistentDataPath + "Saves/savedGames.gd"))
+      if(File.Exists(Application.persistentDataPath + "/Saves/savedGames.gd"))
       {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "Saves/savedGames.gd", FileMode.Open);
+        FileStream file = File.Open(Application.persistentDataPath + "/Saves/savedGames.gd", FileMode.Open);
         SaveLoad.savedGames = (List<LevelManager>)bf.Deserialize(file);
         LevelManager.current = savedGames[-1];
         file.Close();
