@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
 
   Resolution[] resolutions;
 
-  public Text currentRes;
+  Text currentRes;
   Text saveFile;
 
   Button newGame;
@@ -43,6 +43,7 @@ public class MainMenu : MonoBehaviour
   void Start()
   {
       resolutions = Screen.resolutions;
+      currentRes = GameObject.Find("CurrentRes").GetComponent<Text>();
       currentRes.text = ResToString(Screen.currentResolution);
       saveFile = GameObject.Find("Save File").GetComponent<Text>();
       newGame = GameObject.Find("New Game").GetComponent<Button>();
@@ -121,7 +122,7 @@ public class MainMenu : MonoBehaviour
       return res.width + " x " + res.height;
   }
 
-  void UpResolution()
+  public void UpResolution()
   {
       if(posRes < resolutions.Length-1)
       {
@@ -135,7 +136,7 @@ public class MainMenu : MonoBehaviour
       currentRes.text = ResToString(resolutions[posRes]);
   }
 
-  void LowerResolution()
+  public void LowerResolution()
   {
       if(posRes > 0)
       {
@@ -149,7 +150,7 @@ public class MainMenu : MonoBehaviour
       currentRes.text = ResToString(resolutions[posRes]);
   }
 
-  void Apply()
+  public void Apply()
   {
       Screen.SetResolution(resolutions[posRes].width, resolutions[posRes].height, true);
   }

@@ -648,10 +648,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 699543026}
+    m_SelectOnUp: {fileID: 727041049}
     m_SelectOnDown: {fileID: 1823850797}
     m_SelectOnLeft: {fileID: 1117995640}
-    m_SelectOnRight: {fileID: 1421962955}
+    m_SelectOnRight: {fileID: 2126591424}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -677,12 +677,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1622827200}
+        m_MethodName: LowerResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699543022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_SelectOnUp: {fileID: 727041049}
-    m_SelectOnDown: {fileID: 1421962955}
+    m_SelectOnDown: {fileID: 492733247}
     m_SelectOnLeft: {fileID: 492733247}
     m_SelectOnRight: {fileID: 2126591424}
   m_Transition: 1
@@ -1129,8 +1129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 2060041794}
-    m_SelectOnDown: {fileID: 699543026}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 492733247}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1209,7 +1209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8824dc32df4f7dd4eb7dad97ed0026ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRes: {fileID: 1421962953}
 --- !u!114 &932332873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,7 +1438,7 @@ MonoBehaviour:
     m_SelectOnUp: {fileID: 1532375982}
     m_SelectOnDown: {fileID: 482362634}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 2060041794}
+    m_SelectOnRight: {fileID: 727041049}
   m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1843,7 +1842,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421962951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -2129,7 +2128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8824dc32df4f7dd4eb7dad97ed0026ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRes: {fileID: 0}
 --- !u!4 &1622827201
 Transform:
   m_ObjectHideFlags: 0
@@ -2586,7 +2584,7 @@ MonoBehaviour:
     m_Mode: 4
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 2060041794}
+    m_SelectOnLeft: {fileID: 1117995640}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -2613,12 +2611,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1622827200}
+        m_MethodName: Apply
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2997,7 +2995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060041790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -3085,10 +3083,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 699543026}
+    m_SelectOnUp: {fileID: 727041049}
     m_SelectOnDown: {fileID: 1823850797}
-    m_SelectOnLeft: {fileID: 1421962955}
-    m_SelectOnRight: {fileID: 1823850797}
+    m_SelectOnLeft: {fileID: 492733247}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3114,12 +3112,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1622827200}
+        m_MethodName: UpResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
