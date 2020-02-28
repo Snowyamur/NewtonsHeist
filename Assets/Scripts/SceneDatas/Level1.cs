@@ -16,7 +16,7 @@ public class Level1 : SceneData
 
     //Scene's boundaries
     float m_maxX = 47f;
-    float m_minX = -0.8f;
+    float m_minX = -1f;
     float m_maxY = 1.73f;
     float m_minY = -49f;
 
