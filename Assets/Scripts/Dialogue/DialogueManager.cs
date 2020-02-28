@@ -8,7 +8,6 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public Text name_Text;
     public Text dialogue_Text;
-    public Animator text_ani;
     public PlayerControlMapping control;
     public bool StartedDialogue;
     public bool progressText;
@@ -35,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (progressText && Input.anyKey)
         {
-            display_char_art(name_Text.text);
+            //display_char_art(name_Text.text);
             StopAllCoroutines();
             control.ToggleInput(20f);
             DisplayNext();
@@ -75,12 +74,14 @@ public class DialogueManager : MonoBehaviour
         if (line_counter < s_array.Length)
         {
             //Debug.Log(line_counter.ToString() + " " + indexes_of_characters[line_counter].ToString());
-            if (line_counter == indexes_of_characters[index_counter])
+            if (index_counter < indexes_of_characters.Length)
             {
-                name_Text.text = array_of_names[index_counter];
-                index_counter++;
-
-            }
+                if (line_counter == indexes_of_characters[index_counter])
+                {
+                    name_Text.text = array_of_names[index_counter];
+                    index_counter++;
+                }
+            }   
             line_counter++;
         }
         display_char_art(name_Text.text);
@@ -137,23 +138,54 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (GameObject g in character_images)
         {
-            g.GetComponent<Image>().color = Color.gray;
+            //g.GetComponent<Image>().color = Color.gray;
+            g.SetActive(false);
         }
-        if (s == "Kep")
+
+        foreach (string n in array_of_names)
         {
-            character_images[0].SetActive(true);
+            if (n == "Kepler" || n == "Calem" || n == "Kid")
+            {
+                character_images[0].SetActive(true);
+                character_images[0].GetComponent<Image>().color = Color.gray;
+            }
+            else if (n == "Robin" || n == "???" || n == "Lathi")
+            {
+                character_images[1].SetActive(true);
+                character_images[1].GetComponent<Image>().color = Color.gray;
+            }
+            else if (n == "Newton")
+            {
+                character_images[2].SetActive(true);
+                character_images[2].GetComponent<Image>().color = Color.gray;
+            }
+            else if (n == "Kestrel")
+            {
+                character_images[3].SetActive(true);
+                character_images[3].GetComponent<Image>().color = Color.gray;
+            }
+        }
+
+        if (s == "Kepler" || s == "Calem" || s == "Kid")
+        {
             character_images[0].GetComponent<Image>().color = Color.white;
         }
-        else if (s == "Rob")
+        else if (s == "Robin" || s == "???" || s == "Lathi")
         {
-            character_images[1].SetActive(true);
             character_images[1].GetComponent<Image>().color = Color.white;
         }
-        else if (s == "3rd Guy")
+        else if (s == "Newton")
         {
-            character_images[2].SetActive(true);
             character_images[2].GetComponent<Image>().color = Color.white;
         }
+        else if (s == "Kestrel")
+        {
+            character_images[3].GetComponent<Image>().color = Color.white;
+        }
+    }
+
+    public void set_gray_images()
+    {
     }
 
 }
