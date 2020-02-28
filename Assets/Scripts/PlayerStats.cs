@@ -10,15 +10,15 @@ public class PlayerStats
     float m_maxGravityPower = 100f; //Max gravity the player has
 
     //Current position of player in scene
-    float m_playerPosX;
-    float m_playerPosY;
-    float m_playerPosZ;
+    float m_playerPosX = -14f;
+    float m_playerPosY = 15f;
+    float m_playerPosZ = 0f;
 
-    int m_sceneID; //Current scene
+    int m_sceneID = 1; //Current scene
 
     Dictionary<string, bool> m_powers = new Dictionary<string, bool>
     {
-        {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
+        {"Multidirection Gravity", false}, {"Grenade Power", false}, {"Ug3", false}, {"Ug4", false}
     };
 
     Dictionary<string, int> m_grenades = new Dictionary<string, int>
