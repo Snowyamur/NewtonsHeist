@@ -101,25 +101,25 @@ public class GravityController : MonoBehaviour
                 rb.AddForce(Vector2.down*9.81f*2f);
                 if(LevelManager.current.playerData.gravityPower < 100f)
                 {
-                  LevelManager.current.playerData.gravityPower += 0.1f;
+                  LevelManager.current.playerData.gravityPower += 0.5f;
                 }
                 break;
 
             case GravityDirection.Up:
                 rb.AddForce(Vector2.up*9.81f*2f);
-                LevelManager.current.playerData.gravityPower -= 0.1f;
+                LevelManager.current.playerData.gravityPower -= 0.5f;
                 break;
 
             case GravityDirection.Left:
                 rb.AddForce(-transform.up*9.81f*2f);
                 //rb.AddForce(-Vector2.up*-9.81f);
-                LevelManager.current.playerData.gravityPower -= 0.1f;
+                LevelManager.current.playerData.gravityPower -= 0.5f;
                 break;
 
             case GravityDirection.Right:
                 rb.AddForce(-transform.up*9.81f*2f);
                 //rb.AddForce(-Vector2.up*-9.81f);
-                LevelManager.current.playerData.gravityPower -= 0.1f;
+                LevelManager.current.playerData.gravityPower -= 0.5f;
                 break;
         }
         if(LevelManager.current.playerData.gravityPower <= 0)
