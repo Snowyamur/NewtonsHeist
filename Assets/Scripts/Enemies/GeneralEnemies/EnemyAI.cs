@@ -177,7 +177,7 @@ public class EnemyAI : MonoBehaviour
         {
             hitEMP = true; //Signals hit by EMP
         }
-        else if(collision.transform.tag == "Obstacle" || collision.transform.tag == "Enemy")
+        else if(collision.transform.tag == "Obstacle")// || collision.transform.tag == "Enemy")
         {
             ChangeDirection();
         }
