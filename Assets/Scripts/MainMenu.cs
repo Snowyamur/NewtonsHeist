@@ -36,28 +36,46 @@ public class MainMenu : MonoBehaviour
   Button play;
   Button lowerRes;
   Button higherRes;
-  Button applyBut;
+  Button apply;
 
   GameObject continueMenu;
 
+  GameObject canvas;
+  GameObject optionsMenu;
+
   void Start()
   {
-      resolutions = Screen.resolutions;
-      currentRes = GameObject.Find("CurrentRes").GetComponent<Text>();
-      currentRes.text = ResToString(Screen.currentResolution);
-      saveFile = GameObject.Find("Save File").GetComponent<Text>();
-      newGame = GameObject.Find("New Game").GetComponent<Button>();
-      play = GameObject.Find("Play").GetComponent<Button>();
-      applyBut = GameObject.Find("Apply").GetComponent<Button>();
-      lowerRes = GameObject.Find("LowText").GetComponent<Button>();
-      higherRes = GameObject.Find("HighText").GetComponent<Button>();
-      newGame.onClick.AddListener(StartGame);
-      play.onClick.AddListener(Play);
-      lowerRes.onClick.AddListener(LowerResolution);
-      higherRes.onClick.AddListener(UpResolution);
-      applyBut.onClick.AddListener(Apply);
+      canvas = GameObject.Find("Canvas");
 
-      GameObject.Find("OptionsMenu").SetActive(false);
+      //Options Stuff
+      optionsMenu = canvas.transform.Find("OptionsMenu").gameObject;
+      currentRes = optionsMenu.transform.Find("CurrentRes").gameObject.GetComponent<Text>();
+      resolutions = Screen.resolutions;
+      currentRes.text = ResToString(Screen.currentResolution);
+
+      lowerRes = optionsMenu.transform.Find("LowText").gameObject.GetComponent<Button>();
+      lowerRes.onClick.AddListener(LowerResolution);
+
+      higherRes = optionsMenu.transform.Find("HighText").gameObject.GetComponent<Button>();
+      higherRes.onClick.AddListener(UpResolution);
+
+      apply = optionsMenu.transform.Find("Apply").gameObject.GetComponent<Button>();
+      apply.onClick.AddListener(Apply);
+
+      //Continue Stuff
+      continueMenu = canvas.transform.Find("ContinueMenu").gameObject;
+
+      //saveFile = GameObject.Find("Save File").GetComponent<Text>();
+
+      play = GameObject.Find("Play").GetComponent<Button>();
+      play.onClick.AddListener(Play);
+
+      //New Game Stuff
+      newGame = GameObject.Find("New Game").GetComponent<Button>();
+      newGame.onClick.AddListener(StartGame);
+
+      //Clean-up
+      optionsMenu.SetActive(false);
   }
 
   public void StartGame()
