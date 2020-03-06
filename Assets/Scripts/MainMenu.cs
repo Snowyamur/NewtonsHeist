@@ -91,7 +91,7 @@ public class MainMenu : MonoBehaviour
   {
     if(SaveLoad.savedGames.Count != 0)
     {
-        saveFile.text = "Level: " + SaveLoad.savedGames[SaveLoad.savedGames.Count-1].playerData.sceneID;
+        Play();
     }
     else //Disable continue menu if no save games are present
     {
