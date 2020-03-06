@@ -15,10 +15,10 @@ public class Level1 : SceneData
     float m_yPos = 15f;
 
     //Scene's boundaries
-    float m_maxX = 47f;
-    float m_minX = -1f;
-    float m_maxY = 1.73f;
-    float m_minY = -49f;
+    float m_maxX = 55f;
+    float m_minX = -8.5f;
+    float m_maxY = 9.5f;
+    float m_minY = -53f;
 
     public string getScene() {return scene;}
 

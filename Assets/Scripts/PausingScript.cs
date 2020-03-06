@@ -10,7 +10,7 @@ public class PausingScript : MonoBehaviour
 
     void Awake()
     {
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        pauseMenu = transform.GetChild(1).gameObject;
         pauseMenu.SetActive(false); // now that we found the pausemenu, make it inactive.
     }
 
