@@ -99,8 +99,7 @@ public class GravityController : MonoBehaviour
         {
             case GravityDirection.Down:
                 rb.AddForce(Vector2.down*9.81f*2f);
-                if(LevelManager.current.playerData.gravityPower < 100f && (collisions.IsOnGround() ||
-                collisions.IsOnWall() || collisions.IsOnCeiling()))
+                if(LevelManager.current.playerData.gravityPower < 100f)
                 {
                   LevelManager.current.playerData.gravityPower += 0.5f;
                 }
