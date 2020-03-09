@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected LayerMask groundMask;
     [SerializeField] protected LayerMask wallMask;
     [SerializeField] protected LayerMask ceilingMask;
+    [SerializeField] protected LayerMask enemyMask;
     [Space]
 
     [Header("Animation Bools")]
@@ -42,6 +43,7 @@ public class EnemyAI : MonoBehaviour
         groundMask = LayerMask.GetMask("Ground");
         wallMask = LayerMask.GetMask("Wall");
         ceilingMask = LayerMask.GetMask("Ceiling");
+        enemyMask = LayerMask.GetMask("Enemy");
 
         if (isFacingLeft)
         {
@@ -65,6 +67,7 @@ public class EnemyAI : MonoBehaviour
     protected void Patrol()
     {
         CheckGrounded();
+        CheckEnemy();
         CheckWall();
         Look();
         Movement();
@@ -86,6 +89,17 @@ public class EnemyAI : MonoBehaviour
             ChangeDirection();
             isTurning = false;
             timer = 1f; //Reset timer
+        }
+    }
+
+    void CheckEnemy()
+    {
+        RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, enemyMask);
+
+        if (raycastHit.collider == true) //If the enemy hits an object in front of it, it flips direction
+        {
+            ChangeDirection();
         }
     }
 
