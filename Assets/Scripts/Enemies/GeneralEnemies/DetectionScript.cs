@@ -91,9 +91,11 @@ public class DetectionScript : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
-
+        
+        /*
         // create new colors array where the colors will be created.
-        Color[] colors = new Color[mesh.vertexCount];
+        List<Color> colors = new List<Color>();
+        //Color[] colors = new Color[mesh.vertexCount];
         Color transparentCone = new Color(coneColor.r, coneColor.g, coneColor.b, 0);
 
         //colors[0] = coneColor;
@@ -101,14 +103,17 @@ public class DetectionScript : MonoBehaviour
         //for (int i = 1; i < vertices.Length; i++)
         //    colors[i] = transparentCone;
 
-    //    for (int i = 0; i < colors.Length - 2; i += 3)
-    //    {
-    //        colors[i] = Color.red;
-    //        colors[i + 1] = Color.green;
-    //        colors[i + 2] = Color.blue;
-    //    }
+        for (int i = 0; i < colors.Count - 2; i += 3)
+        {
+            colors[i] = Color.red;
+            colors[i + 1] = Color.green;
+            colors[i + 2] = Color.blue;
+        }
 
-    //    mesh.colors = colors;
+        mesh.SetColors(colors);
+
+        //    mesh.colors = colors;
+        */
     }
 
 

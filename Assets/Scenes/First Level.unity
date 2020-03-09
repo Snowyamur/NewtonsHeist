@@ -4267,6 +4267,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7388186815606638054, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
+        type: 3}
+      propertyPath: endAngle
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265, type: 3}
 --- !u!1 &214386879 stripped
@@ -4975,12 +4980,12 @@ PrefabInstance:
     - target: {fileID: 7388186814737679146, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.2
+      value: 23.46
       objectReference: {fileID: 0}
     - target: {fileID: 7388186814737679146, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7388186815606638052, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
         type: 3}
@@ -5046,6 +5051,16 @@ PrefabInstance:
         type: 3}
       propertyPath: startAngle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388186815606638054, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
+        type: 3}
+      propertyPath: endAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388186815606638054, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
+        type: 3}
+      propertyPath: rotationTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265, type: 3}
@@ -29215,12 +29230,12 @@ PrefabInstance:
     - target: {fileID: 7388186814737679146, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.2
+      value: 23.89
       objectReference: {fileID: 0}
     - target: {fileID: 7388186814737679146, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 7388186815606638052, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
         type: 3}
@@ -29286,6 +29301,16 @@ PrefabInstance:
         type: 3}
       propertyPath: startAngle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388186815606638054, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
+        type: 3}
+      propertyPath: endAngle
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388186815606638054, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265,
+        type: 3}
+      propertyPath: rotationTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f7c4f952c9d3ea4a87a8281e2fd1265, type: 3}
@@ -30961,7 +30986,7 @@ PrefabInstance:
     - target: {fileID: 2300726030330520510, guid: 82b4e2ea9c5653b439d4a8abf64019d7,
         type: 3}
       propertyPath: isTrapTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b4e2ea9c5653b439d4a8abf64019d7, type: 3}
