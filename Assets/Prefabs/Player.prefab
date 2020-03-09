@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a4585f434beb745ae4647dd796093a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 8
+  jumpSpeed: 10
   smallJumpMod: 3
   fallingMod: 4
   hasJumped: 0
@@ -673,6 +673,7 @@ MonoBehaviour:
   isCrouching: 0
   isFlipping: 0
   isIdle: 0
+  isLanding: 0
   isFacingLeft: 0
   grenade: 0
   currentGrenade: 

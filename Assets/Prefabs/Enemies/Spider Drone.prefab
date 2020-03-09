@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5863554329965461574}
   m_Layer: 11
   m_Name: Spider Drone
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +133,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   ceilingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyMask:
     serializedVersion: 2
     m_Bits: 0
   isIdle: 0

@@ -13,6 +13,8 @@ TagManager:
   - EMP
   - Trap
   - PauseMenu
+  - Canvas
+  - Enemy
   layers:
   - Default
   - TransparentFX
