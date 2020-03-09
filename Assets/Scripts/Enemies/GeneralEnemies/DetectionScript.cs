@@ -9,6 +9,7 @@ public class DetectionScript : MonoBehaviour
     [SerializeField] float detectionConeAngle = 90.0f;
     [SerializeField] float detectionRayDistance = 5.0f;
     [SerializeField] int numberOfRaycasts = 2;
+    [SerializeField] Color coneColor = Color.yellow;
 
     // ----- Private variables -----
     // Detection cone variables
@@ -90,6 +91,24 @@ public class DetectionScript : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
+
+        // create new colors array where the colors will be created.
+        Color[] colors = new Color[mesh.vertexCount];
+        Color transparentCone = new Color(coneColor.r, coneColor.g, coneColor.b, 0);
+
+        //colors[0] = coneColor;
+
+        //for (int i = 1; i < vertices.Length; i++)
+        //    colors[i] = transparentCone;
+
+    //    for (int i = 0; i < colors.Length - 2; i += 3)
+    //    {
+    //        colors[i] = Color.red;
+    //        colors[i + 1] = Color.green;
+    //        colors[i + 2] = Color.blue;
+    //    }
+
+    //    mesh.colors = colors;
     }
 
 
