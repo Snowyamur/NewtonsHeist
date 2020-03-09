@@ -33,21 +33,16 @@ public class Camera : MonoBehaviour
     {
         newPos = player.transform.position + offset; //Update new position
 
-        //If new postion is within level bounds, update to it
-        if(maxX >= newPos.x && newPos.x >= minX && maxY >= newPos.y && newPos.y >= minY)
-        {
-            transform.position = newPos;
-        }
-        //If camera hits x bounds of level
-        else if(maxY >= newPos.y && newPos.y >= minY)
-        {
-            transform.position = new Vector3(transform.position.x, newPos.y, transform.position.z);
-        }
-        //If camera hits y bounds of level
-        else if(maxX >= newPos.x && newPos.x >= minX)
-        {
-            transform.position = new Vector3(newPos.x, transform.position.y, transform.position.z);
-        }
-        //If camera hits both x and y bounds of level, stay put
+        if (maxX < newPos.x)
+            newPos.x = maxX;
+        else if (newPos.x < minX)
+            newPos.x = minX;
+
+        if (maxY < newPos.y)
+            newPos.y = maxY;
+        else if (newPos.y < minY)
+            newPos.y = minY;
+
+        transform.position = newPos;
     }
 }
