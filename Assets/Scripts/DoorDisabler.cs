@@ -8,7 +8,7 @@ public class DoorDisabler : MonoBehaviour
 
     void Start()
     {
-        door = GameObject.Find("Machine Door");
+        door = transform.Find("Door").gameObject;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
