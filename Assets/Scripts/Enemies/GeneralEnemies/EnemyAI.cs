@@ -21,6 +21,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected LayerMask wallMask;
     [SerializeField] protected LayerMask ceilingMask;
     [SerializeField] protected LayerMask enemyMask;
+    [SerializeField] protected LayerMask trapMask;
     [Space]
 
     [Header("Animation Bools")]
@@ -44,6 +45,7 @@ public class EnemyAI : MonoBehaviour
         wallMask = LayerMask.GetMask("Wall");
         ceilingMask = LayerMask.GetMask("Ceiling");
         enemyMask = LayerMask.GetMask("Enemy");
+        trapMask = LayerMask.GetMask("Trap");
 
         if (isFacingLeft)
         {
@@ -67,13 +69,13 @@ public class EnemyAI : MonoBehaviour
     protected void Patrol()
     {
         CheckGrounded();
-        CheckEnemy();
+        CheckObjects();
         CheckWall();
         Look();
         Movement();
     }
 
-    void CheckGrounded()
+    protected void CheckGrounded()
     {
         RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, -transform.up,
                                               rayDistance, groundMask);
@@ -92,12 +94,15 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void CheckEnemy()
+    protected void CheckObjects()
     {
-        RaycastHit2D raycastHit = DrawRaycast(groundDetection.position, transform.right,
+        RaycastHit2D raycastEnemy = DrawRaycast(groundDetection.position, transform.right,
                                               rayDistance, enemyMask);
 
-        if (raycastHit.collider == true) //If the enemy hits an object in front of it, it flips direction
+        RaycastHit2D raycastTrap = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, trapMask);
+
+        if (raycastEnemy.collider == true || raycastTrap.collider == true) //If the enemy hits an object in front of it, it flips direction
         {
             ChangeDirection();
         }

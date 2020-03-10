@@ -22,8 +22,10 @@ public class SpiderDrone : EnemyAI
         groundMask = LayerMask.GetMask("Ground");
         wallMask = LayerMask.GetMask("Wall");
         ceilingMask = LayerMask.GetMask("Ceiling");
+        enemyMask = LayerMask.GetMask("Enemy");
+        trapMask = LayerMask.GetMask("Trap");
 
-        rayDistance = 1f;
+        rayDistance = 1.2f;
 
         if (isFacingLeft)
         {
@@ -31,11 +33,35 @@ public class SpiderDrone : EnemyAI
             speed *= -1;
         }
 
-        gravDir = GravityDirection.Down; //Begin Spider Drone on the ground
+        RaycastHit2D rayGround = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, groundMask);
+
+        RaycastHit2D rayCeiling = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, ceilingMask);
+
+        RaycastHit2D rayWall = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, wallMask);
+
+        if(rayGround)
+        {
+            gravDir = GravityDirection.Down; //Begin Spider Drone on the ground
+        }
+        else if(rayCeiling)
+        {
+            gravDir = GravityDirection.Up; //Begin Spider Drone on the ceiling
+        }
+        else if(rayWall)
+        {
+            gravDir = GravityDirection.Right; //Begin Spider Drone on the wall
+        }
+
+
     }
 
     void Update()
     {
+        CheckGrounded();
+        CheckObjects();
         CheckSurface();
         Movement();
     }
@@ -67,6 +93,41 @@ public class SpiderDrone : EnemyAI
         }
     }
 
+    void CheckGrounded()
+    {
+      RaycastHit2D rayGround = DrawRaycast(groundDetection.position, -transform.up,
+                                            rayDistance, groundMask);
+
+      RaycastHit2D rayCeiling = DrawRaycast(groundDetection.position, -transform.up,
+                                            rayDistance, ceilingMask);
+
+      RaycastHit2D rayWall = DrawRaycast(groundDetection.position, -transform.up,
+                                            rayDistance, wallMask);
+
+        if(gravDir == GravityDirection.Down)
+        {
+          if (rayGround.collider == false) //If the enemy hits an object in front of it, it flips direction
+          {
+              ChangeDirection();
+          }
+        }
+        else if(gravDir == GravityDirection.Up)
+        {
+          if (rayCeiling.collider == false) //If the enemy hits an object in front of it, it flips direction
+          {
+              ChangeDirection();
+          }
+        }
+        else if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right)
+        {
+          if (rayWall.collider == false) //If the enemy hits an object in front of it, it flips direction
+          {
+              ChangeDirection();
+          }
+        }
+
+    }
+
     void CheckSurface()
     {
         //Checks for ground, wall, or ceiling to turn onto
@@ -74,10 +135,10 @@ public class SpiderDrone : EnemyAI
                                               rayDistance, groundMask);
 
         RaycastHit2D rayCeiling = DrawRaycast(groundDetection.position, transform.right,
-                                              rayDistance, wallMask);
+                                              rayDistance, ceilingMask);
 
         RaycastHit2D rayWall = DrawRaycast(groundDetection.position, transform.right,
-                                              rayDistance, ceilingMask);
+                                              rayDistance, wallMask);
 
         if(rayGround || rayCeiling || rayWall) //If the drone hits a surface
         {

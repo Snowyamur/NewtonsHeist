@@ -16,6 +16,7 @@ public class FlyingDrone : EnemyAI
     void Update()
     {
       CheckWall();
+      CheckObjects();
       Look();
       Movement();
     }
