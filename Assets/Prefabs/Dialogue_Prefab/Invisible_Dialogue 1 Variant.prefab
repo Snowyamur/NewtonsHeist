@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5614378190743711393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: next_player_index.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: player_names.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: checkpoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Shit!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: What? What happened? Ca - Kepler, are you okay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Kepler\u2026?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Get out of here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: "So you\u2019re the thief who took the gravity core. Here to take it
+        again?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: "No. My contract was up as soon as I delivered it here. I couldn\u2019t
+        care less about this corporate war."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: Plus, he paid me half what he promised.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: next_player_index.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: next_player_index.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: next_player_index.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: next_player_index.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: player_names.Array.data[0]
+      value: Kepler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: player_names.Array.data[1]
+      value: Newton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: player_names.Array.data[2]
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: player_names.Array.data[3]
+      value: Kepler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014656, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: player_names.Array.data[4]
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 168.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8348
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014657, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434400420390014662, guid: 175d84ca41e438b409ce3741a73a7134,
+        type: 3}
+      propertyPath: m_Name
+      value: Invisible_Dialogue 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 175d84ca41e438b409ce3741a73a7134, type: 3}

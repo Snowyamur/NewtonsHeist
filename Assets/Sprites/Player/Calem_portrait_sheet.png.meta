@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: ee2ead0bee027bf4b8ca31ff56714831
+guid: 4317dd4fef64de648a7f4484fb794ff3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5324796168613391141
-    second: jump_sprite_sheet_0
+      213: 7499873168332028453
+    second: Calem_portrait_sheet_0
   - first:
-      213: 7284168166783513065
-    second: jump_sprite_sheet_1
+      213: 4454280676718548206
+    second: Calem_portrait_sheet_1
   - first:
-      213: 5883957310004416991
-    second: jump_sprite_sheet_2
+      213: 4185125888222416976
+    second: Calem_portrait_sheet_2
   - first:
-      213: -1758053112772571629
-    second: jump_sprite_sheet_3
+      213: 7663404123598283578
+    second: Calem_portrait_sheet_3
   - first:
-      213: 7827808386687060857
-    second: jump_sprite_sheet_4
+      213: -1988255061333822574
+    second: Calem_portrait_sheet_4
   - first:
-      213: -1967688253728956947
-    second: jump_sprite_sheet_5
+      213: -6386769883329947245
+    second: Calem_portrait_sheet_5
   - first:
-      213: -7788349487405637004
-    second: jump_sprite_sheet_6
+      213: 49592554516854607
+    second: Calem_portrait_sheet_6
   - first:
-      213: -7121341509265181576
-    second: jump_sprite_sheet_7
-  - first:
-      213: -5150387172779838834
-    second: jump_sprite_sheet_8
-  - first:
-      213: -4697823658570494162
-    second: jump_sprite_sheet_9
+      213: -4504479447818988219
+    second: Calem_portrait_sheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -77,7 +71,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -116,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_sprite_sheet_0
+      name: Calem_portrait_sheet_0
       rect:
         serializedVersion: 2
-        x: 116
-        y: 1006
-        width: 135
-        height: 266
+        x: 0
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770cba56ab86377459b8a43fdfc0feb4
-      internalID: -5324796168613391141
+      spriteID: 97d31399b1e638842b606a9c9b63ab94
+      internalID: 7499873168332028453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_1
+      name: Calem_portrait_sheet_1
       rect:
         serializedVersion: 2
-        x: 614
-        y: 1006
-        width: 129
-        height: 266
+        x: 740
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb8d173cb6d6dc4438483a9d7d62f00b
-      internalID: 7284168166783513065
+      spriteID: 3df53042e9a99534ea0f68da48aa7e28
+      internalID: 4454280676718548206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_2
+      name: Calem_portrait_sheet_2
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 1004
-        width: 186
-        height: 483
+        x: 1480
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ab542a2810269449d8fe61d63d2f21
-      internalID: 5883957310004416991
+      spriteID: a4ce18c77dfa3944a8c9373f3790f993
+      internalID: 4185125888222416976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_3
+      name: Calem_portrait_sheet_3
       rect:
         serializedVersion: 2
-        x: 1611
-        y: 1020
-        width: 190
-        height: 469
+        x: 2220
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d93ffdd9ad3494e448de6efbacd994a1
-      internalID: -1758053112772571629
+      spriteID: cd2712d957d8b1a4f851ac6bf7d7d7b2
+      internalID: 7663404123598283578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_4
+      name: Calem_portrait_sheet_4
       rect:
         serializedVersion: 2
-        x: 85
-        y: 546
-        width: 211
-        height: 447
+        x: 0
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb1e8bd71d23f2544b2a9f3e6d22d09c
-      internalID: 7827808386687060857
+      spriteID: b3d4985443064a84ba0f6ee0a5cd5cb9
+      internalID: -1988255061333822574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_5
+      name: Calem_portrait_sheet_5
       rect:
         serializedVersion: 2
-        x: 558
-        y: 592
-        width: 219
-        height: 388
+        x: 740
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a77398e81e2d7a4fb80da3d9bb0aa0d
-      internalID: -1967688253728956947
+      spriteID: a44af62a6e7e38543b3618de4543b402
+      internalID: -6386769883329947245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_6
+      name: Calem_portrait_sheet_6
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 543
-        width: 250
-        height: 446
+        x: 1480
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe79e3c7d0176e04189568e952206a8d
-      internalID: -7788349487405637004
+      spriteID: 47af6fc840e5f9449b49b47ec013eb46
+      internalID: 49592554516854607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_7
+      name: Calem_portrait_sheet_7
       rect:
         serializedVersion: 2
-        x: 1530
-        y: 513
-        width: 232
-        height: 397
+        x: 2220
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,50 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f647716c8438a4093615c93de898c9
-      internalID: -7121341509265181576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_sprite_sheet_8
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 13
-        width: 222
-        height: 316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3c3843a0f7664f439e38c7c5260b653
-      internalID: -5150387172779838834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_sprite_sheet_9
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 18
-        width: 195
-        height: 417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8998fab69121fe4479fea3464a7e7cba
-      internalID: -4697823658570494162
+      spriteID: d7177ce9cd00b0b4e98555a8e53ad37e
+      internalID: -4504479447818988219
       vertices: []
       indices: 
       edges: []

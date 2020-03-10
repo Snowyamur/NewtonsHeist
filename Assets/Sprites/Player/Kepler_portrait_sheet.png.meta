@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: ee2ead0bee027bf4b8ca31ff56714831
+guid: fc396014ad29b344295ceb617ca11794
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5324796168613391141
-    second: jump_sprite_sheet_0
+      213: -1939693187562862693
+    second: Kepler_portrait_sheet_0
   - first:
-      213: 7284168166783513065
-    second: jump_sprite_sheet_1
+      213: -6236928679042621670
+    second: Kepler_portrait_sheet_1
   - first:
-      213: 5883957310004416991
-    second: jump_sprite_sheet_2
+      213: -1567614228224413661
+    second: Kepler_portrait_sheet_2
   - first:
-      213: -1758053112772571629
-    second: jump_sprite_sheet_3
+      213: -6890768394312882058
+    second: Kepler_portrait_sheet_3
   - first:
-      213: 7827808386687060857
-    second: jump_sprite_sheet_4
+      213: -4436512377521881567
+    second: Kepler_portrait_sheet_4
   - first:
-      213: -1967688253728956947
-    second: jump_sprite_sheet_5
+      213: -2009434008092270241
+    second: Kepler_portrait_sheet_5
   - first:
-      213: -7788349487405637004
-    second: jump_sprite_sheet_6
+      213: 5369822529550081978
+    second: Kepler_portrait_sheet_6
   - first:
-      213: -7121341509265181576
-    second: jump_sprite_sheet_7
-  - first:
-      213: -5150387172779838834
-    second: jump_sprite_sheet_8
-  - first:
-      213: -4697823658570494162
-    second: jump_sprite_sheet_9
+      213: -7247660082943789239
+    second: Kepler_portrait_sheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_sprite_sheet_0
+      name: Kepler_portrait_sheet_0
       rect:
         serializedVersion: 2
-        x: 116
-        y: 1006
-        width: 135
-        height: 266
+        x: 0
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 770cba56ab86377459b8a43fdfc0feb4
-      internalID: -5324796168613391141
+      spriteID: 7e5ba19bbe5952941a45c2638f7eb6b6
+      internalID: -1939693187562862693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_1
+      name: Kepler_portrait_sheet_1
       rect:
         serializedVersion: 2
-        x: 614
-        y: 1006
-        width: 129
-        height: 266
+        x: 740
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb8d173cb6d6dc4438483a9d7d62f00b
-      internalID: 7284168166783513065
+      spriteID: 1901dce5785d11c4ba0aed155afb4967
+      internalID: -6236928679042621670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_2
+      name: Kepler_portrait_sheet_2
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 1004
-        width: 186
-        height: 483
+        x: 1480
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ab542a2810269449d8fe61d63d2f21
-      internalID: 5883957310004416991
+      spriteID: 92130e9897e466645afa40270c01053e
+      internalID: -1567614228224413661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_3
+      name: Kepler_portrait_sheet_3
       rect:
         serializedVersion: 2
-        x: 1611
-        y: 1020
-        width: 190
-        height: 469
+        x: 2220
+        y: 1080
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d93ffdd9ad3494e448de6efbacd994a1
-      internalID: -1758053112772571629
+      spriteID: 6939d7c0668b73d47ac9336436874645
+      internalID: -6890768394312882058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_4
+      name: Kepler_portrait_sheet_4
       rect:
         serializedVersion: 2
-        x: 85
-        y: 546
-        width: 211
-        height: 447
+        x: 0
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb1e8bd71d23f2544b2a9f3e6d22d09c
-      internalID: 7827808386687060857
+      spriteID: 9cafd88cbfb1aaf49a2cbaa4f8c6d620
+      internalID: -4436512377521881567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_5
+      name: Kepler_portrait_sheet_5
       rect:
         serializedVersion: 2
-        x: 558
-        y: 592
-        width: 219
-        height: 388
+        x: 740
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a77398e81e2d7a4fb80da3d9bb0aa0d
-      internalID: -1967688253728956947
+      spriteID: dbc43bede4ac48c45a33d3cf439c4bd2
+      internalID: -2009434008092270241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_6
+      name: Kepler_portrait_sheet_6
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 543
-        width: 250
-        height: 446
+        x: 1480
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe79e3c7d0176e04189568e952206a8d
-      internalID: -7788349487405637004
+      spriteID: c23bb82db6f674e42a62b3406a612a36
+      internalID: 5369822529550081978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_sprite_sheet_7
+      name: Kepler_portrait_sheet_7
       rect:
         serializedVersion: 2
-        x: 1530
-        y: 513
-        width: 232
-        height: 397
+        x: 2220
+        y: 0
+        width: 740
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,50 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f647716c8438a4093615c93de898c9
-      internalID: -7121341509265181576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_sprite_sheet_8
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 13
-        width: 222
-        height: 316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3c3843a0f7664f439e38c7c5260b653
-      internalID: -5150387172779838834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_sprite_sheet_9
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 18
-        width: 195
-        height: 417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8998fab69121fe4479fea3464a7e7cba
-      internalID: -4697823658570494162
+      spriteID: 56a1e799ff6506b4fa70b4b3a7e99570
+      internalID: -7247660082943789239
       vertices: []
       indices: 
       edges: []
