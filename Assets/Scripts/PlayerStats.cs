@@ -18,7 +18,7 @@ public class PlayerStats
 
     Dictionary<string, bool> m_powers = new Dictionary<string, bool>
     {
-        {"Multidirection Gravity", false}, {"Grenade Power", false}, {"Ug3", false}, {"Ug4", false}
+        {"Multidirection Gravity", false}, {"Grenades", false}, {"Ug3", false}, {"Ug4", false}
     };
 
     Dictionary<string, int> m_grenades = new Dictionary<string, int>
