@@ -27,7 +27,7 @@ public class SwitchScenes : MonoBehaviour
         yPos = GameObject.FindGameObjectWithTag("Canvas").GetComponent<SceneData>().yPos;
         player = GameObject.FindGameObjectWithTag("Player");
         control = player.GetComponent<PlayerControlMapping>();
-        blackScreen = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Image>();
+        //blackScreen = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Image>();
         fade = blackScreen.GetComponent<Fade>();
 
         blackScreen.color = new Color(0f, 0f, 0f, 0f);
@@ -45,7 +45,7 @@ public class SwitchScenes : MonoBehaviour
     public void ChangeScene(int scene, float xPos, float yPos)
     {
         StartCoroutine(control.ToggleInput(delay));
-        StartCoroutine(fade.FadeImageInOut(fps, fps, blackScreen, delay*2)); //Begins fade to black
+        //StartCoroutine(fade.FadeImageInOut(fps, fps, blackScreen, delay*2)); //Begins fade to black
         player.transform.position = new Vector3(xPos, yPos, 0); //Changes player's position in new scene
         SaveLoad.Save(); //Save data
         SceneManager.LoadScene(scene); //Load new scene
