@@ -8,10 +8,8 @@ public class SwitchScenes : MonoBehaviour
 {
     float fps = 3f;
     float delay = 4f;
-    float radius = 1f;
     float xPos;
     float yPos;
-    int levelIndex;
     int newScene;
 
     Fade fade;

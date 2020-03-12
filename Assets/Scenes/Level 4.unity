@@ -7701,6 +7701,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1646270829687487754, guid: fdee21714f521aa4db8f036e8021d970,
+        type: 3}
+      propertyPath: coil
+      value: 
+      objectReference: {fileID: 619850327}
     - target: {fileID: 4151077509795736014, guid: fdee21714f521aa4db8f036e8021d970,
         type: 3}
       propertyPath: m_Camera
