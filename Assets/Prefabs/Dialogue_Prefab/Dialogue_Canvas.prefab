@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6146417736400030468}
   - component: {fileID: 7110493588819377494}
   - component: {fileID: 5552097204235202739}
-  - component: {fileID: 4513265356493370274}
   m_Layer: 5
   m_Name: Dialogue_Canvas
   m_TagString: Untagged
@@ -100,18 +99,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4513265356493370274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196718864378045757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c7f9aff1c7e465408e66cae173d6296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2198936763081024541
 GameObject:
   m_ObjectHideFlags: 0
