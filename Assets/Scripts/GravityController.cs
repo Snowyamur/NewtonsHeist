@@ -107,22 +107,31 @@ public class GravityController : MonoBehaviour
 
             case GravityDirection.Up:
                 rb.AddForce(Vector2.up*9.81f*2f);
-                LevelManager.current.playerData.gravityPower -= 0.1f;
+                if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+                {
+                    LevelManager.current.playerData.gravityPower -= 0.1f;
+                }
                 break;
 
             case GravityDirection.Left:
                 rb.AddForce(-transform.up*9.81f*2f);
                 //rb.AddForce(-Vector2.up*-9.81f);
-                LevelManager.current.playerData.gravityPower -= 0.1f;
+                if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+                {
+                    LevelManager.current.playerData.gravityPower -= 0.1f;
+                }
                 break;
 
             case GravityDirection.Right:
                 rb.AddForce(-transform.up*9.81f*2f);
                 //rb.AddForce(-Vector2.up*-9.81f);
-                LevelManager.current.playerData.gravityPower -= 0.1f;
+                if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+                {
+                    LevelManager.current.playerData.gravityPower -= 0.1f;
+                }
                 break;
         }
-        if(LevelManager.current.playerData.gravityPower <= 0)
+        if(LevelManager.current.playerData.gravityPower <= 0) //Resets gravity to down and to zero if power were to hit 0 or below
         {
             if(m_gravDir != GravityDirection.Down)
             {
@@ -137,7 +146,11 @@ public class GravityController : MonoBehaviour
         if(!multiDir)
         {
             audio.Play();
-            LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+            if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+            {
+                LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+            }
+
             if(m_gravDir == GravityDirection.Down) //If current direction is down, make up
             {
                 m_gravDir = GravityDirection.Up;
@@ -165,7 +178,10 @@ public class GravityController : MonoBehaviour
           if(Input.GetKey(KeyCode.UpArrow))
           {
               m_gravDir = GravityDirection.Up;
-              LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+              if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+              {
+                  LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20
+              }
               transform.eulerAngles = new Vector3(0, 0, 180);
               audio.Play();
               break;
@@ -174,7 +190,10 @@ public class GravityController : MonoBehaviour
           if(Input.GetKey(KeyCode.DownArrow))
           {
               m_gravDir = GravityDirection.Down;
-              LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+              if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+              {
+                  LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20
+              }
               transform.eulerAngles = new Vector3(0, 0, 0);
               audio.Play();
               break;
@@ -183,7 +202,10 @@ public class GravityController : MonoBehaviour
           if(Input.GetKey(KeyCode.RightArrow))
           {
               m_gravDir = GravityDirection.Right;
-              LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+              if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+              {
+                  LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20
+              }
               transform.eulerAngles = new Vector3(0, 0, 90);
               audio.Play();
               break;
@@ -192,7 +214,10 @@ public class GravityController : MonoBehaviour
           if(Input.GetKey(KeyCode.LeftArrow))
           {
               m_gravDir = GravityDirection.Left;
-              LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20;
+              if(!LevelManager.current.playerData.powers["Unlimited Gravity"])
+              {
+                  LevelManager.current.playerData.gravityPower -= 20; //Each toggle drains gravity bar by 20
+              };
               transform.eulerAngles = new Vector3(0, 0, 270);
               audio.Play();
               break;

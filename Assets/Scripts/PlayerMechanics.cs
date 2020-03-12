@@ -35,6 +35,7 @@ public class PlayerMechanics : MonoBehaviour
     public bool isCrouching;
     public bool isFlipping;
     public bool isIdle;
+    public bool isLanding;
     public bool isFacingLeft = false;
 
     [Space]
@@ -42,7 +43,7 @@ public class PlayerMechanics : MonoBehaviour
     [Header("Powers")]
     [SerializeField] Dictionary<string, bool> powers = new Dictionary<string, bool>
     {
-        {"Multidirection Gravity", false}, {"Ug2", false}, {"Ug3", false}, {"Ug4", false}
+        {"Multidirection Gravity", false}, {"Grenades", false}, {"Unlimited Gravity", false}, {"Ug4", false}
     };
 
     [Header("Grenades")]
@@ -240,6 +241,7 @@ public class PlayerMechanics : MonoBehaviour
             if(rb.velocity.y == 0)
             {
                 hasJumped = 0;
+                isLanding = true;
             }
         }
 
@@ -267,6 +269,7 @@ public class PlayerMechanics : MonoBehaviour
             if(rb.velocity.x == 0)
             {
                 hasJumped = 0;
+                isLanding = true;
             }
         }
     }
@@ -324,21 +327,40 @@ public class PlayerMechanics : MonoBehaviour
 
     void Throw()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(LevelManager.current.playerData.powers["Grenades"])
         {
-            grenade += 1;
-
-            if(grenade == 2)
+            if(Input.GetKeyDown(KeyCode.Q))
             {
-                grenade = 0;
+                grenade += 1;
+
+                if(grenade == 2)
+                {
+                    grenade = 0;
+                }
+                switch(grenade)
+                {
+                    case 0:
+                      StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, polarImg, 1f));
+                      break;
+                    case 1:
+                      StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, empImg, 1f));
+                      break;
+                    /*case 2:
+                      currentGrenade = "GravityManipulator";
+                      break;
+                    case 3:
+                      currentGrenade = "GravityManipulator";
+                      break;*/
+                }
+
             }
             switch(grenade)
             {
                 case 0:
-                  StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, polarImg, 1f));
+                  currentGrenade = "Gravity Manipulator";
                   break;
                 case 1:
-                  StartCoroutine(fade.FadeImageInOut(0.2f, 0.2f, empImg, 1f));
+                  currentGrenade = "EMP";
                   break;
                 /*case 2:
                   currentGrenade = "GravityManipulator";
@@ -348,36 +370,22 @@ public class PlayerMechanics : MonoBehaviour
                   break;*/
             }
 
-        }
-        switch(grenade)
-        {
-            case 0:
-              currentGrenade = "Gravity Manipulator";
-              break;
-            case 1:
-              currentGrenade = "EMP";
-              break;
-            /*case 2:
-              currentGrenade = "GravityManipulator";
-              break;
-            case 3:
-              currentGrenade = "GravityManipulator";
-              break;*/
-        }
 
-
-        if(control.throwHeld > 0.5 && grenOn)
-        {
-            if(grenades[currentGrenade] != 0)
+            if(control.throwHeld > 0.5 && grenOn)
             {
-                grenades[currentGrenade] -= 1;
-                throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
+
+                if(grenades[currentGrenade] != 0)
+                {
+                    grenades[currentGrenade] -= 1;
+                    throwScript.ThrowGrenade(currentGrenade, isFacingLeft);
+                }
+
+                grenOn = !grenOn;
             }
-            grenOn = !grenOn;
-        }
-        else if(control.throwHeld < 0.5 && !grenOn)
-        {
-            grenOn = !grenOn;
+            else if(control.throwHeld < 0.5 && !grenOn)
+            {
+                grenOn = !grenOn;
+            }
         }
     }
 
