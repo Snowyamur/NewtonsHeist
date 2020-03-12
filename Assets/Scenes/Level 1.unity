@@ -1765,8 +1765,8 @@ MonoBehaviour:
     - I made it in.
     - "Be careful, something doesn\u2019t feel right. This seems too easy."
     - Avoid the lasers on the ground and floor by using the Graviscender to go sideways.
-    - Hold down LT and move the Right Stick to select a direction. Then Release LT
-      to go that way.
+    - Move the Right Stick or press and hold an arrow to select a direction. Then
+      press LT or X to go that way.
   next_player_index: 0000000001000000
   player_names:
   - Kepler
