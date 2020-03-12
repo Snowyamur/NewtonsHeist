@@ -9,6 +9,7 @@ public class Level1 : SceneData
 {
     //Scene name to transfer to
     string scene = "Level 1";
+    int nextScene = 2;
 
     //Player's beginning position in new scene
     float m_xPos = -14f;
@@ -20,7 +21,10 @@ public class Level1 : SceneData
     float m_maxY = 9.5f;
     float m_minY = -53f;
 
-    public string getScene() {return scene;}
+    //Getters add setters
+    public override string getScene() {return scene;}
+
+    public override int getNextScene() {return nextScene;}
 
     public override float xPos
     {

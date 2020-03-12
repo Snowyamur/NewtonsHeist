@@ -9,44 +9,43 @@ public class SwitchScenes : MonoBehaviour
     float fps = 3f;
     float delay = 4f;
     float radius = 1f;
+    float xPos;
+    float yPos;
+    int levelIndex;
+    int newScene;
 
     Fade fade;
-    SceneData newScene;
     PlayerControlMapping control;
-
     //GameObject blackScreen;
     Image blackScreen;
     GameObject player;
 
-    LayerMask playerLayer;
-
     void Awake()
     {
+        newScene = GameObject.FindGameObjectWithTag("Canvas").GetComponent<SceneData>().getNextScene();
+        xPos = GameObject.FindGameObjectWithTag("Canvas").GetComponent<SceneData>().xPos;
+        yPos = GameObject.FindGameObjectWithTag("Canvas").GetComponent<SceneData>().yPos;
         player = GameObject.FindGameObjectWithTag("Player");
         control = player.GetComponent<PlayerControlMapping>();
         blackScreen = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Image>();
         fade = blackScreen.GetComponent<Fade>();
-        playerLayer = LayerMask.GetMask("Player");
+
+        blackScreen.color = new Color(0f, 0f, 0f, 0f);
     }
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        //Applies a collider to detect player
-        Collider2D col = Physics2D.OverlapCircle(transform.position, radius, playerLayer);
-
-        //This is for doors, entryways...etc. NOT EDGE OF SCREEN TRANSITION
-        if(col != null && Input.GetKeyDown("E")) //If player is there and pressing E
+        if(col.transform.tag == "Player")
         {
-            newScene = col.GetComponent<SceneData>();
-            ChangeScene(newScene.getScene(), newScene.xPos, newScene.yPos);
+            //Debug.Log(newScene.getScene());
+            ChangeScene(newScene, xPos, yPos);
         }
     }
 
-    public void ChangeScene(string scene, float xPos, float yPos)
+    public void ChangeScene(int scene, float xPos, float yPos)
     {
-        //StartCoroutine(fade.FadeInOut(fps, fps, blackScreen, delay));
-        StartCoroutine(fade.FadeImageInOut(fps, fps, blackScreen, delay)); //Begins fade to black
-        //StartCoroutine(control.ToggleInput(delay*2)); //Stops input for 8 seconds
+        StartCoroutine(control.ToggleInput(delay));
+        StartCoroutine(fade.FadeImageInOut(fps, fps, blackScreen, delay*2)); //Begins fade to black
         player.transform.position = new Vector3(xPos, yPos, 0); //Changes player's position in new scene
         SaveLoad.Save(); //Save data
         SceneManager.LoadScene(scene); //Load new scene

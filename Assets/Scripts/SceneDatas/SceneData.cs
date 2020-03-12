@@ -9,6 +9,7 @@ public class SceneData : MonoBehaviour
 {
     //Scene name to transfer to
     protected string scene;
+    protected int nextScene;
 
     //Player's beginning position in new scene
     protected float m_xPos;
@@ -21,6 +22,8 @@ public class SceneData : MonoBehaviour
     protected float m_minY;
 
     public virtual string getScene() {return scene;}
+
+    public virtual int getNextScene() {return nextScene;}
 
     public virtual float xPos
     {
