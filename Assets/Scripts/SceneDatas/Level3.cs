@@ -18,7 +18,7 @@ public class Level3 : SceneData
     //Scene's boundaries
     float m_maxX = 160f;
     float m_minX = 1.2f;
-    float m_maxY = 68f;
+    float m_maxY = 70f;
     float m_minY = -18.5f;
 
     //Getters add setters
