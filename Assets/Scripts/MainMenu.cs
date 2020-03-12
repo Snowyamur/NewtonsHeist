@@ -67,8 +67,8 @@ public class MainMenu : MonoBehaviour
 
       //saveFile = GameObject.Find("Save File").GetComponent<Text>();
 
-      play = GameObject.Find("Play").GetComponent<Button>();
-      play.onClick.AddListener(Play);
+      /*play = GameObject.Find("Play").GetComponent<Button>();
+      play.onClick.AddListener(Play);*/
 
       //New Game Stuff
       newGame = GameObject.Find("New Game").GetComponent<Button>();
@@ -173,7 +173,10 @@ public class MainMenu : MonoBehaviour
       Screen.SetResolution(resolutions[posRes].width, resolutions[posRes].height, true);
   }
 
-
+  public void Quit()
+  {
+      Application.Quit();
+  }
   /*void OnGUI () //Old UI, un-comment for testing
   {
 
