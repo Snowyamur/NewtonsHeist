@@ -105,7 +105,6 @@ public class EnemyAI : MonoBehaviour
 
         if ((raycastEnemy.collider == true && raycastEnemy.collider.transform.gameObject != this.gameObject) || raycastTrap.collider == true) //If the enemy hits an object in front of it, it flips direction
         {
-            Debug.Log("There");
             ChangeDirection();
         }
     }
@@ -123,7 +122,7 @@ public class EnemyAI : MonoBehaviour
                 timer -= Time.deltaTime;
                 return;
             }
-            Debug.Log("Here");
+
             ChangeDirection();
             isTurning = false;
             timer = 1f; //Reset timer
