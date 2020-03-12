@@ -645,8 +645,7 @@ MonoBehaviour:
       type: 3}
     m_SelectedSprite: {fileID: -1948266674699603315, guid: cdcd014699f9f834db7fae12f07f8f34,
       type: 3}
-    m_DisabledSprite: {fileID: -1948266674699603315, guid: cdcd014699f9f834db7fae12f07f8f34,
-      type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -843,7 +842,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1657,8 +1656,7 @@ MonoBehaviour:
       type: 3}
     m_SelectedSprite: {fileID: -4608160516310898631, guid: cdcd014699f9f834db7fae12f07f8f34,
       type: 3}
-    m_DisabledSprite: {fileID: 3604652147977411474, guid: cdcd014699f9f834db7fae12f07f8f34,
-      type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1851,7 +1849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1219172205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2297,8 +2295,7 @@ MonoBehaviour:
       type: 3}
     m_SelectedSprite: {fileID: 204643128758060318, guid: cdcd014699f9f834db7fae12f07f8f34,
       type: 3}
-    m_DisabledSprite: {fileID: 6271406837546934705, guid: cdcd014699f9f834db7fae12f07f8f34,
-      type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2395,7 +2392,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3134,9 +3131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 2126591424}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 1117995640}
+    m_SelectOnLeft: {fileID: 2126591424}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -3436,7 +3433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2027978783
 RectTransform:
   m_ObjectHideFlags: 0
