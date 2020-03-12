@@ -60,7 +60,7 @@ public class FlyingDrone : EnemyAI
 
     void Look()
     {
-        detectionScript.SetAimDirection(transform.right, isFacingLeft);
+        detectionScript.SetAimDirection(Vector2.right, isFacingLeft);
     }
 
     void ChangeDirection()
