@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2300726030330520511}
   - component: {fileID: 2300726030330520510}
   - component: {fileID: 2300726030330520509}
+  - component: {fileID: 82223138216702582}
+  - component: {fileID: 5128634095384386595}
   m_Layer: 0
   m_Name: Individual Checkpoints
   m_TagString: Untagged
@@ -121,3 +123,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &82223138216702582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300726030330520451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb9ae8488b9c29429adca95e4053087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSprite: {fileID: 21300000, guid: 3dba281637fc4a34dbd173520ca730d4, type: 3}
+--- !u!114 &5128634095384386595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300726030330520451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e9be37106743b42b9c1c6526c102a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
