@@ -11,14 +11,14 @@ public class Level2 : SceneData
     string scene = "Level 2";
 
     //Player's beginning position in new scene
-    float m_xPos = -14f;
-    float m_yPos = 15f;
+    float m_xPos = 76f;
+    float m_yPos = 0.5f;
 
     //Scene's boundaries
-    float m_maxX = 55f;
-    float m_minX = -8.5f;
-    float m_maxY = 9.5f;
-    float m_minY = -53f;
+    float m_maxX = 353.5f;
+    float m_minX = 87f;
+    float m_maxY = 5f;
+    float m_minY = -70.5f;
 
     public string getScene() {return scene;}
 
