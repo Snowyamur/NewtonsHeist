@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4427923375073236325}
   - component: {fileID: 4427923375073236322}
   - component: {fileID: 3614170266116895235}
+  - component: {fileID: -828585276436680987}
   m_Layer: 13
   m_Name: Tesla Coil
   m_TagString: Trap
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -224,3 +225,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-828585276436680987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427923375073236323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a251b004fb60e46928612b8c5d2f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
