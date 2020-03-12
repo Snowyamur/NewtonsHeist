@@ -14,6 +14,8 @@ public class SpiderDrone : EnemyAI
     }
     GravityDirection gravDir;
 
+    bool changed = false; //Checks if the enemy switched grounds
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +27,7 @@ public class SpiderDrone : EnemyAI
         enemyMask = LayerMask.GetMask("Enemy");
         trapMask = LayerMask.GetMask("Trap");
 
-        rayDistance = 1.2f;
+        rayDistance = 1.5f;
 
         if (isFacingLeft)
         {
@@ -45,24 +47,43 @@ public class SpiderDrone : EnemyAI
         if(rayGround)
         {
             gravDir = GravityDirection.Down; //Begin Spider Drone on the ground
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if(rayCeiling)
         {
+            speed *= -1;
             gravDir = GravityDirection.Up; //Begin Spider Drone on the ceiling
+            transform.eulerAngles = new Vector3(0, 0, 180);
         }
         else if(rayWall)
         {
-            gravDir = GravityDirection.Right; //Begin Spider Drone on the wall
+            if(transform.eulerAngles.z == 90)
+            {
+              gravDir = GravityDirection.Right; //Begin Spider Drone on the wall
+              transform.eulerAngles = new Vector3(0, 0, 90);
+            }
+
+            else
+            {
+              speed *= -1;
+              gravDir = GravityDirection.Left; //Begin Spider Drone on the wall
+              transform.eulerAngles = new Vector3(0, 0, -90);
+            }
         }
+        /*else
+        {
+            gravDir = GravityDirection.Down;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }*/
 
 
     }
 
     void Update()
     {
-        CheckGrounded();
-        CheckObjects();
-        CheckSurface();
+        StartCoroutine(CheckGrounded());
+        //CheckObjects();
+        //CheckSurface();
         Movement();
     }
 
@@ -82,7 +103,7 @@ public class SpiderDrone : EnemyAI
                 break;
 
             case GravityDirection.Left:
-                rb.AddForce(-transform.right*-9.81f*2f);
+                rb.AddForce(-transform.right*-9.81f*3f);
                 detectionScript.SetAimDirection(new Vector2(0,-1), isFacingLeft);
                 break;
 
@@ -93,42 +114,67 @@ public class SpiderDrone : EnemyAI
         }
     }
 
-    void CheckGrounded()
+    IEnumerator CheckGrounded()
     {
-      RaycastHit2D rayGround = DrawRaycast(groundDetection.position, -transform.up,
-                                            rayDistance, groundMask);
+        if(changed)
+        {
+          yield break;
+        }
 
-      RaycastHit2D rayCeiling = DrawRaycast(groundDetection.position, -transform.up,
-                                            rayDistance, ceilingMask);
+        RaycastHit2D rayGroundGround = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, groundMask);
 
-      RaycastHit2D rayWall = DrawRaycast(groundDetection.position, -transform.up,
-                                            rayDistance, wallMask);
+        RaycastHit2D rayCeilingGround = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, ceilingMask);
+
+        RaycastHit2D rayWallGround = DrawRaycast(groundDetection.position, -transform.up,
+                                              rayDistance, wallMask);
+
+        RaycastHit2D rayGroundNext = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, groundMask);
+
+        RaycastHit2D rayCeilingNext = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, ceilingMask);
+
+        RaycastHit2D rayWallNext = DrawRaycast(groundDetection.position, transform.right,
+                                              rayDistance, wallMask);
 
         if(gravDir == GravityDirection.Down)
         {
-          if (rayGround.collider == false) //If the enemy hits an object in front of it, it flips direction
-          {
-              ChangeDirection();
-          }
+            if (!rayGroundGround && rayWallGround.collider == false && rayWallNext.collider == false) //If the enemy is on the ground and the ground ends
+            {
+                ChangeDirection();
+                changed = true;
+            }
         }
         else if(gravDir == GravityDirection.Up)
         {
-          if (rayCeiling.collider == false) //If the enemy hits an object in front of it, it flips direction
-          {
-              ChangeDirection();
-          }
+            if (!rayGroundGround && !rayCeilingGround && !rayWallGround && !rayWallNext && !rayCeilingNext && !rayGroundNext) //If the enemy is on the ceiling and the ceiling ends
+            {
+                ChangeDirection();
+                changed = true;
+            }
         }
         else if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right)
         {
-          if (rayWall.collider == false) //If the enemy hits an object in front of it, it flips direction
-          {
-              ChangeDirection();
-          }
+            if (!rayWallGround && !rayCeilingGround && !rayGroundGround && !rayCeilingNext && !rayGroundNext) //If the enemy is on the wall and the wall ends
+            {
+                ChangeDirection();
+                changed = true;
+            }
         }
 
+        if(!changed)
+        {
+            changed = true;
+            CheckSurface(); //rayGroundNext, rayCeilingNext, rayWallNext
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        changed = false;
     }
 
-    void CheckSurface()
+    void CheckSurface() //RaycastHit2D rayGround, RaycastHit2D rayCeiling, RaycastHit2D rayWall
     {
         //Checks for ground, wall, or ceiling to turn onto
         RaycastHit2D rayGround = DrawRaycast(groundDetection.position, transform.right,
@@ -154,7 +200,7 @@ public class SpiderDrone : EnemyAI
                   currentGrav = 0;
                 }
                 gravDir = (GravityDirection)currentGrav;
-                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 90); //Rotate right
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x+180, transform.eulerAngles.y+180, transform.eulerAngles.z + 90); //Rotate right
             }
             else
             {
@@ -165,7 +211,7 @@ public class SpiderDrone : EnemyAI
                   currentGrav = 3;
                 }
                 gravDir = (GravityDirection)currentGrav;
-                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 90); //Rotate left
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x-180, transform.eulerAngles.y-180, transform.eulerAngles.z - 90); //Rotate left
             }
 
             if(!isFacingLeft)
@@ -182,8 +228,6 @@ public class SpiderDrone : EnemyAI
                     speed = -speed;
                 }
             }
-
-            //Debug.Log(gravDir);
         }
     }
 
@@ -209,6 +253,37 @@ public class SpiderDrone : EnemyAI
             isWalking = false;
         }
 
+    }
+
+    void ChangeDirection()
+    {
+        if(gravDir == GravityDirection.Down || gravDir == GravityDirection.Up)
+        {
+            if(isFacingLeft)
+            {
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y+180, transform.eulerAngles.z); //Resets angles
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y-180, transform.eulerAngles.z);
+            }
+        }
+
+        else if(gravDir == GravityDirection.Left || gravDir == GravityDirection.Right)
+        {
+            if(isFacingLeft)
+            {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x+180, 0, transform.eulerAngles.z); //Resets angles
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x-180, 0, transform.eulerAngles.z);
+            }
+        }
+
+
+        speed *= -1; //Flips speed
+        isFacingLeft = !isFacingLeft;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
