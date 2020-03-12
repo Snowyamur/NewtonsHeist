@@ -20,6 +20,7 @@ public class Level4 : SceneData
     float m_maxY = 130f;
     float m_minY = 2f;
 
+    //Getters add setters
     public string getScene() {return scene;}
 
     public override float xPos
