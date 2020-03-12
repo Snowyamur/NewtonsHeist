@@ -75,6 +75,8 @@ public class FlyingDrone : EnemyAI
             {
                 transform.eulerAngles = new Vector3(0, 0, -90);
             }
+
+            speed *= -1; //Flips speed
         }
 
         else
@@ -87,11 +89,10 @@ public class FlyingDrone : EnemyAI
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
             }
+
+            speed *= -1; //Flips speed
+            isFacingLeft = !isFacingLeft;
         }
-
-
-        speed *= -1; //Flips speed
-        isFacingLeft = !isFacingLeft;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
