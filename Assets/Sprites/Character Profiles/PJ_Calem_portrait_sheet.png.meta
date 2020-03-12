@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 6b72a8c74f31cc34d9e7b68fb3db7819
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8181141333897849529
+    second: PJ_Calem_portrait_sheet_0
+  - first:
+      213: 4180805830253705463
+    second: PJ_Calem_portrait_sheet_1
+  - first:
+      213: -7152953944402003375
+    second: PJ_Calem_portrait_sheet_2
+  - first:
+      213: -1532798872988822719
+    second: PJ_Calem_portrait_sheet_3
+  - first:
+      213: -3539345479201283314
+    second: PJ_Calem_portrait_sheet_4
+  - first:
+      213: 3838889654389010864
+    second: PJ_Calem_portrait_sheet_5
+  - first:
+      213: -5304788246961307808
+    second: PJ_Calem_portrait_sheet_6
+  - first:
+      213: -1345039490410122292
+    second: PJ_Calem_portrait_sheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b1bd8a7049487468711bb02455db45
+      internalID: -8181141333897849529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d287b075d5382499069afbf29cd332
+      internalID: 4180805830253705463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de04bbde43524cf4cace675ef52eab83
+      internalID: -7152953944402003375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c63481c58342494eba4a720e396b31b
+      internalID: -1532798872988822719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a720937975fcf445819fbe632da8666
+      internalID: -3539345479201283314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 0
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaab13ef92a7b7445bcd62b3e712db6d
+      internalID: 3838889654389010864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PJ_Calem_portrait_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 0
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda5cde54b9aced49877132477a4178a
+      internalID: -5304788246961307808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

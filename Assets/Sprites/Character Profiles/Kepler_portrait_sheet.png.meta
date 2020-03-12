@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 3dae7f7b8ae01e145a1a0d55019bf096
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1939693187562862693
+    second: Kepler_portrait_sheet_0
+  - first:
+      213: -6236928679042621670
+    second: Kepler_portrait_sheet_1
+  - first:
+      213: -1567614228224413661
+    second: Kepler_portrait_sheet_2
+  - first:
+      213: -6890768394312882058
+    second: Kepler_portrait_sheet_3
+  - first:
+      213: -4436512377521881567
+    second: Kepler_portrait_sheet_4
+  - first:
+      213: -2009434008092270241
+    second: Kepler_portrait_sheet_5
+  - first:
+      213: 5369822529550081978
+    second: Kepler_portrait_sheet_6
+  - first:
+      213: -7247660082943789239
+    second: Kepler_portrait_sheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1078
+        width: 589
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f990d90f005faaf47a312ff2e948c445
+      internalID: -1939693187562862693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1078
+        width: 589
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15654a6b63c68524399cfd2f142a1e1a
+      internalID: -6236928679042621670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1078
+        width: 589
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c805f72945e74048802a21f668352fb
+      internalID: -1567614228224413661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 1078
+        width: 589
+        height: 1082
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5a4ecf7412c1548aa4a20ba023eba6
+      internalID: -6890768394312882058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 589
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75b492b274e15148b7c9afc9e0a27b4
+      internalID: -4436512377521881567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 0
+        width: 589
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadbd7da5458fdc4b9c760d2bf792ee1
+      internalID: -2009434008092270241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 0
+        width: 589
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144505c3b53b7f94b83536156cd440a1
+      internalID: 5369822529550081978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kepler_portrait_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 0
+        width: 589
+        height: 1073
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fd12ded4d3d564cbd5c8e21c6ae72d
+      internalID: -7247660082943789239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
