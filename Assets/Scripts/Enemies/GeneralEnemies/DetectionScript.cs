@@ -14,6 +14,7 @@ public class DetectionScript : MonoBehaviour
     // ----- Private variables -----
     // Detection cone variables
     private Mesh mesh;
+    private MeshRenderer meshRenderer;
     private float angleIncrement;
     private Vector3 origin = Vector3.zero;
     [SerializeField] private LayerMask layerMask;
@@ -23,6 +24,8 @@ public class DetectionScript : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+
+        meshRenderer = GetComponent<MeshRenderer>();
 
         angleIncrement = detectionConeAngle / numberOfRaycasts;
     }
@@ -91,29 +94,8 @@ public class DetectionScript : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
-        
-        /*
-        // create new colors array where the colors will be created.
-        List<Color> colors = new List<Color>();
-        //Color[] colors = new Color[mesh.vertexCount];
-        Color transparentCone = new Color(coneColor.r, coneColor.g, coneColor.b, 0);
 
-        //colors[0] = coneColor;
-
-        //for (int i = 1; i < vertices.Length; i++)
-        //    colors[i] = transparentCone;
-
-        for (int i = 0; i < colors.Count - 2; i += 3)
-        {
-            colors[i] = Color.red;
-            colors[i + 1] = Color.green;
-            colors[i + 2] = Color.blue;
-        }
-
-        mesh.SetColors(colors);
-
-        //    mesh.colors = colors;
-        */
+        meshRenderer.material.color = coneColor;
     }
 
 

@@ -138,6 +138,9 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 0
+  trapMask:
+    serializedVersion: 2
+    m_Bits: 0
   isIdle: 0
   isWalking: 0
   isTurning: 0
@@ -239,7 +242,7 @@ MonoBehaviour:
   detectionConeAngle: 90
   detectionRayDistance: 5
   numberOfRaycasts: 50
-  coneColor: {r: 1, g: 0.5529412, b: 0.20784315, a: 1}
+  coneColor: {r: 1, g: 0.5529412, b: 0.20784315, a: 0.627451}
   layerMask:
     serializedVersion: 2
     m_Bits: 1847
@@ -268,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: eb7c00a85e9479a429935eea4c6ae259, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

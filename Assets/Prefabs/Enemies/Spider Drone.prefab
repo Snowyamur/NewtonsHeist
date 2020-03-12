@@ -282,7 +282,7 @@ MonoBehaviour:
   detectionConeAngle: 90
   detectionRayDistance: 5
   numberOfRaycasts: 50
-  coneColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  coneColor: {r: 0.64705884, g: 0.654902, b: 0.654902, a: 0.627451}
   layerMask:
     serializedVersion: 2
     m_Bits: 1847
@@ -311,7 +311,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: eb7c00a85e9479a429935eea4c6ae259, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
