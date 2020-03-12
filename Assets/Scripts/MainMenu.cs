@@ -121,8 +121,11 @@ public class MainMenu : MonoBehaviour
 
   public void Play()
   {
-    LevelManager.current = SaveLoad.savedGames[SaveLoad.savedGames.Count-1];
-    SceneManager.LoadScene(LevelManager.current.playerData.sceneID); //Load last scene
+    if(SaveLoad.savedGames.Count > 0)
+    {
+      LevelManager.current = SaveLoad.savedGames[SaveLoad.savedGames.Count-1];
+      SceneManager.LoadScene(LevelManager.current.playerData.sceneID); //Load last scene
+    }
   }
 
   void CreateButton(Transform parent, Vector3 position, Vector2 size,
