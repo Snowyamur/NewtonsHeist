@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 30cbf1e69bb4547458bc3024b2c542f3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2394912245349293828
+    second: Robin_portrait_sheet_0
+  - first:
+      213: 3445471315334177393
+    second: Robin_portrait_sheet_1
+  - first:
+      213: 4139072387765904674
+    second: Robin_portrait_sheet_2
+  - first:
+      213: -5046013317979704531
+    second: Robin_portrait_sheet_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +82,105 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Robin_portrait_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 586
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb4d8d7bb9db1b4cb30696428d3ce7d
+      internalID: -2394912245349293828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin_portrait_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 586
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59571fc78f65cf64aa2c88c579784174
+      internalID: 3445471315334177393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin_portrait_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 0
+        width: 586
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49cc41060368a54f9077f103a840c85
+      internalID: 4139072387765904674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin_portrait_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 0
+        width: 586
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0753e708885a97243b7c06a9fcd50c39
+      internalID: -5046013317979704531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: fad003e99b3bd7c418569d4b03beeab7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7499873168332028453
+    second: Calem_portrait_sheet_0
+  - first:
+      213: 4454280676718548206
+    second: Calem_portrait_sheet_1
+  - first:
+      213: 4185125888222416976
+    second: Calem_portrait_sheet_2
+  - first:
+      213: 7663404123598283578
+    second: Calem_portrait_sheet_3
+  - first:
+      213: -1988255061333822574
+    second: Calem_portrait_sheet_4
+  - first:
+      213: -6386769883329947245
+    second: Calem_portrait_sheet_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +88,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Calem_portrait_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de8fec7f87c030438ac4a2a55972b86
+      internalID: 7499873168332028453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calem_portrait_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ccefa12e553e48815a6a1b2079348
+      internalID: 4454280676718548206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calem_portrait_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa5aa234e074bd49abcfa4b7ea90f43
+      internalID: 4185125888222416976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calem_portrait_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 1080
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0f7cd46e6f9f946b949e541406117a
+      internalID: 7663404123598283578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calem_portrait_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667acb65be39c8046b8153db6926c151
+      internalID: -1988255061333822574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Calem_portrait_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 0
+        width: 730
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2406f28b34a54ae478a5851207dafe18
+      internalID: -6386769883329947245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
