@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected bool isFacingLeft = false;  // isFacingLeft is true if the AI is patrolling
                                        // in the left direction
     [SerializeField] protected bool hitEMP = false; //Signals if hit by EMP
-    [SerializeField] protected float rayDistance = 2.0f;
+    [SerializeField] protected float rayDistance = 2f;
     [SerializeField] protected float gravDelay = 5.0f;
     [SerializeField] protected float timer = 1f;
     [Space]
@@ -88,6 +88,7 @@ public class EnemyAI : MonoBehaviour
                 timer -= Time.deltaTime;
                 return;
             }
+
             ChangeDirection();
             isTurning = false;
             timer = 1f; //Reset timer
@@ -102,8 +103,9 @@ public class EnemyAI : MonoBehaviour
         RaycastHit2D raycastTrap = DrawRaycast(groundDetection.position, transform.right,
                                               rayDistance, trapMask);
 
-        if (raycastEnemy.collider == true || raycastTrap.collider == true) //If the enemy hits an object in front of it, it flips direction
+        if ((raycastEnemy.collider == true && raycastEnemy.collider.transform.gameObject != this.gameObject) || raycastTrap.collider == true) //If the enemy hits an object in front of it, it flips direction
         {
+            Debug.Log("There");
             ChangeDirection();
         }
     }
@@ -121,6 +123,7 @@ public class EnemyAI : MonoBehaviour
                 timer -= Time.deltaTime;
                 return;
             }
+            Debug.Log("Here");
             ChangeDirection();
             isTurning = false;
             timer = 1f; //Reset timer

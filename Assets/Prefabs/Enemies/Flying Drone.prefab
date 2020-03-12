@@ -138,6 +138,9 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 0
+  trapMask:
+    serializedVersion: 2
+    m_Bits: 0
   isIdle: 0
   isWalking: 0
   isTurning: 0
@@ -169,10 +172,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.74201024, y: 0.33500433}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.45087337, y: 0.51455605}
     oldSize: {x: 12.8, y: 7.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -279,6 +282,7 @@ MonoBehaviour:
   detectionConeAngle: 90
   detectionRayDistance: 5
   numberOfRaycasts: 50
+  coneColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   layerMask:
     serializedVersion: 2
     m_Bits: 3895
