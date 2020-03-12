@@ -28,9 +28,9 @@ public class SwitchScenes : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         control = player.GetComponent<PlayerControlMapping>();
         //blackScreen = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Image>();
-        fade = blackScreen.GetComponent<Fade>();
+        //fade = blackScreen.GetComponent<Fade>();
 
-        blackScreen.color = new Color(0f, 0f, 0f, 0f);
+        //blackScreen.color = new Color(0f, 0f, 0f, 0f);
     }
 
     void OnTriggerEnter2D(Collider2D col)
