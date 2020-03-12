@@ -12864,6 +12864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transfer Level
       objectReference: {fileID: 0}
+    - target: {fileID: 1046097741395169666, guid: edc5119b57941724bb344e6a844d032b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 1046097741395169676, guid: edc5119b57941724bb344e6a844d032b,
         type: 3}
       propertyPath: m_LocalPosition.x

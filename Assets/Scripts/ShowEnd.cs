@@ -14,7 +14,7 @@ public class ShowEnd : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.transform.tag == "Goal")
+        if(col.transform.tag == "Player")
         {
             goal.SetActive(true);
         }
