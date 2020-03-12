@@ -38,6 +38,8 @@ public class MainMenu : MonoBehaviour
   Button higherRes;
   Button apply;
 
+  Slider volumeSlider;
+
   GameObject continueMenu;
 
   GameObject canvas;
@@ -49,6 +51,7 @@ public class MainMenu : MonoBehaviour
 
       //Options Stuff
       optionsMenu = canvas.transform.Find("OptionsMenu").gameObject;
+      volumeSlider = optionsMenu.transform.Find("VolumeSlider").gameObject.GetComponent<Slider>();
       currentRes = optionsMenu.transform.Find("CurrentRes").gameObject.GetComponent<Text>();
       resolutions = Screen.resolutions;
       currentRes.text = ResToString(Screen.currentResolution);
@@ -133,6 +136,11 @@ public class MainMenu : MonoBehaviour
     button.transform.position = position;
     //button.GetComponent<RectTransform>().SetSize(size);
     button.GetComponent<Button>().onClick.AddListener(method);
+  }
+
+  public void ChangeVolume()
+  {
+      AudioListener.volume = volumeSlider.value;
   }
 
   string ResToString(Resolution res)
