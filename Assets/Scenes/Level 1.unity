@@ -25332,6 +25332,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 170000}
   m_EdgeRadius: 0
+--- !u!1 &1418044247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4418397490233633888, guid: 9ab59feff072cd34589047680bda3965,
+    type: 3}
+  m_PrefabInstance: {fileID: 924733992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1420521784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 6f2e49a539985de4182f9ae2814c39b6,
@@ -33117,7 +33123,7 @@ PrefabInstance:
     - target: {fileID: 239065629565359728, guid: fde4e3da239feb9419459da09940da2f,
         type: 3}
       propertyPath: character_images.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 239065629565359728, guid: fde4e3da239feb9419459da09940da2f,
         type: 3}
@@ -33164,6 +33170,11 @@ PrefabInstance:
       propertyPath: character_images.Array.data[4]
       value: 
       objectReference: {fileID: 1518102386}
+    - target: {fileID: 239065629565359728, guid: fde4e3da239feb9419459da09940da2f,
+        type: 3}
+      propertyPath: character_images.Array.data[5]
+      value: 
+      objectReference: {fileID: 1418044247}
     - target: {fileID: 239065629565359729, guid: fde4e3da239feb9419459da09940da2f,
         type: 3}
       propertyPath: m_LocalPosition.x
