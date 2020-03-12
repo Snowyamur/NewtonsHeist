@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 68852973}
   - component: {fileID: 68852972}
   m_Layer: 0
-  m_Name: Killzone2
+  m_Name: Killzone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 186583555}
   - component: {fileID: 186583554}
   m_Layer: 0
-  m_Name: Killzone4
+  m_Name: Killzone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3156,6 +3156,7 @@ Transform:
   - {fileID: 1188753603}
   - {fileID: 281720569}
   - {fileID: 1789816268}
+  - {fileID: 1349161689}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6025,7 +6026,7 @@ PrefabInstance:
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8054214943488492019, guid: 4521131968ace624bb9306c378c52640,
         type: 3}
@@ -6737,6 +6738,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1332425152}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1349161688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 619850328}
+    m_Modifications:
+    - target: {fileID: 4427923375073236323, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_Name
+      value: Tesla Coil (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -60.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1746.5414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4926324
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4043
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4043
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cbbbce32b43a06c4cb2bad81b74008e4, type: 3}
+--- !u!4 &1349161689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4427923375073236327, guid: cbbbce32b43a06c4cb2bad81b74008e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1349161688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1353774240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6835,7 +6926,7 @@ GameObject:
   - component: {fileID: 1383012520}
   - component: {fileID: 1383012519}
   m_Layer: 0
-  m_Name: Killzone3
+  m_Name: Killzone (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7579,7 +7670,7 @@ PrefabInstance:
     - target: {fileID: 8419402094328317623, guid: fdee21714f521aa4db8f036e8021d970,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8419402094328317623, guid: fdee21714f521aa4db8f036e8021d970,
         type: 3}
@@ -8850,7 +8941,7 @@ GameObject:
   - component: {fileID: 1976469361}
   - component: {fileID: 1976469360}
   m_Layer: 0
-  m_Name: Killzone1
+  m_Name: Killzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9207,7 +9298,7 @@ PrefabInstance:
     - target: {fileID: 5559740352772771111, guid: 72d2c2b4878f0e74da3419c0c2ae61e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5559740352772771111, guid: 72d2c2b4878f0e74da3419c0c2ae61e7,
         type: 3}
