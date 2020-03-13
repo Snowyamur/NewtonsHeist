@@ -19,7 +19,10 @@ public class Camera : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        offset = transform.position - player.transform.position;
+
+        float new_x = player.transform.position.x;
+        float new_y = player.transform.position.y;
+        transform.position = new Vector3(new_x, new_y, transform.position.z);
         //sData = GameObject.FindGameObjectWithTag("Canvas").GetComponent<SceneData>();
 
         minX = GameObject.FindGameObjectWithTag("Canvas").GetComponent<SceneData>().minX;
@@ -31,7 +34,10 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        newPos = player.transform.position + offset; //Update new position
+        float temp_x = player.transform.position.x;
+        float temp_y = player.transform.position.y;
+        Vector3 temp_pos = new Vector3(temp_x, temp_y, transform.position.z);
+        newPos = temp_pos + offset; //Update new position
 
         if (maxX < newPos.x)
             newPos.x = maxX;

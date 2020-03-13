@@ -92,6 +92,8 @@ public class PlayerMechanics : MonoBehaviour
         empImg = GameObject.Find("EMP Grenade Icon").GetComponent<Image>();
 
         rb.gravityScale = 0; //Sets gravity to zero to let GravityController handle manipulation
+
+        LoadPlayer();
     }
 
     // Start is called before the first frame update
@@ -427,5 +429,42 @@ public class PlayerMechanics : MonoBehaviour
         }
     }
 
+    private void LoadPlayer()
+    {
+        if (SaveLoad.savedGames.Count > 0)
+        {
+            LevelManager.current = SaveLoad.savedGames[SaveLoad.savedGames.Count - 1];
+            if (LevelManager.current.isSceneBeingLoaded)
+            {
+                PlayerStats ps = LevelManager.current.playerData;
+                float new_x = ps.playerPosX;
+                float new_y = ps.playerPosY;
+                float new_z = ps.playerPosZ;
+                transform.position = new Vector3(new_x, new_y, new_z);
 
+                powers = ps.powers;
+                grenades = ps.grenades;
+                currentGrenade = ps.currentGrenade;
+
+                LevelManager.current.isSceneBeingLoaded = false;
+            }
+        }
+    }
+
+    
+    // ----- GETTERS ----- 
+    public Dictionary<string, bool> GetPowers()
+    {
+        return powers; 
+    }
+
+    public Dictionary<string, int> GetGrenades()
+    {
+        return grenades;
+    }
+
+    public string GetCurrentGrenade()
+    {
+        return currentGrenade;
+    }
 }
