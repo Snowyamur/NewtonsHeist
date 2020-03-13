@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5957169ef14f66f42a873cc5045f4a60
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cease
+  fontNames:
+  - Cease
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3290d322012c477438830425b06c7cad, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
