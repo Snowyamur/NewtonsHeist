@@ -35,6 +35,7 @@ public class SpiderDrone : EnemyAI
             speed *= -1;
         }
 
+        //Set beginning orientation of drone based on what direction it's currently set
         RaycastHit2D rayGround = DrawRaycast(groundDetection.position, -transform.up,
                                               rayDistance, groundMask);
 
@@ -108,7 +109,7 @@ public class SpiderDrone : EnemyAI
                 break;
 
             case GravityDirection.Right:
-                rb.AddForce(transform.right*-9.81f*2f);
+                rb.AddForce(transform.right*-9.81f*3f);
                 detectionScript.SetAimDirection(new Vector2(0,1), isFacingLeft);
                 break;
         }
@@ -144,6 +145,7 @@ public class SpiderDrone : EnemyAI
             if (!rayGroundGround && rayWallGround.collider == false && rayWallNext.collider == false) //If the enemy is on the ground and the ground ends
             {
                 ChangeDirection();
+                yield return new WaitForSeconds(0.5f);
                 changed = true;
             }
         }
@@ -152,6 +154,7 @@ public class SpiderDrone : EnemyAI
             if (!rayGroundGround && !rayCeilingGround && !rayWallGround && !rayWallNext && !rayCeilingNext && !rayGroundNext) //If the enemy is on the ceiling and the ceiling ends
             {
                 ChangeDirection();
+                yield return new WaitForSeconds(0.5f);
                 changed = true;
             }
         }
@@ -160,6 +163,7 @@ public class SpiderDrone : EnemyAI
             if (!rayWallGround && !rayCeilingGround && !rayGroundGround && !rayCeilingNext && !rayGroundNext) //If the enemy is on the wall and the wall ends
             {
                 ChangeDirection();
+                yield return new WaitForSeconds(0.5f);
                 changed = true;
             }
         }
@@ -273,10 +277,12 @@ public class SpiderDrone : EnemyAI
         {
             if(isFacingLeft)
             {
+                Debug.Log("Tere");
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x+180, 0, transform.eulerAngles.z); //Resets angles
             }
             else
             {
+                Debug.Log("Here");
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x-180, 0, transform.eulerAngles.z);
             }
         }
