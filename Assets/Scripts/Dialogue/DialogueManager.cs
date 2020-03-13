@@ -32,13 +32,13 @@ public class DialogueManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (progressText && Input.anyKey)
+        if (progressText && Input.GetKeyDown(KeyCode.Space))
         {
             //display_char_art(name_Text.text);
-            StopAllCoroutines();
-            control.ToggleInput(20f);
+            //StopAllCoroutines();
+            //control.ToggleInput(20f);
             DisplayNext();
-            progressText = false;
+            //progressText = false;
             
         }
 
