@@ -28,6 +28,12 @@ public class PausingScript : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerMechanics = player.GetComponent<PlayerMechanics>();
+
+        if (LevelManager.current == null)
+        {
+            LevelManager.current = new LevelManager();
+        }
+        
         stats = LevelManager.current.playerData;
     }
 
