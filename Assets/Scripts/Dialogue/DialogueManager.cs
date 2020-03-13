@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public Animator kepler_ani;
+    public Animator lathi_ani;
+    public Animator newton_ani;
     private Queue<string> sentences;
     public Text name_Text;
     public Text dialogue_Text;
@@ -32,13 +35,13 @@ public class DialogueManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (progressText && Input.anyKey)
+        if (progressText && Input.GetKeyDown(KeyCode.Space))
         {
             //display_char_art(name_Text.text);
-            StopAllCoroutines();
-            control.ToggleInput(20f);
+            //StopAllCoroutines();
+            //control.ToggleInput(20f);
             DisplayNext();
-            progressText = false;
+            //progressText = false;
             
         }
 
@@ -169,18 +172,30 @@ public class DialogueManager : MonoBehaviour
         if (s == "Kepler" || s == "Calem" || s == "Kid")
         {
             character_images[0].GetComponent<Image>().color = Color.white;
+            kepler_ani.SetBool("kepler_is_talking", true);
+            lathi_ani.SetBool("lathi_is_talking", false);
+            newton_ani.SetBool("newton_is_talking", false);
         }
         else if (s == "Robin" || s == "???" || s == "Lathi")
         {
             character_images[1].GetComponent<Image>().color = Color.white;
+            kepler_ani.SetBool("kepler_is_talking", false);
+            lathi_ani.SetBool("lathi_is_talking", true);
+            newton_ani.SetBool("newton_is_talking", false);
         }
         else if (s == "Newton")
         {
             character_images[2].GetComponent<Image>().color = Color.white;
+            kepler_ani.SetBool("kepler_is_talking", false);
+            lathi_ani.SetBool("lathi_is_talking", false);
+            newton_ani.SetBool("newton_is_talking", true);
         }
         else if (s == "Kestrel")
         {
             character_images[3].GetComponent<Image>().color = Color.white;
+            kepler_ani.SetBool("kepler_is_talking", false);
+            lathi_ani.SetBool("lathi_is_talking", false);
+            newton_ani.SetBool("newton_is_talking", false);
         }
     }
 
