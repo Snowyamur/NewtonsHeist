@@ -8,11 +8,14 @@ public class CheckpointController : MonoBehaviour
     public bool isTrapTrigger = false;
 
     // ----- Private variables ----- 
-    CheckpointManager manager; 
+    CheckpointManager manager;
+    private AudioSource source;
+    private bool alarmTriggered = false;
 
     private void Start()
     {
         manager = transform.parent.GetComponent<CheckpointManager>();
+        source = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,8 +24,14 @@ public class CheckpointController : MonoBehaviour
         {
             manager.UpdateCheckpoint(gameObject);
 
-            if (isTrapTrigger)
+            if (isTrapTrigger && !alarmTriggered)
             {
+                alarmTriggered = true;
+
+                // Sound alarm 
+                source.Play();
+
+                // Activate traps
                 foreach (GameObject trap in GameObject.FindGameObjectsWithTag("Trap"))
                 {
                     RotationScript script = trap.GetComponent<RotationScript>();
