@@ -113,7 +113,6 @@ public class FlyingDrone : EnemyAI
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Tere");
         if(col.transform.tag == "Trap")
         {
             StartCoroutine(Timer());
