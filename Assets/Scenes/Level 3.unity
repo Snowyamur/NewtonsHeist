@@ -10375,6 +10375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider Drone
       objectReference: {fileID: 0}
+    - target: {fileID: 8485712896887114216, guid: bf3eed4b88a81c649a9d4154776227bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3eed4b88a81c649a9d4154776227bd, type: 3}
 --- !u!1 &343513758
