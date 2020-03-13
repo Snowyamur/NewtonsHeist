@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(RotationScript))]
@@ -44,7 +45,7 @@ public class RotationEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
-
+#endif
 
 // [ExecuteInEditMode]
 [System.Serializable]
